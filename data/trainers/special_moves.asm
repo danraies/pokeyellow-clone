@@ -51,9 +51,10 @@ SpecialTrainerMoves:
 	db BLAINE, 1
 	db 1, 1, FLAMETHROWER
 	db 1, 4, CONFUSE_RAY
-	db 3, 1, FLAMETHROWER
+	db 3, 1, BODY_SLAM
 	db 3, 2, FIRE_BLAST
-	db 3, 3, REFLECT
+	db 3, 3, DIG
+	db 3, 4, AGILITY
 	db 0
 
 	db SABRINA, 1
@@ -88,7 +89,10 @@ SpecialTrainerMoves:
 	db 3, 3, AMNESIA
 	db 3, 4, ICE_BEAM
 	db 4, 3, LOVELY_KISS
-	db 5, 3, BLIZZARD
+	db 5, 1, BLIZZARD
+	db 5, 2, HYDRO_PUMP
+	db 5, 3, BODY_SLAM
+	db 5, 4, SING
 	db 0
 
 	db BRUNO, 1
@@ -122,7 +126,10 @@ SpecialTrainerMoves:
 	db 0
 
 	db LANCE, 1
-	db 1, 1, DRAGON_RAGE
+	db 1, 1, DRAGON_CLAW
+	db 1, 2, HYDRO_PUMP
+	db 1, 3, DRAGON_RAGE
+	db 1, 4, HYPER_BEAM
 	db 2, 1, THUNDER_WAVE
 	db 2, 3, THUNDERBOLT
 	db 3, 1, BUBBLEBEAM

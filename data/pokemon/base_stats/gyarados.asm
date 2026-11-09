@@ -3,7 +3,7 @@
 	db  95, 125,  79,  81, 100
 	;   hp  atk  def  spd  spc
 
-	db WATER, FLYING ; type
+	db WATER, DRAGON ; type
 	db 45 ; catch rate
 	db 214 ; base exp
 
@@ -18,7 +18,7 @@
 	     WATER_GUN,    ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   RAGE,         \
 	     DRAGON_RAGE,  THUNDERBOLT,  THUNDER,      MIMIC,        DOUBLE_TEAM,  \
 	     REFLECT,      BIDE,         FIRE_BLAST,   SKULL_BASH,   REST,         \
-	     SUBSTITUTE,   SURF,         STRENGTH
+	     SUBSTITUTE,   SURF,         STRENGTH,     EARTHQUAKE
 	; end
 
 	db 0 ; padding
