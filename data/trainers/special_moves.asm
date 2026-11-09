@@ -25,7 +25,7 @@ SpecialTrainerMoves:
 	db LT_SURGE, 1
 	db 1, 1, THUNDERBOLT
 	db 1, 2, MEGA_PUNCH
-	db 1, 3, MEGA_KICK
+	db 1, 3, BODY_SLAM
 	db 1, 4, GROWL
 	db 0
 
@@ -108,14 +108,17 @@ SpecialTrainerMoves:
 	db 0
 
 	db AGATHA, 1
-	db 1, 2, SUBSTITUTE
-	db 1, 3, LICK
-	db 1, 4, MEGA_DRAIN
 	db 2, 2, TOXIC
 	db 2, 4, LEECH_LIFE
-	db 3, 2, LICK
+	db 3, 1, SPORE
+	db 3, 2, LEECH_LIFE
+	db 3, 3, SLASH
+	db 3, 4, SHADOW_BALL
 	db 4, 1, WRAP
+	db 5, 1, SHADOW_BALL
 	db 5, 2, PSYCHIC_M
+	db 5, 3, THUNDERBOLT
+	db 5, 4, DOUBLE_TEAM
 	db 0
 
 	db LANCE, 1
@@ -136,7 +139,10 @@ SpecialTrainerMoves:
 	db RIVAL3, 1
 	db 1, 3, EARTHQUAKE
 	db 2, 4, KINESIS
-	db 3, 4, LEECH_SEED
+	db 3, 1, LEECH_SEED
+	db 3, 2, EGG_BOMB
+	db 3, 3, PSYCHIC_M
+	db 3, 4, SLEEP_POWDER
 	db 4, 1, ICE_BEAM
 	db 5, 1, CONFUSE_RAY
 	db 5, 4, FIRE_SPIN
@@ -146,7 +152,10 @@ SpecialTrainerMoves:
 	db RIVAL3, 2
 	db 1, 3, EARTHQUAKE
 	db 2, 4, KINESIS
-	db 3, 4, LEECH_SEED
+	db 3, 1, LEECH_SEED
+	db 3, 2, EGG_BOMB
+	db 3, 3, PSYCHIC_M
+	db 3, 4, SLEEP_POWDER
 	db 4, 1, THUNDERBOLT
 	db 5, 1, ICE_BEAM
 	db 6, 2, REFLECT
@@ -156,7 +165,10 @@ SpecialTrainerMoves:
 	db RIVAL3, 3
 	db 1, 3, EARTHQUAKE
 	db 2, 4, KINESIS
-	db 3, 4, LEECH_SEED
+	db 3, 1, LEECH_SEED
+	db 3, 2, EGG_BOMB
+	db 3, 3, PSYCHIC_M
+	db 3, 4, SLEEP_POWDER
 	db 4, 1, CONFUSE_RAY
 	db 4, 4, FIRE_SPIN
 	db 5, 1, THUNDERBOLT

@@ -587,30 +587,68 @@ ExeggcuteEvosMoves:
 	db EVOLVE_ITEM, LEAF_STONE, 1, EXEGGUTOR
 	db 0
 ; Learnset
-	db 25, REFLECT
-	db 28, LEECH_SEED
-	db 32, STUN_SPORE
-	db 37, POISONPOWDER
-	db 42, SOLARBEAM
-	db 48, SLEEP_POWDER
+	db 25, MEGA_DRAIN
+	db 28, REFLECT
+	db 32, PSYBEAM
+	db 37, LEECH_SEED
+	db 42, EGG_BOMB
+	db 48, GROWTH
 	db 0
 
 ExeggutorEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 28, STOMP
+	db 25, MEGA_DRAIN
+	db 28, REFLECT
+	db 32, PSYBEAM
+	db 40, LEECH_SEED
+	db 49, EGG_BOMB
+	db 58, GROWTH
+	db 0
+
+PikachuEvosMoves:
+; Evolutions
+	db EVOLVE_ITEM, THUNDER_STONE, 1, RAICHU
+	db 0
+; Learnset
+	db 6, TAIL_WHIP
+	db 8, THUNDER_WAVE
+	db 11, QUICK_ATTACK
+	db 15, DOUBLE_TEAM
+	db 20, BODY_SLAM
+	db 26, THUNDERBOLT
+	db 33, AGILITY
+	db 41, THUNDER
+	db 50, LIGHT_SCREEN
+	db 0
+
+RaichuEvosMoves:
+; Evolutions
+	db 0
+; Learnset
+	db 6, TAIL_WHIP
+	db 8, THUNDER_WAVE
+	db 11, QUICK_ATTACK
+	db 15, DOUBLE_TEAM
+	db 23, BODY_SLAM
+	db 30, THUNDERBOLT
+	db 37, AGILITY
+	db 44, THUNDER
+	db 60, LIGHT_SCREEN
 	db 0
 
 LickitungEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 7, STOMP
-	db 15, DISABLE
-	db 23, DEFENSE_CURL
-	db 31, SLAM
-	db 39, SCREECH
+	db 11, STOMP
+	db 19, SLAM
+	db 27, DEFENSE_CURL
+	db 35, MEGA_PUNCH
+	db 43, SCREECH
+	db 51, LICK
+	db 59, DOUBLE_EDGE
 	db 0
 
 GrimerEvosMoves:
@@ -618,20 +656,96 @@ GrimerEvosMoves:
 	db EVOLVE_LEVEL, 38, MUK
 	db 0
 ; Learnset
-	db 30, POISON_GAS
-	db 33, MINIMIZE
-	db 37, SLUDGE
-	db 42, HARDEN
+	db 11, ACID
+	db 16, POISON_GAS
+	db 22, MINIMIZE
+	db 28, FURY_ATTACK
+	db 33, SLUDGE
+	db 37, LEECH_LIFE
+	db 42, LICK
 	db 48, SCREECH
 	db 55, ACID_ARMOR
+	db 0
+
+MukEvosMoves:
+; Evolutions
+	db 0
+; Learnset
+	db 11, ACID
+	db 16, POISON_GAS
+	db 22, MINIMIZE
+	db 28, FURY_ATTACK
+	db 33, SLUDGE
+	db 37, LEECH_LIFE
+	db 44, LICK
+	db 52, SCREECH
+	db 60, ACID_ARMOR
+	db 0
+
+GastlyEvosMoves:
+; Evolutions
+	db EVOLVE_LEVEL, 25, HAUNTER
+	db 0
+; Learnset
+	db 15, NIGHT_SHADE
+	db 21, LICK
+	db 28, POISON_GAS
+	db 32, CONFUSE_RAY
+	db 39, HYPNOSIS
+	db 44, SHADOW_BALL
+	db 50, DREAM_EATER
+	db 0
+
+HaunterEvosMoves:
+; Evolutions
+	db EVOLVE_LEVEL, 50, HAUNTER
+	db 0
+; Learnset
+	db 15, NIGHT_SHADE
+	db 21, LICK
+	db 28, POISON_GAS
+	db 34, CONFUSE_RAY
+	db 43, HYPNOSIS
+	db 48, SHADOW_BALL
+	db 54, DREAM_EATER
 	db 0
 
 GengarEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 29, HYPNOSIS
-	db 38, DREAM_EATER
+	db 15, NIGHT_SHADE
+	db 21, LICK
+	db 28, POISON_GAS
+	db 34, CONFUSE_RAY
+	db 43, HYPNOSIS
+	db 48, SHADOW_BALL
+	db 58, DREAM_EATER
+	db 0
+
+ParasEvosMoves:
+; Evolutions
+	db EVOLVE_LEVEL, 24, PARASECT
+	db 0
+; Learnset
+	db 13, STUN_SPORE
+	db 20, LEECH_LIFE
+	db 27, SPORE
+	db 34, SLASH
+	db 41, SHADOW_BALL
+	db 47, GROWTH
+	db 0
+
+ParasectEvosMoves:
+; Evolutions
+	db 0
+; Learnset
+	db 13, STUN_SPORE
+	db 20, LEECH_LIFE
+	db 30, SPORE
+	db 39, SLASH
+	db 47, SHADOW_BALL
+	db 55, GROWTH
 	db 0
 
 CuboneEvosMoves:
@@ -713,15 +827,6 @@ TentacoolEvosMoves:
 	db 33, BARRIER
 	db 40, SCREECH
 	db 48, HYDRO_PUMP
-	db 0
-
-GastlyEvosMoves:
-; Evolutions
-	db EVOLVE_LEVEL, 25, HAUNTER
-	db 0
-; Learnset
-	db 27, HYPNOSIS
-	db 35, DREAM_EATER
 	db 0
 
 ScytherEvosMoves:
@@ -919,17 +1024,6 @@ ArbokEvosMoves:
 	db 27, GLARE
 	db 36, SCREECH
 	db 47, ACID
-	db 0
-
-ParasectEvosMoves:
-; Evolutions
-	db 0
-; Learnset
-	db 13, STUN_SPORE
-	db 20, LEECH_LIFE
-	db 30, SPORE
-	db 39, SLASH
-	db 48, GROWTH
 	db 0
 
 PsyduckEvosMoves:
@@ -1287,28 +1381,6 @@ NinetalesEvosMoves:
 ; Learnset
 	db 0
 
-PikachuEvosMoves:
-; Evolutions
-	db EVOLVE_ITEM, THUNDER_STONE, 1, RAICHU
-	db 0
-; Learnset
-	db 6, TAIL_WHIP
-	db 8, THUNDER_WAVE
-	db 11, QUICK_ATTACK
-	db 15, DOUBLE_TEAM
-	db 20, SLAM
-	db 26, THUNDERBOLT
-	db 33, AGILITY
-	db 41, THUNDER
-	db 50, LIGHT_SCREEN
-	db 0
-
-RaichuEvosMoves:
-; Evolutions
-	db 0
-; Learnset
-	db 0
-
 MissingNo56EvosMoves:
 ; Evolutions
 	db 0
@@ -1559,18 +1631,6 @@ EkansEvosMoves:
 	db 38, ACID
 	db 0
 
-ParasEvosMoves:
-; Evolutions
-	db EVOLVE_LEVEL, 24, PARASECT
-	db 0
-; Learnset
-	db 13, STUN_SPORE
-	db 20, LEECH_LIFE
-	db 27, SPORE
-	db 34, SLASH
-	db 41, GROWTH
-	db 0
-
 PoliwhirlEvosMoves:
 ; Evolutions
 	db EVOLVE_ITEM, WATER_STONE, 1, POLIWRATH
@@ -1817,18 +1877,6 @@ MissingNo87EvosMoves:
 ; Learnset
 	db 0
 
-MukEvosMoves:
-; Evolutions
-	db 0
-; Learnset
-	db 30, POISON_GAS
-	db 33, MINIMIZE
-	db 37, SLUDGE
-	db 45, HARDEN
-	db 53, SCREECH
-	db 60, ACID_ARMOR
-	db 0
-
 MissingNo8AEvosMoves:
 ; Evolutions
 	db 0
@@ -1899,15 +1947,6 @@ MissingNo92EvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 0
-
-HaunterEvosMoves:
-; Evolutions
-	db EVOLVE_TRADE, 1, GENGAR
-	db 0
-; Learnset
-	db 29, HYPNOSIS
-	db 38, DREAM_EATER
 	db 0
 
 AbraEvosMoves:
