@@ -139,12 +139,12 @@ AttackAnimationPointers:
 	dw GlareAnim
 	dw DreamEaterAnim
 	dw PoisonGasAnim
-	dw BarrageAnim
+	dw ShadowBallAnim
 	dw LeechLifeAnim
 	dw LovelyKissAnim
 	dw SkyAttackAnim
 	dw TransformAnim
-	dw BubbleAnim
+	dw DragonClawAnim
 	dw DizzyPunchAnim
 	dw SporeAnim
 	dw FlashAnim
@@ -583,7 +583,7 @@ CounterAnim:
 
 SeismicTossAnim:
 	battle_anim NO_MOVE, SE_BLINK_ENEMY_MON
-	battle_anim BARRAGE, SUBANIM_1_SPHERE_BIG, 1, 1
+	battle_anim SHADOW_BALL, SUBANIM_1_SPHERE_BIG, 1, 1
 	battle_anim NO_MOVE, SE_HIDE_ENEMY_MON_PIC
 	battle_anim NO_MOVE, SE_SLIDE_MON_OFF
 	battle_anim SEISMIC_TOSS, SUBANIM_1_SPHERE_BIG_RISE, 1, 2
@@ -1004,8 +1004,8 @@ PoisonGasAnim:
 	battle_anim POISON_GAS, SUBANIM_1_CLOUD_TOSS, 1, 6
 	db -1 ; end
 
-BarrageAnim:
-	battle_anim BARRAGE, SUBANIM_1_CIRCLE_BLACK_TOSS, 1, 3
+ShadowBallAnim:
+	battle_anim SHADOW_BALL, SUBANIM_1_CIRCLE_BLACK_TOSS, 1, 3
 	battle_anim NO_MOVE, SUBANIM_0_STAR_HIGH, 0, 5
 	db -1 ; end
 
@@ -1035,8 +1035,8 @@ TransformAnim:
 	battle_anim NO_MOVE, SE_TRANSFORM_MON
 	db -1 ; end
 
-BubbleAnim:
-	battle_anim BUBBLE, SUBANIM_0_WATER_BUBBLES, 0, 22
+DragonClawAnim:
+	battle_anim SLASH, SUBANIM_0_SCRATCHES, 0, 6
 	db -1 ; end
 
 DizzyPunchAnim:
@@ -1267,9 +1267,9 @@ ShakeScreenAnim:
 	db -1 ; end
 
 ThrowRockAnim:
-	battle_anim BARRAGE, SUBANIM_0_SAFARI_ROCK, 0, 3
+	battle_anim SHADOW_BALL, SUBANIM_0_SAFARI_ROCK, 0, 3
 	db -1 ; end
 
 ThrowBaitAnim:
-	battle_anim BARRAGE, SUBANIM_0_SAFARI_BAIT, 0, 3
+	battle_anim SHADOW_BALL, SUBANIM_0_SAFARI_BAIT, 0, 3
 	db -1 ; end

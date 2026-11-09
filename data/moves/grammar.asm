@@ -21,7 +21,7 @@ MoveGrammar:
 	db MIMIC
 	db DOUBLE_TEAM
 	db BIDE ; corrected JP grammar: moved from set 1 in pokered
-	db BARRAGE
+	db SHADOW_BALL
 	db 0 ; end set
 
 ; 3: originally "[mon]の<LINE>[move]　こうげき！" ("[mon]'s<LINE>[move] attack!")
@@ -62,7 +62,7 @@ MoveGrammar:
 	db CONSTRICT
 	db POISON_GAS
 	db LEECH_LIFE
-	db BUBBLE
+	db DRAGON_CLAW
 	db FLASH
 	db SPLASH
 	db ACID_ARMOR
