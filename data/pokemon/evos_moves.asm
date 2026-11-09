@@ -498,7 +498,7 @@ CharmanderEvosMoves:
 	db 17, SEISMIC_TOSS
 	db 22, FIRE_SPIN
 	db 27, SLASH
-	db 32, BODY_SLAM
+	db 32, DRAGON_CLAW
 	db 37, FLAMETHROWER
 	db 42, ROAR
 	db 47, FIRE_BLAST
@@ -514,7 +514,7 @@ CharmeleonEvosMoves:
 	db 17, SEISMIC_TOSS
 	db 23, FIRE_SPIN
 	db 29, SLASH
-	db 35, BODY_SLAM
+	db 35, DRAGON_CLAW
 	db 40, FLAMETHROWER
 	db 45, ROAR
 	db 50, FIRE_BLAST
@@ -529,7 +529,7 @@ CharizardEvosMoves:
 	db 17, SEISMIC_TOSS
 	db 23, FIRE_SPIN
 	db 29, SLASH
-	db 35, BODY_SLAM
+	db 35, DRAGON_CLAW
 	db 41, FLAMETHROWER
 	db 47, ROAR
 	db 53, FIRE_BLAST

@@ -140,7 +140,7 @@ MoveNames::
 	li "GLARE"
 	li "DREAM EATER"
 	li "POISON GAS"
-	li "BARRAGE"
+	li "DRAGON CLAW"
 	li "LEECH LIFE"
 	li "LOVELY KISS"
 	li "SKY ATTACK"
