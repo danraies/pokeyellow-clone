@@ -9,9 +9,9 @@ SpecialTrainerMoves:
 	db 2, 3, STRING_SHOT
 	db 0
 
-	db YOUNGSTER, 14
-	db 1, 4, FISSURE
-	db 0
+;	db YOUNGSTER, 14
+;	db 1, 4, FISSURE
+;	db 0
 
 	db BROCK, 1
 	db 2, 3, BIND
@@ -67,11 +67,16 @@ SpecialTrainerMoves:
 	db 1, 3, FISSURE
 	db 2, 2, DOUBLE_TEAM
 	db 3, 1, EARTHQUAKE
+	db 3, 2, SLUDGE
 	db 3, 3, THUNDER
+	db 3, 4, THRASH
 	db 4, 1, EARTHQUAKE
 	db 4, 2, LEER
 	db 4, 3, THUNDER
+	db 4, 4, BODY_SLAM
 	db 5, 1, ROCK_SLIDE
+	db 5, 2, HORN_DRILL
+	db 5, 3, DOUBLE_EDGE
 	db 5, 4, EARTHQUAKE
 	db 0
 
@@ -80,6 +85,8 @@ SpecialTrainerMoves:
 	db 2, 3, ICE_BEAM
 	db 3, 1, PSYCHIC_M
 	db 3, 2, SURF
+	db 3, 3, AMNESIA
+	db 3, 4, ICE_BEAM
 	db 4, 3, LOVELY_KISS
 	db 5, 3, BLIZZARD
 	db 0
