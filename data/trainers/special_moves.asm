@@ -35,7 +35,7 @@ SpecialTrainerMoves:
 	db LT_SURGE, 1
 	; raichu
 	db 1, 1, THUNDERBOLT
-	db 1, 2, MEGA_PUNCH
+	db 1, 2, LOW_KICK
 	db 1, 3, BODY_SLAM
 	db 1, 4, GROWL
 	db 0
@@ -76,8 +76,10 @@ SpecialTrainerMoves:
 	db 0
 
 	db BLAINE, 1
-	; ninetails !!!
+	; ninetales
 	db 1, 1, FLAMETHROWER
+	db 1, 2, QUICK_ATTACK
+	db 1, 3, ROAR
 	db 1, 4, CONFUSE_RAY
 	; rapidash !!!
 	; arcanine
@@ -111,7 +113,7 @@ SpecialTrainerMoves:
 	db 1, 2, EARTHQUAKE
 	db 1, 3, SAND_ATTACK
 	db 1, 4, SLASH
-	; persian !!!
+	; persian
 	db 2, 1, SLASH
 	db 2, 2, DIG
 	db 2, 3, SCREECH
@@ -168,22 +170,22 @@ SpecialTrainerMoves:
 	db 1, 3, EARTHQUAKE
 	db 1, 4, DOUBLE_KICK
 	; hitmonchan
-	db 2, 1, MEGA_PUNCH
+	db 2, 1, STRENGTH
 	db 2, 2, ICE_PUNCH
 	db 2, 3, THUNDERPUNCH
 	db 2, 4, MEDITATE
 	; hitmonlee
 	db 3, 1, AGILITY
 	db 3, 2, SKULL_BASH
-	db 3, 3, MEGA_KICK
+	db 3, 3, HI_JUMP_KICK
 	db 3, 4, DOUBLE_TEAM
 	; pinsir
 	db 4, 1, LEECH_LIFE
 	db 4, 2, SWORDS_DANCE
-	db 4, 3, MEGA_PUNCH
+	db 4, 3, SUBMISSION
 	db 4, 4, BIND
 	; machamp
-	db 5, 1, MEGA_KICK
+	db 5, 1, HAYMAKER
 	db 5, 2, AGILITY
 	db 5, 3, BODY_SLAM
 	db 5, 4, ROCK_SLIDE
@@ -257,9 +259,11 @@ SpecialTrainerMoves:
 	db 4, 2, SURF
 	db 4, 3, SPIKE_CANNON
 	db 4, 4, CLAMP
-	; ninetails !!!
-	db 5, 1, CONFUSE_RAY
-	db 5, 4, FIRE_SPIN
+	; ninetales
+	db 5, 1, FLAMETHROWER
+	db 5, 2, SHADOW_BALL
+	db 5, 3, CONFUSE_RAY
+	db 5, 4, ROAR
 	; jolteon !!!
 	db 6, 3, QUICK_ATTACK
 	db 0
@@ -305,9 +309,11 @@ SpecialTrainerMoves:
 	db 3, 2, EGG_BOMB
 	db 3, 3, PSYCHIC_M
 	db 3, 4, SLEEP_POWDER
-	; ninetails !!!
-	db 4, 1, CONFUSE_RAY
-	db 4, 4, FIRE_SPIN
+	; ninetales
+	db 5, 1, FLAMETHROWER
+	db 5, 2, SHADOW_BALL
+	db 5, 3, CONFUSE_RAY
+	db 5, 4, ROAR
 	; magneton
 	db 5, 1, THUNDERBOLT
 	db 5, 2, TRI_ATTACK
