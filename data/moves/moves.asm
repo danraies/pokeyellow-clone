@@ -135,7 +135,7 @@ Moves:
 	move LICK,         PARALYZE_SIDE_EFFECT2,       50, GHOST,        100, 30
 	move SMOG,         POISON_SIDE_EFFECT2,         20, POISON,        70, 20
 	move SLUDGE,       POISON_SIDE_EFFECT2,         75, POISON,       100, 20
-	move BONE_CLUB,    FLINCH_SIDE_EFFECT1,         65, GROUND,        85, 20
+	move BULLDOZE,     SPEED_DOWN_SIDE_EFFECT,      65, GROUND,        90, 20
 	move FIRE_BLAST,   BURN_SIDE_EFFECT2,          120, FIRE,          85, 10
 	move WATERFALL,    NO_ADDITIONAL_EFFECT,        80, WATER,        100, 15
 	move CLAMP,        TRAPPING_EFFECT,             40, WATER,         75, 15

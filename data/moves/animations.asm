@@ -124,7 +124,7 @@ AttackAnimationPointers:
 	dw LickAnim
 	dw SmogAnim
 	dw SludgeAnim
-	dw BoneClubAnim
+	dw BulldozeAnim
 	dw FireBlastAnim
 	dw WaterfallAnim
 	dw ClampAnim
@@ -922,8 +922,8 @@ SludgeAnim:
 	battle_anim SLUDGE, SUBANIM_1_BLOB_DRIP_ENEMY, 1, 6
 	db -1 ; end
 
-BoneClubAnim:
-	battle_anim BONE_CLUB, SUBANIM_0_STAR_THRICE, 0, 8
+BulldozeAnim:
+	battle_anim BULLDOZE, SUBANIM_0_STAR_THRICE, 0, 8
 	db -1 ; end
 
 FireBlastAnim:

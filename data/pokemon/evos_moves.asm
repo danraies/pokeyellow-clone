@@ -208,7 +208,7 @@ RhyhornEvosMoves:
 	db 0
 ; Learnset
 	db 20, ROCK_THROW
-	db 25, BONE_CLUB
+	db 25, BULLDOZE
 	db 30, STOMP
 	db 35, LEER
 	db 40, ROCK_SLIDE
@@ -222,7 +222,7 @@ RhydonEvosMoves:
 	db 0
 ; Learnset
 	db 20, ROCK_THROW
-	db 25, BONE_CLUB
+	db 25, BULLDOZE
 	db 30, STOMP
 	db 35, LEER
 	db 40, ROCK_SLIDE
@@ -250,7 +250,7 @@ NidoranMEvosMoves:
 	db 8, DOUBLE_KICK
 	db 12, POISON_STING
 	db 17, THRASH
-	db 23, BONE_CLUB
+	db 23, BULLDOZE
 	db 30, SHARPEN
 	db 38, SLUDGE
 	db 44, HORN_DRILL
@@ -265,7 +265,7 @@ NidorinoEvosMoves:
 	db 8, DOUBLE_KICK
 	db 12, POISON_STING
 	db 17, THRASH
-	db 23, BONE_CLUB
+	db 23, BULLDOZE
 	db 30, SHARPEN
 	db 40, SLUDGE
 	db 48, HORN_DRILL
@@ -279,7 +279,7 @@ NidokingEvosMoves:
 	db 8, DOUBLE_KICK
 	db 12, POISON_STING
 	db 17, THRASH
-	db 23, BONE_CLUB
+	db 23, BULLDOZE
 	db 30, SHARPEN
 	db 40, SLUDGE
 	db 52, HORN_DRILL
@@ -294,7 +294,7 @@ NidoranFEvosMoves:
 	db 8, DOUBLE_KICK
 	db 12, POISON_STING
 	db 17, BODY_SLAM
-	db 23, BONE_CLUB
+	db 23, BULLDOZE
 	db 30, HARDEN
 	db 38, SLUDGE
 	db 44, GLARE
@@ -309,7 +309,7 @@ NidorinaEvosMoves:
 	db 8, DOUBLE_KICK
 	db 12, POISON_STING
 	db 17, BODY_SLAM
-	db 23, BONE_CLUB
+	db 23, BULLDOZE
 	db 30, HARDEN
 	db 40, SLUDGE
 	db 48, GLARE
@@ -323,7 +323,7 @@ NidoqueenEvosMoves:
 	db 8, DOUBLE_KICK
 	db 12, POISON_STING
 	db 17, BODY_SLAM
-	db 23, BONE_CLUB
+	db 23, BULLDOZE
 	db 30, HARDEN
 	db 40, SLUDGE
 	db 52, GLARE
@@ -784,7 +784,7 @@ CuboneEvosMoves:
 ; Learnset
 	db 10, HEADBUTT
 	db 13, TAIL_WHIP
-	db 18, BONE_CLUB
+	db 18, BULLDOZE
 	db 25, ROCK_THROW
 	db 31, BODY_SLAM
 	db 38, THRASH
@@ -798,7 +798,7 @@ MarowakEvosMoves:
 ; Learnset
 	db 10, HEADBUTT
 	db 13, TAIL_WHIP
-	db 18, BONE_CLUB
+	db 18, BULLDOZE
 	db 25, ROCK_THROW
 	db 33, BODY_SLAM
 	db 41, THRASH
@@ -1743,7 +1743,7 @@ SandshrewEvosMoves:
 	db 0
 ; Learnset
 	db 10, SAND_ATTACK
-	db 17, BONE_CLUB
+	db 17, BULLDOZE
 	db 24, SLASH
 	db 31, PIN_MISSILE
 	db 38, EARTHQUAKE
@@ -1754,7 +1754,7 @@ SandslashEvosMoves:
 	db 0
 ; Learnset
 	db 10, SAND_ATTACK
-	db 17, BONE_CLUB
+	db 17, BULLDOZE
 	db 27, SLASH
 	db 36, PIN_MISSILE
 	db 47, EARTHQUAKE
