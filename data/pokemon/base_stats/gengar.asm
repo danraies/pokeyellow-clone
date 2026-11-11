@@ -19,7 +19,8 @@
 	     RAGE,         MEGA_DRAIN,   THUNDERBOLT,  THUNDER,      PSYCHIC_M,    \
 	     MIMIC,        DOUBLE_TEAM,  BIDE,         METRONOME,    SELFDESTRUCT, \
 	     SKULL_BASH,   DREAM_EATER,  REST,         PSYWAVE,      EXPLOSION,    \
-	     SUBSTITUTE,   STRENGTH
+	     SUBSTITUTE,   STRENGTH,     ICE_BEAM,     BLIZZARD,     FLAMETHROWER, \
+		 FIRE_BLAST
 	; end
 
 	db 0 ; padding

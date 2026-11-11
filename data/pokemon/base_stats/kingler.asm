@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/kingler.pic", 0, 1 ; sprite dimensions
 	dw KinglerPicFront, KinglerPicBack
 
-	db WATER_GUN, LEER, VICEGRIP, NO_MOVE ; level 1 learnset
+	db VICEGRIP, LEER, WATER_GUN, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset

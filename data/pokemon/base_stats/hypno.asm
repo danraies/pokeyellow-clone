@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/hypno.pic", 0, 1 ; sprite dimensions
 	dw HypnoPicFront, HypnoPicBack
 
-	db POUND, HYPNOSIS, DISABLE, CONFUSION ; level 1 learnset
+	db DISABLE, POUND, HYPNOSIS, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -19,7 +19,7 @@
 	     RAGE,         PSYCHIC_M,    TELEPORT,     MIMIC,        DOUBLE_TEAM,  \
 	     REFLECT,      BIDE,         METRONOME,    SKULL_BASH,   DREAM_EATER,  \
 	     REST,         THUNDER_WAVE, PSYWAVE,      TRI_ATTACK,   SUBSTITUTE,   \
-	     FLASH
+	     FLASH,        DREAM_EATER
 	; end
 
 	db 0 ; padding

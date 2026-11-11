@@ -16,7 +16,9 @@
 	; tm/hm learnset
 	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  RAGE,         MEGA_DRAIN,   \
 	     SOLARBEAM,    PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  REFLECT,      \
-	     BIDE,         REST,         PSYWAVE,      SUBSTITUTE,   FLASH
+	     BIDE,         REST,         PSYWAVE,      SUBSTITUTE,   FLASH,        \
+		 FLAMETHROWER, FIRE_BLAST,   THUNDERBOLT,  THUNDER,      ICE_BEAM,     \
+		 BLIZZARD
 	; end
 
 	db 0 ; padding

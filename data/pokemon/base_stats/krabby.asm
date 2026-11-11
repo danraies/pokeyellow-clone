@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/krabby.pic", 0, 1 ; sprite dimensions
 	dw KrabbyPicFront, KrabbyPicBack
 
-	db WATER_GUN, LEER, NO_MOVE, NO_MOVE ; level 1 learnset
+	db LEER, VICEGRIP, WATER_GUN, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset

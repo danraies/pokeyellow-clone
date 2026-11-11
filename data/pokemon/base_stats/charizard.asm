@@ -19,7 +19,7 @@
 	     SEISMIC_TOSS, RAGE,         DRAGON_RAGE,  EARTHQUAKE,   FISSURE,      \
 	     DIG,          MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
 	     FIRE_BLAST,   SWIFT,        SKULL_BASH,   REST,         SUBSTITUTE,   \
-	     CUT,          FLY,          STRENGTH,     SKY_ATTACK
+	     CUT,          FLY,          STRENGTH,     SKY_ATTACK,   FLAMETHROWER
 	; end
 
 	db 0 ; padding

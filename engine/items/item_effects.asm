@@ -206,6 +206,10 @@ ItemUseBall:
 	cp MASTER_BALL
 	jp z, .captured
 
+; The Safari Ball always succeeds.
+	cp SAFARI_BALL
+	jp z, .captured
+
 ; Anything will do for the basic Poké Ball.
 	cp POKE_BALL
 	jr z, .checkForAilments
