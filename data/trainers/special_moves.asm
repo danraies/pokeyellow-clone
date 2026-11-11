@@ -46,10 +46,16 @@ SpecialTrainerMoves:
 	db 1, 2, MEGA_DRAIN
 	db 1, 3, BIND
 	db 1, 4, TOXIC
-	; weepinbell !!!
-	db 2, 1, RAZOR_LEAF
-	; gloom !!!
-	db 3, 1, PETAL_DANCE
+	; weepinbell
+	db 2, 1, STUN_SPORE
+	db 2, 2, WRAP
+	db 2, 3, SLUDGE
+	db 2, 4, RAZOR_LEAF
+	; gloom
+	db 2, 1, LEECH_SEED
+	db 2, 2, SLEEP_POWDER
+	db 2, 3, SLUDGE
+	db 2, 4, PETAL_DANCE
 	db 0
 
 	db KOGA, 1
@@ -81,7 +87,11 @@ SpecialTrainerMoves:
 	db 1, 2, QUICK_ATTACK
 	db 1, 3, ROAR
 	db 1, 4, CONFUSE_RAY
-	; rapidash !!!
+	; rapidash
+	db 1, 4, LICK
+	db 2, 1, FLAMETHROWER
+	db 3, 2, FIRE_SPIN
+	db 4, 3, STOMP
 	; arcanine
 	db 3, 1, BODY_SLAM
 	db 3, 2, FIRE_BLAST
@@ -193,8 +203,10 @@ SpecialTrainerMoves:
 
 	db AGATHA, 1
 	; gengar (fine as-is)
-	; golbat !!!
-	db 2, 2, TOXIC
+	; golbat
+	db 2, 2, DOUBLE_TEAM
+	db 2, 2, HYPER_FANG
+	db 2, 2, SUPER_FANG
 	db 2, 4, LEECH_LIFE
 	; parasect
 	db 3, 1, SPORE
@@ -242,8 +254,11 @@ SpecialTrainerMoves:
 	db 0
 
 	db RIVAL3, 1
-	; sandslash !!!
-	db 1, 3, EARTHQUAKE
+	; sandslash
+	db 1, 1, EARTHQUAKE
+	db 1, 2, PIN_MISSILE
+	db 1, 3, SLASH
+	db 1, 4, SWORDS_DANCE
 	; alakazam
 	db 2, 1, PSYCHIC_M
 	db 2, 2, RECOVER
@@ -269,8 +284,11 @@ SpecialTrainerMoves:
 	db 0
 
 	db RIVAL3, 2
-	; sandslash !!!
-	db 1, 3, EARTHQUAKE
+	; sandslash
+	db 1, 1, EARTHQUAKE
+	db 1, 2, PIN_MISSILE
+	db 1, 3, SLASH
+	db 1, 4, SWORDS_DANCE
 	; alakazam
 	db 2, 1, PSYCHIC_M
 	db 2, 2, RECOVER
@@ -297,8 +315,11 @@ SpecialTrainerMoves:
 	db 0
 
 	db RIVAL3, 3
-	; sandslash !!!
-	db 1, 3, EARTHQUAKE
+	; sandslash
+	db 1, 1, EARTHQUAKE
+	db 1, 2, PIN_MISSILE
+	db 1, 3, SLASH
+	db 1, 4, SWORDS_DANCE
 	; alakazam
 	db 2, 1, PSYCHIC_M
 	db 2, 2, RECOVER
