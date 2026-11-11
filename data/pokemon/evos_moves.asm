@@ -1174,7 +1174,7 @@ MachopEvosMoves:
 	db 32, BODY_SLAM
 	db 39, ROCK_SLIDE
 	db 46, GLARE
-	db 50, MEGA_KICK
+	db 50, HAYMAKER
 	db 0
 
 MachokeEvosMoves:
@@ -1187,7 +1187,7 @@ MachokeEvosMoves:
 	db 36, BODY_SLAM
 	db 44, ROCK_SLIDE
 	db 52, GLARE
-	db 56, MEGA_KICK
+	db 56, HAYMAKER
 	db 0
 
 MachampEvosMoves:
@@ -1199,7 +1199,7 @@ MachampEvosMoves:
 	db 36, BODY_SLAM
 	db 44, ROCK_SLIDE
 	db 52, GLARE
-	db 60, MEGA_KICK
+	db 60, HAYMAKER
 	db 0
 
 MrMimeEvosMoves:
@@ -1777,7 +1777,7 @@ EeveeEvosMoves:
 	db 16, GROWL
 	db 23, QUICK_ATTACK
 	db 30, BITE
-	db 36, FOCUS_ENERGY
+	db 36, DOUBLE_TEAM
 	db 42, TAKE_DOWN
 	db 0
 
@@ -1855,7 +1855,7 @@ BeedrillEvosMoves:
 	db 0
 ; Learnset
 	db 12, FURY_ATTACK
-	db 16, FOCUS_ENERGY
+	db 16, SWORDS_DANCE
 	db 20, TWINEEDLE
 	db 25, RAGE
 	db 30, PIN_MISSILE
@@ -1980,7 +1980,7 @@ RattataEvosMoves:
 ; Learnset
 	db 7, QUICK_ATTACK
 	db 14, HYPER_FANG
-	db 23, FOCUS_ENERGY
+	db 23, AGILITY
 	db 34, SUPER_FANG
 	db 0
 
@@ -1990,7 +1990,7 @@ RaticateEvosMoves:
 ; Learnset
 	db 7, QUICK_ATTACK
 	db 14, HYPER_FANG
-	db 27, FOCUS_ENERGY
+	db 27, AGILITY
 	db 41, SUPER_FANG
 	db 0
 

@@ -116,7 +116,7 @@ MoveNames::
 	li "LIGHT SCREEN"
 	li "HAZE"
 	li "REFLECT"
-	li "FOCUS ENERGY"
+	li "HAYMAKER"
 	li "BIDE"
 	li "METRONOME"
 	li "MIRROR MOVE"

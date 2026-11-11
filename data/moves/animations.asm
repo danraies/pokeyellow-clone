@@ -115,7 +115,7 @@ AttackAnimationPointers:
 	dw LightScreenAnim
 	dw HazeAnim
 	dw ReflectAnim
-	dw FocusEnergyAnim
+	dw HaymakerAnim
 	dw BideAnim
 	dw MetronomeAnim
 	dw MirrorMoveAnim
@@ -875,8 +875,9 @@ ReflectAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
-FocusEnergyAnim:
-	battle_anim FOCUS_ENERGY, SE_SPIRAL_BALLS_INWARD
+HaymakerAnim:
+	battle_anim HAYMAKER, SE_SPIRAL_BALLS_INWARD
+	battle_anim MEGA_PUNCH, SUBANIM_1_STAR_BIG_MOVING, 1, 6
 	db -1 ; end
 
 BideAnim:
