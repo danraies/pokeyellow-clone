@@ -48,7 +48,7 @@ _CeladonCityGramps3ReceivedTM41Text::
 
 _CeladonCityGramps3TM41ExplanationText::
 	text "TM41 teaches"
-	line "FLAMETHROWER!"
+	line "TRI ATTACK!"
 	done
 
 _CeladonCityGramps3TM41NoRoomText::

@@ -24,17 +24,17 @@ PrizeMenuMon2Entries:
 PrizeMenuMon2Cost:
 	bcd2 500
 	bcd2 500
-	bcd2 2500
+	bcd2 2000
 	db "@"
 
 PrizeMenuTMsEntries:
 	db TM_DRAGON_CLAW
 	db TM_HYPER_BEAM
-	db TM_SUBSTITUTE
+	db TM_EARTHQUAKE
 	db "@"
 
 PrizeMenuTMsCost:
-	bcd2 1000
-	bcd2 1500
-	bcd2 2000
+	bcd2 5000
+	bcd2 5000
+	bcd2 5000
 	db "@"
