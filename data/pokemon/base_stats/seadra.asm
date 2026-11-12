@@ -17,7 +17,7 @@
 	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    \
 	     ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   RAGE,         MIMIC,        \
 	     DOUBLE_TEAM,  BIDE,         SWIFT,        SKULL_BASH,   REST,         \
-	     SUBSTITUTE,   SURF,         DRAGON_RAGE,  FLAMETHROWER, FIRE_BLAST
+	     SUBSTITUTE,   SURF,         DRAGON_CLAW,  FLAMETHROWER, FIRE_BLAST
 	; end
 
 	db 0 ; padding

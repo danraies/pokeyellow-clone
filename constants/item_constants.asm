@@ -180,7 +180,7 @@ DEF TM01 EQU const_value
 	add_tm RAGE         ; $DC
 	add_tm MEGA_DRAIN   ; $DD
 	add_tm SOLARBEAM    ; $DE
-	add_tm DRAGON_RAGE  ; $DF
+	add_tm DRAGON_CLAW  ; $DF
 	add_tm THUNDERBOLT  ; $E0
 	add_tm THUNDER      ; $E1
 	add_tm EARTHQUAKE   ; $E2
