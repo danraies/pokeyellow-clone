@@ -18,7 +18,7 @@
 	     BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   \
 	     RAGE,         SOLARBEAM,    DRAGON_CLAW,  THUNDERBOLT,  THUNDER,      \
 	     PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
-	     SKULL_BASH,   REST,         PSYWAVE,      SUBSTITUTE,   SURF,         \
+	     SKULL_BASH,   REST,               SUBSTITUTE,   SURF,         \
 	     STRENGTH
 	; end
 

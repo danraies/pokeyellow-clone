@@ -109,12 +109,12 @@ SpecialTrainerMoves:
 	db 2, 1, RECOVER
 	db 2, 2, PSYCHIC_M
 	db 2, 3, THUNDER_WAVE
-	db 2, 4, PSYWAVE
+	db 2, 4, REFLECT
 	; alakazam
 	db 3, 1, RECOVER
 	db 3, 2, PSYCHIC_M
 	db 3, 3, SEISMIC_TOSS
-	db 3, 4, REFLECT
+	db 3, 4, SHADOW_BALL
 	db 0
 
 	db GIOVANNI, 3

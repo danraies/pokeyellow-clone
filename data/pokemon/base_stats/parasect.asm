@@ -18,7 +18,7 @@
 	     HYPER_BEAM,   RAGE,         MEGA_DRAIN,   SOLARBEAM,    DIG,          \
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         SKULL_BASH,   \
 	     REST,         SUBSTITUTE,   CUT,          STRENGTH,     EARTHQUAKE,   \
-		 ROCK_SLIDE,   DREAM_EATER
+		 ROCK_SLIDE,   DREAM_EATER,  SHADOW_BALL
 	; end
 
 	db 0 ; padding
