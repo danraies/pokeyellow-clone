@@ -498,7 +498,7 @@ CharmanderEvosMoves:
 	db 17, SEISMIC_TOSS
 	db 22, FIRE_SPIN
 	db 27, SLASH
-	db 32, BODY_SLAM
+	db 32, DRAGON_CLAW
 	db 37, FLAMETHROWER
 	db 42, ROAR
 	db 47, FIRE_BLAST
@@ -514,7 +514,7 @@ CharmeleonEvosMoves:
 	db 17, SEISMIC_TOSS
 	db 23, FIRE_SPIN
 	db 29, SLASH
-	db 35, BODY_SLAM
+	db 35, DRAGON_CLAW
 	db 40, FLAMETHROWER
 	db 45, ROAR
 	db 50, FIRE_BLAST
@@ -529,7 +529,7 @@ CharizardEvosMoves:
 	db 17, SEISMIC_TOSS
 	db 23, FIRE_SPIN
 	db 29, SLASH
-	db 35, BODY_SLAM
+	db 35, DRAGON_CLAW
 	db 41, FLAMETHROWER
 	db 47, ROAR
 	db 53, FIRE_BLAST
@@ -2066,6 +2066,37 @@ ButterfreeEvosMoves:
 	db 40, LEECH_LIFE
 	db 0
 
+ChanseyEvosMoves:
+; Evolutions
+	db 0
+; Learnset
+	db 12, SING
+	db 18, PSYBEAM
+	db 24, ICE_PUNCH
+	db 30, FIRE_PUNCH
+	db 36, SOFTBOILED
+	db 42, DEFENSE_CURL
+	db 48, LIGHT_SCREEN
+	db 54, EGG_BOMB
+	db 60, SELFDESTRUCT
+	db 0
+
+MewEvosMoves:
+; Evolutions
+	db 0
+; Learnset
+	db 5, BODY_SLAM
+	db 10, TRANSFORM
+	db 15, SHADOW_BALL
+	db 20, LEECH_LIFE
+	db 25, SOFTBOILED
+	db 30, METRONOME
+	db 35, SWORDS_DANCE
+	db 40, PSYCHIC_M
+	db 45, EARTHQUAKE
+	db 50, SKULL_BASH
+	db 0
+
 EeveeEvosMoves:
 ; Evolutions
 	db EVOLVE_ITEM, FIRE_STONE, 1, FLAREON
@@ -2073,79 +2104,66 @@ EeveeEvosMoves:
 	db EVOLVE_ITEM, WATER_STONE, 1, VAPOREON
 	db 0
 ; Learnset
+	db 6, QUICK_ATTACK
 	db 8, SAND_ATTACK
-	db 16, GROWL
-	db 23, QUICK_ATTACK
-	db 30, BITE
-	db 36, DOUBLE_TEAM
-	db 42, TAKE_DOWN
+	db 11, BITE
+	db 14, DOUBLE_KICK
+	db 20, LICK
+	db 26, DOUBLE_TEAM
+	db 32, DIG
+	db 38, BODY_SLAM
+	db 44, SKULL_BASH
 	db 0
 
 FlareonEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 6, QUICK_ATTACK
 	db 8, SAND_ATTACK
-	db 16, EMBER
-	db 23, QUICK_ATTACK
-	db 30, BITE
-	db 36, FIRE_SPIN
-	db 42, SMOG
-	db 47, LEER
-	db 52, FLAMETHROWER
+	db 11, BITE
+	db 14, EMBER
+	db 20, LICK
+	db 26, FIRE_SPIN
+	db 32, FLAMETHROWER
+	db 38, DRAGON_CLAW
+	db 44, SKULL_BASH
+	db 50, FIRE_BLAST
 	db 0
 
 JolteonEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 6, QUICK_ATTACK
 	db 8, SAND_ATTACK
-	db 16, THUNDERSHOCK
-	db 23, QUICK_ATTACK
-	db 30, DOUBLE_KICK
-	db 36, PIN_MISSILE
-	db 42, THUNDER_WAVE
-	db 47, AGILITY
-	db 52, THUNDER
+	db 11, BITE
+	db 14, THUNDERSHOCK
+	db 20, LICK
+	db 26, THUNDER_WAVE
+	db 32, THUNDERBOLT
+	db 38, PIN_MISSILE
+	db 44, SKULL_BASH
+	db 50, THUNDER
 	db 0
 
 VaporeonEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 6, QUICK_ATTACK
 	db 8, SAND_ATTACK
-	db 16, WATER_GUN
-	db 23, QUICK_ATTACK
-	db 30, BITE
-	db 36, AURORA_BEAM
-	db 42, HAZE
-	db 42, MIST
-	db 47, ACID_ARMOR
-	db 52, HYDRO_PUMP
+	db 11, BITE
+	db 14, WATER_GUN
+	db 20, LICK
+	db 26, HAZE
+	db 32, BUBBLEBEAM
+	db 38, ICE_BEAM
+	db 44, SKULL_BASH
+	db 50, HYDRO_PUMP
 	db 0
 
-ChanseyEvosMoves:
-; Evolutions
-	db 0
-; Learnset
-	db 12, DOUBLESLAP
-	db 24, SING
-	db 30, GROWL
-	db 38, MINIMIZE
-	db 44, DEFENSE_CURL
-	db 48, LIGHT_SCREEN
-	db 54, DOUBLE_EDGE
-	db 0
-
-MewEvosMoves:
-; Evolutions
-	db 0
-; Learnset
-	db 10, TRANSFORM
-	db 20, MEGA_PUNCH
-	db 30, METRONOME
-	db 40, PSYCHIC_M
-	db 0
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 MissingNo1FEvosMoves:
 ; Evolutions

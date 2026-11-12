@@ -10,8 +10,8 @@
 	INCBIN "gfx/pokemon/front/chansey.pic", 0, 1 ; sprite dimensions
 	dw ChanseyPicFront, ChanseyPicBack
 
-	db POUND, TAIL_WHIP, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_FAST ; growth rate
+	db DOUBLESLAP, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset
+	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    TAKE_DOWN,    \
@@ -21,7 +21,7 @@
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         METRONOME,    \
 	     EGG_BOMB,     FIRE_BLAST,   SKULL_BASH,   FLAMETHROWER, REST,         \
 	     THUNDER_WAVE, PSYWAVE,      TRI_ATTACK,   SUBSTITUTE,   STRENGTH,     \
-	     FLASH
+	     FLASH,        EXPLOSION,    DOUBLE_TEAM
 	; end
 
 	db 0 ; padding

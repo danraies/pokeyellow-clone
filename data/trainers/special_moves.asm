@@ -279,8 +279,11 @@ SpecialTrainerMoves:
 	db 5, 2, SHADOW_BALL
 	db 5, 3, CONFUSE_RAY
 	db 5, 4, ROAR
-	; jolteon !!!
-	db 6, 3, QUICK_ATTACK
+	; jolteon
+	db 6, 1, THUNDER
+	db 6, 2, PIN_MISSILE
+	db 6, 3, THUNDER_WAVE
+	db 6, 4, LICK
 	db 0
 
 	db RIVAL3, 2
@@ -309,9 +312,11 @@ SpecialTrainerMoves:
 	db 5, 2, SURF
 	db 5, 3, SPIKE_CANNON
 	db 5, 4, CLAMP
-	; flareon !!!
-	db 6, 2, REFLECT
-	db 6, 3, QUICK_ATTACK
+	; flareon
+	db 6, 1, FIRE_BLAST
+	db 6, 2, DRAGON_CLAW
+	db 6, 3, FIRE_SPIN
+	db 6, 4, LICK
 	db 0
 
 	db RIVAL3, 3
@@ -340,9 +345,11 @@ SpecialTrainerMoves:
 	db 5, 2, TRI_ATTACK
 	db 5, 3, THUNDER_WAVE
 	db 5, 4, SUPERSONIC
-	; vaporeon !!!
-	db 6, 1, AURORA_BEAM
-	db 6, 3, QUICK_ATTACK
+	; vaporeon
+	db 6, 1, HYDRO_PUMP
+	db 6, 2, ICE_BEAM
+	db 6, 3, HAZE
+	db 6, 4, LICK
 	db 0
 
 	db -1 ; end
