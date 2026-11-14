@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/ekans.pic", 0, 1 ; sprite dimensions
 	dw EkansPicFront, EkansPicBack
 
-	db SCREECH, BITE, AGILITY, NO_MOVE ; level 1 learnset
+	db BUG_BITE, POISON_STING, AGILITY, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset

@@ -61,7 +61,7 @@ Moves:
 	move SUPERSONIC,   CONFUSION_EFFECT,             0, NORMAL,        60, 20
 	move SONICBOOM,    SPECIAL_DAMAGE_EFFECT,        1, NORMAL,        90, 20
 	move DISABLE,      DISABLE_EFFECT,               0, NORMAL,        55, 20
-	move ACID,         DEFENSE_DOWN_SIDE_EFFECT,    40, POISON,       100, 30
+	move BUG_BITE,     DEFENSE_DOWN_SIDE_EFFECT,    45, BUG,          100, 30
 	move EMBER,        BURN_SIDE_EFFECT1,           40, FIRE,         100, 25
 	move FLAMETHROWER, BURN_SIDE_EFFECT1,           95, FIRE,         100, 15
 	move MIST,         MIST_EFFECT,                  0, ICE,          100, 30
@@ -81,7 +81,7 @@ Moves:
 	move COUNTER,      NO_ADDITIONAL_EFFECT,         1, FIGHTING,     100, 20
 	move SEISMIC_TOSS, SPECIAL_DAMAGE_EFFECT,        1, FIGHTING,     100, 20
 	move STRENGTH,     NO_ADDITIONAL_EFFECT,        75, FIGHTING,      95, 15
-	move ABSORB,       DRAIN_HP_EFFECT,             20, GRASS,        100, 20
+	move ABSORB,       DRAIN_HP_EFFECT,             30, GRASS,        100, 20
 	move MEGA_DRAIN,   DRAIN_HP_EFFECT,             60, GRASS,        100, 10
 	move LEECH_SEED,   LEECH_SEED_EFFECT,            0, GRASS,         90, 15
 	move GROWTH,       SPECIAL_UP1_EFFECT,           0, NORMAL,       100, 40
@@ -133,7 +133,7 @@ Moves:
 	move SELFDESTRUCT, EXPLODE_EFFECT,             130, NORMAL,       100,  5
 	move EGG_BOMB,     NO_ADDITIONAL_EFFECT,       100, GRASS,         80, 10
 	move LICK,         PARALYZE_SIDE_EFFECT2,       50, GHOST,        100, 30
-	move SMOG,         POISON_SIDE_EFFECT2,         20, POISON,        70, 20
+	move SMOG,         POISON_SIDE_EFFECT2,         30, POISON,        70, 20
 	move SLUDGE,       POISON_SIDE_EFFECT2,         75, POISON,       100, 20
 	move BULLDOZE,     SPEED_DOWN_SIDE_EFFECT,      65, GROUND,        90, 20
 	move FIRE_BLAST,   BURN_SIDE_EFFECT2,          120, FIRE,          85, 10

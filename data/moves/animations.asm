@@ -50,7 +50,7 @@ AttackAnimationPointers:
 	dw SupersonicAnim
 	dw SonicBoomAnim
 	dw DisableAnim
-	dw AcidAnim
+	dw BugBiteAnim
 	dw EmberAnim
 	dw FlamethrowerAnim
 	dw MistAnim
@@ -485,9 +485,8 @@ DisableAnim:
 	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
 	db -1 ; end
 
-AcidAnim:
-	battle_anim ACID, SUBANIM_1_BLOB_TOSS, 1, 6
-	battle_anim ACID, SUBANIM_1_BLOB_DRIP_ENEMY, 1, 6
+BugBiteAnim:
+	battle_anim BITE, SUBANIM_0_STAR_THRICE, 0, 8
 	db -1 ; end
 
 EmberAnim:

@@ -51,7 +51,7 @@ MoveNames::
 	li "SUPERSONIC"
 	li "SONICBOOM"
 	li "DISABLE"
-	li "ACID"
+	li "BUG BITE"
 	li "EMBER"
 	li "FLAMETHROWER"
 	li "MIST"

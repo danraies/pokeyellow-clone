@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/oddish.pic", 0, 1 ; sprite dimensions
 	dw OddishPicFront, OddishPicBack
 
-	db POISONPOWDER, TACKLE, VINE_WHIP, NO_MOVE ; level 1 learnset
+	db POISONPOWDER, SMOG, ABSORB, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset

@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/exeggutor.pic", 0, 1 ; sprite dimensions
 	dw ExeggutorPicFront, ExeggutorPicBack
 
-	db FURY_ATTACK, SLEEP_POWDER, CONFUSION, NO_MOVE ; level 1 learnset
+	db FURY_ATTACK, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
