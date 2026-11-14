@@ -11,7 +11,7 @@
 	dw DragonitePicFront, DragonitePicBack
 
 	db WRAP, LEER, DRAGON_RAGE, NO_MOVE ; level 1 learnset
-	db GROWTH_SLOW ; growth rate
+	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset
 	tmhm RAZOR_WIND,   TOXIC,        HORN_DRILL,   BODY_SLAM,    TAKE_DOWN,    \

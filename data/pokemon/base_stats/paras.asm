@@ -11,7 +11,7 @@
 	dw ParasPicFront, ParasPicBack
 
 	db SCRATCH, BUG_BITE, MEGA_DRAIN, NO_MOVE ; level 1 learnset
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset
 	tmhm SWORDS_DANCE, TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  \

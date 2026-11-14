@@ -11,7 +11,7 @@
 	dw NidoqueenPicFront, NidoqueenPicBack
 
 	db TAIL_WHIP, SCRATCH, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_MEDIUM_SLOW ; growth rate
+	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        HORN_DRILL,   BODY_SLAM,    \

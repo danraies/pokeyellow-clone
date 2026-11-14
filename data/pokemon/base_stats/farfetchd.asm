@@ -11,7 +11,7 @@
 	dw FarfetchdPicFront, FarfetchdPicBack
 
 	db PECK, GUST, SAND_ATTACK, LEER ; level 1 learnset
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset
 	tmhm RAZOR_WIND,   SWORDS_DANCE, WHIRLWIND,    TOXIC,        BODY_SLAM,    \

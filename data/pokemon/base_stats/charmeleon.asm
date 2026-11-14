@@ -11,7 +11,7 @@
 	dw CharmeleonPicFront, CharmeleonPicBack
 
 	db SCRATCH, LEER, EMBER, NO_MOVE ; level 1 learnset
-	db GROWTH_MEDIUM_SLOW ; growth rate
+	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset
 	tmhm MEGA_PUNCH,   SWORDS_DANCE, MEGA_KICK,    TOXIC,        BODY_SLAM,    \

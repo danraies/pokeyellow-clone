@@ -11,7 +11,7 @@
 	dw LaprasPicFront, LaprasPicBack
 
 	db GROWL, AURORA_BEAM, BUBBLEBEAM, NO_MOVE ; level 1 learnset
-	db GROWTH_SLOW ; growth rate
+	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset
 	tmhm TOXIC,        HORN_DRILL,   BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  \

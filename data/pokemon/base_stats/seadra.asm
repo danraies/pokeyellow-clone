@@ -11,7 +11,7 @@
 	dw SeadraPicFront, SeadraPicBack
 
 	db WATER_GUN, QUICK_ATTACK, SMOKESCREEN, NO_MOVE ; level 1 learnset
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset
 	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    \

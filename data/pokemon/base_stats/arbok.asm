@@ -11,7 +11,7 @@
 	dw ArbokPicFront, ArbokPicBack
 
 	db BUG_BITE, POISON_STING, AGILITY, NO_MOVE ; level 1 learnset
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset
 	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  HYPER_BEAM,   \

@@ -11,7 +11,7 @@
 	dw KabutopsPicFront, KabutopsPicBack
 
 	db WITHDRAW, ROCK_THROW, BUBBLEBEAM, NO_MOVE ; level 1 learnset
-	db GROWTH_MEDIUM_FAST ; growth rate
+	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset
 	tmhm RAZOR_WIND,   SWORDS_DANCE, MEGA_KICK,    TOXIC,        BODY_SLAM,    \

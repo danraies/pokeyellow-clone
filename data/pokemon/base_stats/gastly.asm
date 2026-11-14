@@ -11,7 +11,7 @@
 	dw GastlyPicFront, GastlyPicBack
 
 	db ABSORB, DISABLE, CONFUSE_RAY, NO_MOVE ; level 1 learnset
-	db GROWTH_MEDIUM_SLOW ; growth rate
+	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset
 	tmhm TOXIC,        RAGE,         MEGA_DRAIN,   THUNDERBOLT,  THUNDER,      \

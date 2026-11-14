@@ -11,7 +11,7 @@
 	dw MagikarpPicFront, MagikarpPicBack
 
 	db SPLASH, NO_MOVE, NO_MOVE, NO_MOVE ; level 1 learnset
-	db GROWTH_SLOW ; growth rate
+	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset
 	tmhm
