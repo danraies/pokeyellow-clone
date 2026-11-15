@@ -1531,7 +1531,7 @@ FarfetchdEvosMoves:
 
 VenonatEvosMoves:
 ; Evolutions
-	db EVOLVE_LEVEL, 31, VENOMOTH
+	db EVOLVE_LEVEL, 25, VENOMOTH
 	db 0
 ; Learnset
 	db 9, BUG_BITE
@@ -1553,8 +1553,8 @@ VenomothEvosMoves:
 	db 14, SUPERSONIC
 	db 19, CONFUSION
 	db 22, POISONPOWDER
-	db 27, LEECH_LIFE
-	db 30, STUN_SPORE
+	db 28, LEECH_LIFE
+	db 33, STUN_SPORE
 	db 38, PSYBEAM
 	db 43, SLEEP_POWDER
 	db 50, PSYCHIC_M
