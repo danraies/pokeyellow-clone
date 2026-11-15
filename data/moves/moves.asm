@@ -60,7 +60,7 @@ Moves:
 	move SING,         SLEEP_EFFECT,                 0, NORMAL,        60, 15
 	move SUPERSONIC,   CONFUSION_EFFECT,             0, NORMAL,        60, 20
 	move SONICBOOM,    SPECIAL_DAMAGE_EFFECT,        1, NORMAL,        90, 20
-	move DISABLE,      DISABLE_EFFECT,               0, NORMAL,        55, 20
+	move DISABLE,      DISABLE_EFFECT,               0, NORMAL,       100, 20
 	move BUG_BITE,     DEFENSE_DOWN_SIDE_EFFECT,    45, BUG,          100, 30
 	move EMBER,        BURN_SIDE_EFFECT1,           40, FIRE,         100, 25
 	move FLAMETHROWER, BURN_SIDE_EFFECT1,           95, FIRE,         100, 15

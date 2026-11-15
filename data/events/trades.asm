@@ -15,14 +15,14 @@ TradeMons:
 	; Red/Blue uses the original JP Red/Green trades but with the JP Blue
 	; post-trade text. English Yellow changed _AfterTrade2Text to
 	; not mention evolution.
-	npctrade LICKITUNG,  DUGTRIO,  TRADE_DIALOGSET_CASUAL,    "GURIO"   ; used in ROUTE_11_GATE_2F
-	npctrade CLEFAIRY,   MR_MIME,  TRADE_DIALOGSET_CASUAL,    "MILES"   ; used in ROUTE_2_TRADE_HOUSE
-	npctrade BUTTERFREE, BEEDRILL, TRADE_DIALOGSET_HAPPY,     "STINGER" ; unused
-	npctrade KANGASKHAN, MUK,      TRADE_DIALOGSET_CASUAL,    "STICKY"  ; used in CINNABAR_LAB_FOSSIL_ROOM
-	npctrade MEW,        MEW,      TRADE_DIALOGSET_HAPPY,     "BART"    ; unused
-	npctrade TANGELA,    PARASECT, TRADE_DIALOGSET_CASUAL,    "SPIKE"   ; used in ROUTE_18_GATE_2F
-	npctrade PIDGEOT,    PIDGEOT,  TRADE_DIALOGSET_EVOLUTION, "MARTY"   ; unused
-	npctrade GOLDUCK,    RHYDON,   TRADE_DIALOGSET_EVOLUTION, "BUFFY"   ; used in CINNABAR_LAB_TRADE_ROOM
-	npctrade GROWLITHE,  DEWGONG,  TRADE_DIALOGSET_HAPPY,     "CEZANNE" ; used in CINNABAR_LAB_TRADE_ROOM
-	npctrade CUBONE,     MACHOKE,  TRADE_DIALOGSET_HAPPY,     "RICKY"   ; used in UNDERGROUND_PATH_ROUTE_5
+	npctrade HAUNTER,    MR_MIME,   TRADE_DIALOGSET_CASUAL,    "HANZ"    ; used in ROUTE_11_GATE_2F ;;;;;;;;;;;;;;;;;;
+	npctrade CLEFAIRY,   FARFETCHD, TRADE_DIALOGSET_CASUAL,    "CANE"    ; used in ROUTE_2_TRADE_HOUSE ;;;;;;;;;;;;;;; <-- This is important
+	npctrade BUTTERFREE, BEEDRILL,  TRADE_DIALOGSET_HAPPY,     "STINGER" ; unused ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	npctrade LICKITUNG,  RAICHU,    TRADE_DIALOGSET_CASUAL,    "GORUCHU" ; used in CINNABAR_LAB_FOSSIL_ROOM ;;;;;;;;;;
+	npctrade MEW,        MEW,       TRADE_DIALOGSET_HAPPY,     "BART"    ; unused ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	npctrade DEWGONG,    TAUROS,    TRADE_DIALOGSET_CASUAL,    "THUNDER" ; used in ROUTE_18_GATE_2F ;;;;;;;;;;;;;;;;;;
+	npctrade PIDGEOT,    PIDGEOT,   TRADE_DIALOGSET_EVOLUTION, "MARTY"   ; unused ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	npctrade VICTREEBEL, OMANYTE,   TRADE_DIALOGSET_EVOLUTION, "HERMES"  ; used in CINNABAR_LAB_TRADE_ROOM ;;;;;;;;;;;
+	npctrade VILEPLUME,  KABUTO,    TRADE_DIALOGSET_HAPPY,     "ERWIN"   ; used in CINNABAR_LAB_TRADE_ROOM ;;;;;;;;;;;
+	npctrade PARAS,      VULPIX,    TRADE_DIALOGSET_HAPPY,     "ZEPHYR"  ; used in UNDERGROUND_PATH_ROUTE_5 ;;;;;;;;;;
 	assert_table_length NUM_NPC_TRADES

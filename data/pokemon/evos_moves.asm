@@ -753,7 +753,8 @@ GastlyEvosMoves:
 	db 0
 ; Learnset
 	db 8, NIGHT_SHADE
-	db 15, LICK
+	db 12, CONFUSION
+	db 16, LICK
 	db 21, GLARE
 	db 28, PSYBEAM
 	db 32, SUBSTITUTE
@@ -768,7 +769,8 @@ HaunterEvosMoves:
 	db 0
 ; Learnset
 	db 8, NIGHT_SHADE
-	db 15, LICK
+	db 12, CONFUSION
+	db 16, LICK
 	db 21, GLARE
 	db 28, PSYBEAM
 	db 34, SUBSTITUTE
@@ -782,7 +784,8 @@ GengarEvosMoves:
 	db 0
 ; Learnset
 	db 8, NIGHT_SHADE
-	db 15, LICK
+	db 12, CONFUSION
+	db 16, LICK
 	db 21, GLARE
 	db 28, PSYBEAM
 	db 34, SUBSTITUTE
@@ -1525,6 +1528,7 @@ FarfetchdEvosMoves:
 	db 7, AGILITY
 	db 15, FURY_ATTACK
 	db 23, WING_ATTACK
+	db 27, CUT ; <-- This is important
 	db 31, SWORDS_DANCE
 	db 39, SLASH
 	db 0
