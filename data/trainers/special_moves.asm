@@ -85,7 +85,7 @@ SpecialTrainerMoves:
 	; ninetales
 	db 1, 1, FLAMETHROWER
 	db 1, 2, QUICK_ATTACK
-	db 1, 3, ROAR
+	db 1, 3, MEGA_DRAIN
 	db 1, 4, CONFUSE_RAY
 	; rapidash
 	db 1, 4, LICK
@@ -175,8 +175,8 @@ SpecialTrainerMoves:
 
 	db BRUNO, 1
 	; tauros
-	db 1, 1, ROAR
-	db 1, 2, STOMP
+	db 1, 1, MEDITATE
+	db 1, 2, BODY_SLAM
 	db 1, 3, EARTHQUAKE
 	db 1, 4, DOUBLE_KICK
 	; hitmonchan
@@ -278,7 +278,7 @@ SpecialTrainerMoves:
 	db 5, 1, FLAMETHROWER
 	db 5, 2, SHADOW_BALL
 	db 5, 3, CONFUSE_RAY
-	db 5, 4, ROAR
+	db 5, 4, MEGA_DRAIN
 	; jolteon
 	db 6, 1, THUNDER
 	db 6, 2, PIN_MISSILE
@@ -339,7 +339,7 @@ SpecialTrainerMoves:
 	db 5, 1, FLAMETHROWER
 	db 5, 2, SHADOW_BALL
 	db 5, 3, CONFUSE_RAY
-	db 5, 4, ROAR
+	db 5, 4, MEGA_DRAIN
 	; magneton
 	db 5, 1, THUNDERBOLT
 	db 5, 2, TRI_ATTACK

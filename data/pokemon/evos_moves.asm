@@ -525,9 +525,9 @@ CharmanderEvosMoves:
 	db 17, SEISMIC_TOSS
 	db 22, FIRE_SPIN
 	db 27, SLASH
-	db 32, DRAGON_CLAW
-	db 37, FLAMETHROWER
-	db 42, ROAR
+	db 32, FLAMETHROWER
+	db 37, WING_ATTACK
+	db 42, DRAGON_CLAW
 	db 47, FIRE_BLAST
 	db 0
 
@@ -541,9 +541,9 @@ CharmeleonEvosMoves:
 	db 17, SEISMIC_TOSS
 	db 23, FIRE_SPIN
 	db 29, SLASH
-	db 35, DRAGON_CLAW
-	db 40, FLAMETHROWER
-	db 45, ROAR
+	db 35, FLAMETHROWER
+	db 40, WING_ATTACK
+	db 45, DRAGON_CLAW
 	db 50, FIRE_BLAST
 	db 0
 
@@ -556,9 +556,9 @@ CharizardEvosMoves:
 	db 17, SEISMIC_TOSS
 	db 23, FIRE_SPIN
 	db 29, SLASH
-	db 35, DRAGON_CLAW
-	db 41, FLAMETHROWER
-	db 47, ROAR
+	db 35, FLAMETHROWER
+	db 41, WING_ATTACK
+	db 47, DRAGON_CLAW
 	db 53, FIRE_BLAST
 	db 0
 
@@ -1514,9 +1514,9 @@ TaurosEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 21, STOMP
-	db 28, DOUBLE_KICK
-	db 35, ROAR
+	db 21, DOUBLE_KICK
+	db 28, MEDITATE
+	db 35, BODY_SLAM
 	db 44, DOUBLE_EDGE
 	db 51, EARTHQUAKE
 	db 0
@@ -1713,9 +1713,10 @@ VulpixEvosMoves:
 	db EVOLVE_ITEM, FIRE_STONE, 1, NINETALES
 	db 0
 ; Learnset
+	db 10, CONFUSE_RAY
 	db 16, FIRE_SPIN
-	db 21, ROAR
-	db 28, CONFUSE_RAY
+	db 21, RAZOR_WIND
+	db 28, MEGA_DRAIN
 	db 35, FLAMETHROWER
 	db 42, SHADOW_BALL
 	db 0
@@ -1724,9 +1725,10 @@ NinetalesEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 10, CONFUSE_RAY
 	db 16, FIRE_SPIN
-	db 21, ROAR
-	db 30, CONFUSE_RAY
+	db 21, RAZOR_WIND
+	db 30, MEGA_DRAIN
 	db 40, FLAMETHROWER
 	db 50, SHADOW_BALL
 	db 0
@@ -2125,8 +2127,8 @@ ButterfreeEvosMoves:
 	db 13, STUN_SPORE
 	db 14, GUST
 	db 15, SLEEP_POWDER
-	db 18, MEGA_DRAIN
-	db 23, WHIRLWIND
+	db 18, BUG_BITE
+	db 23, MEGA_DRAIN
 	db 28, RAZOR_WIND
 	db 34, PSYBEAM
 	db 40, LEECH_LIFE

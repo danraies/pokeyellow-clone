@@ -17,7 +17,8 @@
 	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  RAGE,         \
 	     DIG,          MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
 	     FIRE_BLAST,   SWIFT,        SKULL_BASH,   REST,         SUBSTITUTE,   \
-		 FLAMETHROWER, PSYCHIC_M,    TRI_ATTACK,   SHADOW_BALL
+		 FLAMETHROWER, PSYCHIC_M,    TRI_ATTACK,   SHADOW_BALL,  MEGA_DRAIN,   \
+		 RAZOR_WIND
 	; end
 
 	db 0 ; padding
