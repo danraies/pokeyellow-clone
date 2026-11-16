@@ -16,7 +16,7 @@ PrizeMenuMon1Cost:
 	db "@"
 
 PrizeMenuMon2Entries:
-	db EKANS
+	db MEOWTH
 	db KOFFING
 	db PORYGON
 	db "@"
@@ -29,7 +29,7 @@ PrizeMenuMon2Cost:
 
 PrizeMenuTMsEntries:
 	db TM_DRAGON_CLAW
-	db TM_HYPER_BEAM
+	db TM_ROCK_SLIDE
 	db TM_EARTHQUAKE
 	db "@"
 

@@ -17,8 +17,8 @@ ItemPrices::
 	bcd3 200   ; PARLYZ_HEAL
 	bcd3 6000  ; FULL_RESTORE
 	bcd3 4000  ; MAX_POTION
-	bcd3 2000  ; HYPER_POTION
-	bcd3 1000  ; SUPER_POTION
+	bcd3 2400  ; HYPER_POTION
+	bcd3 1200  ; SUPER_POTION
 	bcd3 25    ; POTION
 	bcd3 0     ; BOULDERBADGE
 	bcd3 0     ; CASCADEBADGE
@@ -45,7 +45,7 @@ ItemPrices::
 	bcd3 0     ; SECRET_KEY
 	bcd3 0     ; ITEM_2C
 	bcd3 0     ; BIKE_VOUCHER
-	bcd3 950   ; X_ACCURACY
+	bcd3 1000  ; X_ACCURACY
 	bcd3 2100  ; LEAF_STONE
 	bcd3 0     ; CARD_KEY
 	bcd3 20000 ; NUGGET
@@ -54,20 +54,20 @@ ItemPrices::
 	bcd3 750   ; FULL_HEAL
 	bcd3 3000  ; REVIVE
 	bcd3 6000  ; MAX_REVIVE
-	bcd3 700   ; GUARD_SPEC
+	bcd3 500   ; GUARD_SPEC
 	bcd3 350   ; SUPER_REPEL
 	bcd3 350   ; MAX_REPEL
-	bcd3 650   ; DIRE_HIT
+	bcd3 500   ; DIRE_HIT
 	bcd3 10    ; COIN
-	bcd3 200   ; FRESH_WATER
-	bcd3 300   ; SODA_POP
-	bcd3 350   ; LEMONADE
+	bcd3 500   ; FRESH_WATER
+	bcd3 500   ; SODA_POP
+	bcd3 500   ; LEMONADE
 	bcd3 0     ; S_S_TICKET
 	bcd3 0     ; GOLD_TEETH
 	bcd3 500   ; X_ATTACK
-	bcd3 550   ; X_DEFEND
-	bcd3 350   ; X_SPEED
-	bcd3 350   ; X_SPECIAL
+	bcd3 500   ; X_DEFEND
+	bcd3 500   ; X_SPEED
+	bcd3 500   ; X_SPECIAL
 	bcd3 0     ; COIN_CASE
 	bcd3 0     ; OAKS_PARCEL
 	bcd3 0     ; ITEMFINDER

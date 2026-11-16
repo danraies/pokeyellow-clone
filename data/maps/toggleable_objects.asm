@@ -205,7 +205,7 @@ ToggleableObjectStates:
 	toggle_object_state VICTORYROAD2F_MOLTRES,       ON
 	toggle_object_state VICTORYROAD2F_TM_SUBMISSION, ON
 	toggle_object_state VICTORYROAD2F_FULL_HEAL,     ON
-	toggle_object_state VICTORYROAD2F_TM_MEGA_KICK,  ON
+	toggle_object_state VICTORYROAD2F_TM_ICE_BEAM,  ON
 	toggle_object_state VICTORYROAD2F_GUARD_SPEC,    ON
 	toggle_object_state VICTORYROAD2F_BOULDER3,      ON
 
@@ -374,7 +374,7 @@ ToggleableObjectStates:
 
 	toggleable_objects_for SAFARI_ZONE_NORTH
 	toggle_object_state SAFARIZONENORTH_PROTEIN,       ON
-	toggle_object_state SAFARIZONENORTH_TM_SKULL_BASH, ON
+	toggle_object_state SAFARIZONENORTH_TM_ROCK_SLIDE, ON
 
 	toggleable_objects_for SAFARI_ZONE_WEST
 	toggle_object_state SAFARIZONEWEST_MAX_POTION,     ON

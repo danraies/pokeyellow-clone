@@ -105,7 +105,7 @@ CeladonMartRoofScript_GiveDrinkToGirl:
 	ld hl, CeladonMartRoofLittleGirlYaySodaPopText
 	call PrintText
 	call RemoveItemByIDBank12
-	lb bc, TM_ROCK_SLIDE, 1
+	lb bc, TM_SKULL_BASH, 1
 	call GiveItem
 	jr nc, .bagFull
 	ld hl, CeladonMartRoofLittleGirlReceivedTM48Text
@@ -118,7 +118,7 @@ CeladonMartRoofScript_GiveDrinkToGirl:
 	ld hl, CeladonMartRoofLittleGirlYayFreshWaterText
 	call PrintText
 	call RemoveItemByIDBank12
-	lb bc, TM_ICE_BEAM, 1
+	lb bc, TM_MEGA_KICK, 1
 	call GiveItem
 	jr nc, .bagFull
 	ld hl, CeladonMartRoofLittleGirlReceivedTM13Text
