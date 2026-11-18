@@ -130,7 +130,7 @@ FightingDojoKarateMasterText:
 	call PrintText
 	jr .end
 .defeated_master
-	ld hl, .IWillGiveYouAPokemonText
+	ld hl, .StayAndTrainWithUsText
 	call PrintText
 .end
 	jp TextScriptEnd
@@ -225,7 +225,7 @@ FightingDojoBlackbelt4AfterBattleText:
 
 FightingDojoHitmonleePokeBallText:
 	text_asm
-	CheckEitherEventSet EVENT_GOT_HITMONLEE, EVENT_GOT_HITMONCHAN
+	CheckEvent EVENT_GOT_HITMONLEE
 	jr z, .GetMon
 	ld hl, FightingDojoBetterNotGetGreedyText
 	call PrintText
@@ -259,7 +259,7 @@ FightingDojoHitmonleePokeBallText:
 
 FightingDojoHitmonchanPokeBallText:
 	text_asm
-	CheckEitherEventSet EVENT_GOT_HITMONLEE, EVENT_GOT_HITMONCHAN
+	CheckEvent EVENT_GOT_HITMONCHAN
 	jr z, .GetMon
 	ld hl, FightingDojoBetterNotGetGreedyText
 	call PrintText

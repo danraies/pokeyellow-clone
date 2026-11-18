@@ -21,17 +21,20 @@ _FightingDojoKarateMasterIWillGiveYouAPokemonText::
 	text "Indeed, I have"
 	line "lost!"
 
-	para "But, I beseech"
-	line "you, do not take"
-	cont "our emblem as"
-	cont "your trophy!"
+	para "We do not award"
+	line "a badge here in"
+	cont "the dojo."
 
-	para "In return, I will"
-	line "give you a prized"
-	cont "fighting #MON!"
+	para "Instead, the"
+	line "prized fighting"
+	cont "#MON that you"
+	cont "faced would like"
+	cont "to travel with"
+	cont "you."
 
-	para "Choose whichever"
-	line "one you like!"
+	para "Please take their"
+	line "pokeballs if you"
+	cont "are willing!"
 	done
 
 _FightingDojoKarateMasterStayAndTrainWithUsText::
