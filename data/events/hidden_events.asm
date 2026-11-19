@@ -167,7 +167,7 @@ DEF ANY_FACING EQU $d0
 
 	hidden_events_for VIRIDIAN_FOREST
 	hidden_event  1, 18, HiddenItems, POTION
-	hidden_event 16, 42, HiddenItems, ANTIDOTE
+	hidden_event 16, 42, HiddenItems, FULL_HEAL
 	db -1 ; end
 
 	hidden_events_for MT_MOON_B2F

@@ -702,7 +702,7 @@ _ViridianBlackboardSleepText::
 	line "asleep even after"
 	cont "battles."
 
-	para "Use AWAKENING to"
+	para "Use FULL HEAL to"
 	line "wake them up!"
 	prompt
 
@@ -714,7 +714,7 @@ _ViridianBlackboardPoisonText::
 	para "Poison lingers"
 	line "after battles."
 
-	para "Use an ANTIDOTE"
+	para "Use an FULL HEAL"
 	line "to cure poison!"
 	prompt
 
@@ -726,7 +726,7 @@ _ViridianBlackboardPrlzText::
 	para "Paralysis remains"
 	line "after battles."
 
-	para "Use PARLYZ HEAL"
+	para "Use FULL HEAL"
 	line "for treatment!"
 	prompt
 
@@ -752,7 +752,7 @@ _ViridianBlackboardFrozenText::
 	line "even after the"
 	cont "battle ends."
 
-	para "Use ICE HEAL to"
+	para "Use FULL HEAL to"
 	line "thaw out #MON!"
 	prompt
 

@@ -619,8 +619,8 @@ ExeggcuteEvosMoves:
 	db 12, CONFUSION
 	db 16, SLEEP_POWDER
 	db 22, MEGA_DRAIN
-	db 28, REFLECT
-	db 32, PSYBEAM
+	db 28, PSYBEAM
+	db 32, LEECH_LIFE
 	db 37, LEECH_SEED
 	db 42, EGG_BOMB
 	db 48, GROWTH
@@ -634,8 +634,8 @@ ExeggutorEvosMoves:
 	db 12, CONFUSION
 	db 16, SLEEP_POWDER
 	db 22, MEGA_DRAIN
-	db 28, REFLECT
-	db 32, PSYBEAM
+	db 28, PSYBEAM
+	db 32, LEECH_LIFE
 	db 40, LEECH_SEED
 	db 49, EGG_BOMB
 	db 58, GROWTH
@@ -833,7 +833,7 @@ CuboneEvosMoves:
 	db 31, BODY_SLAM
 	db 38, THRASH
 	db 43, BONEMERANG
-	db 46, RAGE
+	db 46, HAYMAKER
 	db 0
 
 MarowakEvosMoves:
@@ -847,7 +847,7 @@ MarowakEvosMoves:
 	db 33, BODY_SLAM
 	db 41, THRASH
 	db 48, BONEMERANG
-	db 55, RAGE
+	db 55, HAYMAKER
 	db 0
 
 LaprasEvosMoves:
@@ -917,7 +917,7 @@ AerodactylEvosMoves:
 	db 16, BITE
 	db 25, ROCK_THROW
 	db 33, DRILL_PECK
-	db 38, TAKE_DOWN
+	db 38, HEADBUTT
 	db 45, ROCK_SLIDE
 	db 54, HYPER_BEAM
 	db 0
@@ -1034,7 +1034,7 @@ PinsirEvosMoves:
 	db 20, SEISMIC_TOSS
 	db 24, BIND
 	db 29, LEECH_LIFE
-	db 35, SUBMISSION
+	db 35, HAYMAKER
 	db 42, GUILLOTINE
 	db 50, SWORDS_DANCE
 	db 0
@@ -1973,9 +1973,10 @@ RattataEvosMoves:
 ; Learnset
 	db 7, BITE
 	db 14, HYPER_FANG
-	db 23, AGILITY
+	db 23, THRASH
 	db 29, ROLLING_KICK
 	db 34, SUPER_FANG
+	db 40, AGILITY
 	db 0
 
 RaticateEvosMoves:
@@ -1984,9 +1985,10 @@ RaticateEvosMoves:
 ; Learnset
 	db 7, BITE
 	db 14, HYPER_FANG
-	db 27, AGILITY
+	db 27, THRASH
 	db 34, ROLLING_KICK
 	db 41, SUPER_FANG
+	db 48, AGILITY
 	db 0
 
 OddishEvosMoves:
