@@ -202,6 +202,8 @@ EvosMovesPointerTable:
 	dw VictreebelEvosMoves
 	assert_table_length NUM_POKEMON_INDEXES
 
+;;;; MOVES START ;;;;
+
 RhyhornEvosMoves:
 ; 20+25 in safari
 ; earliest trainers at 30
@@ -1056,6 +1058,8 @@ StaryuEvosMoves:
 
 StarmieEvosMoves:
 ; Evolutions
+	db 0
+; Learnset
 	db 7, HARDEN
 	db 16, WATER_GUN
 	db 21, SWIFT
@@ -1064,8 +1068,6 @@ StarmieEvosMoves:
 	db 39, MINIMIZE
 	db 47, LIGHT_SCREEN
 	db 55, HYDRO_PUMP
-	db 0
-; Learnset
 	db 0
 
 TangelaEvosMoves:
@@ -1188,7 +1190,7 @@ GeodudeEvosMoves:
 
 GravelerEvosMoves:
 ; Evolutions
-	db EVOLVE_TRADE, 1, GOLEM
+	db EVOLVE_LEVEL, 41, GOLEM
 	db 0
 ; Learnset
 	db 11, DEFENSE_CURL
@@ -1208,7 +1210,7 @@ GolemEvosMoves:
 	db 21, SELFDESTRUCT
 	db 29, ROLLING_KICK
 	db 36, EARTHQUAKE
-	db 43, EXPLOSION
+	db 47, EXPLOSION
 	db 0
 
 MachopEvosMoves:
@@ -2233,7 +2235,7 @@ VaporeonEvosMoves:
 	db 50, HYDRO_PUMP
 	db 0
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; MOVES STOP ;;;;
 
 MissingNo1FEvosMoves:
 ; Evolutions
