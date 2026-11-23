@@ -51,7 +51,8 @@
             "Atk": 49,
             "Def": 49,
             "Spd": 45,
-            "Spc": 65
+            "Spc": 65,
+            "BST": 253
         },
         "Types": [
             "GRASS",
@@ -133,7 +134,8 @@
             "Atk": 62,
             "Def": 63,
             "Spd": 60,
-            "Spc": 80
+            "Spc": 80,
+            "BST": 325
         },
         "Types": [
             "GRASS",
@@ -143,8 +145,7 @@
         "Base EXP": 141,
         "Starting Moves": [
             "TACKLE",
-            "GROWL",
-            "LEECH_SEED"
+            "GROWL"
         ],
         "TMHM Moves": [
             "SWORDS_DANCE",
@@ -210,7 +211,8 @@
             "Atk": 82,
             "Def": 83,
             "Spd": 80,
-            "Spc": 100
+            "Spc": 100,
+            "BST": 425
         },
         "Types": [
             "GRASS",
@@ -220,9 +222,7 @@
         "Base EXP": 208,
         "Starting Moves": [
             "TACKLE",
-            "GROWL",
-            "LEECH_SEED",
-            "VINE_WHIP"
+            "GROWL"
         ],
         "TMHM Moves": [
             "SWORDS_DANCE",
@@ -297,7 +297,8 @@
             "Atk": 52,
             "Def": 43,
             "Spd": 65,
-            "Spc": 50
+            "Spc": 50,
+            "BST": 249
         },
         "Types": [
             "FIRE",
@@ -389,7 +390,8 @@
             "Atk": 64,
             "Def": 58,
             "Spd": 80,
-            "Spc": 65
+            "Spc": 65,
+            "BST": 325
         },
         "Types": [
             "FIRE",
@@ -399,8 +401,7 @@
         "Base EXP": 142,
         "Starting Moves": [
             "SCRATCH",
-            "LEER",
-            "EMBER"
+            "LEER"
         ],
         "TMHM Moves": [
             "MEGA_PUNCH",
@@ -476,7 +477,8 @@
             "Atk": 84,
             "Def": 78,
             "Spd": 100,
-            "Spc": 85
+            "Spc": 85,
+            "BST": 425
         },
         "Types": [
             "FIRE",
@@ -486,9 +488,7 @@
         "Base EXP": 209,
         "Starting Moves": [
             "SCRATCH",
-            "LEER",
-            "EMBER",
-            "SEISMIC_TOSS"
+            "LEER"
         ],
         "TMHM Moves": [
             "MEGA_PUNCH",
@@ -575,7 +575,8 @@
             "Atk": 48,
             "Def": 65,
             "Spd": 43,
-            "Spc": 50
+            "Spc": 50,
+            "BST": 250
         },
         "Types": [
             "WATER",
@@ -666,7 +667,8 @@
             "Atk": 63,
             "Def": 80,
             "Spd": 58,
-            "Spc": 65
+            "Spc": 65,
+            "BST": 325
         },
         "Types": [
             "WATER",
@@ -676,8 +678,7 @@
         "Base EXP": 143,
         "Starting Moves": [
             "TACKLE",
-            "TAIL_WHIP",
-            "WATER_GUN"
+            "TAIL_WHIP"
         ],
         "TMHM Moves": [
             "MEGA_PUNCH",
@@ -752,7 +753,8 @@
             "Atk": 83,
             "Def": 100,
             "Spd": 78,
-            "Spc": 85
+            "Spc": 85,
+            "BST": 425
         },
         "Types": [
             "WATER",
@@ -762,9 +764,7 @@
         "Base EXP": 210,
         "Starting Moves": [
             "TACKLE",
-            "TAIL_WHIP",
-            "WATER_GUN",
-            "BITE"
+            "TAIL_WHIP"
         ],
         "TMHM Moves": [
             "MEGA_PUNCH",
@@ -811,7 +811,8 @@
             "Atk": 30,
             "Def": 35,
             "Spd": 45,
-            "Spc": 20
+            "Spc": 20,
+            "BST": 175
         },
         "Types": [
             "BUG",
@@ -822,7 +823,8 @@
         "Starting Moves": [
             "TACKLE",
             "STRING_SHOT"
-        ]
+        ],
+        "TMHM Moves": []
     },
     "METAPOD": {
         "Name": "METAPOD",
@@ -844,7 +846,8 @@
             "Atk": 20,
             "Def": 55,
             "Spd": 30,
-            "Spc": 25
+            "Spc": 25,
+            "BST": 180
         },
         "Types": [
             "BUG",
@@ -854,7 +857,8 @@
         "Base EXP": 72,
         "Starting Moves": [
             "HARDEN"
-        ]
+        ],
+        "TMHM Moves": []
     },
     "BUTTERFREE": {
         "Name": "BUTTERFREE",
@@ -902,7 +906,8 @@
             "Atk": 45,
             "Def": 50,
             "Spd": 70,
-            "Spc": 80
+            "Spc": 80,
+            "BST": 305
         },
         "Types": [
             "BUG",
@@ -951,7 +956,8 @@
             "Atk": 35,
             "Def": 30,
             "Spd": 50,
-            "Spc": 20
+            "Spc": 20,
+            "BST": 175
         },
         "Types": [
             "BUG",
@@ -962,11 +968,17 @@
         "Starting Moves": [
             "POISON_STING",
             "STRING_SHOT"
-        ]
+        ],
+        "TMHM Moves": []
     },
     "KAKUNA": {
         "Name": "KAKUNA",
-        "Level-Up Moves": [],
+        "Level-Up Moves": [
+            [
+                7,
+                "HARDEN"
+            ]
+        ],
         "Evolutions": [
             [
                 "LEVEL",
@@ -979,7 +991,8 @@
             "Atk": 25,
             "Def": 50,
             "Spd": 35,
-            "Spc": 25
+            "Spc": 25,
+            "BST": 180
         },
         "Types": [
             "BUG",
@@ -989,7 +1002,8 @@
         "Base EXP": 71,
         "Starting Moves": [
             "HARDEN"
-        ]
+        ],
+        "TMHM Moves": []
     },
     "BEEDRILL": {
         "Name": "BEEDRILL",
@@ -1029,7 +1043,8 @@
             "Atk": 80,
             "Def": 40,
             "Spd": 75,
-            "Spc": 45
+            "Spc": 45,
+            "BST": 305
         },
         "Types": [
             "BUG",
@@ -1103,7 +1118,8 @@
             "Atk": 45,
             "Def": 40,
             "Spd": 56,
-            "Spc": 35
+            "Spc": 35,
+            "BST": 216
         },
         "Types": [
             "NORMAL",
@@ -1178,7 +1194,8 @@
             "Atk": 60,
             "Def": 55,
             "Spd": 71,
-            "Spc": 50
+            "Spc": 50,
+            "BST": 299
         },
         "Types": [
             "NORMAL",
@@ -1247,7 +1264,8 @@
             "Atk": 80,
             "Def": 75,
             "Spd": 91,
-            "Spc": 70
+            "Spc": 70,
+            "BST": 399
         },
         "Types": [
             "NORMAL",
@@ -1319,7 +1337,8 @@
             "Atk": 56,
             "Def": 35,
             "Spd": 72,
-            "Spc": 25
+            "Spc": 25,
+            "BST": 218
         },
         "Types": [
             "NORMAL",
@@ -1386,7 +1405,8 @@
             "Atk": 81,
             "Def": 60,
             "Spd": 97,
-            "Spc": 50
+            "Spc": 50,
+            "BST": 343
         },
         "Types": [
             "NORMAL",
@@ -1461,7 +1481,8 @@
             "Atk": 60,
             "Def": 30,
             "Spd": 70,
-            "Spc": 31
+            "Spc": 31,
+            "BST": 231
         },
         "Types": [
             "NORMAL",
@@ -1525,7 +1546,8 @@
             "Atk": 90,
             "Def": 65,
             "Spd": 100,
-            "Spc": 61
+            "Spc": 61,
+            "BST": 381
         },
         "Types": [
             "NORMAL",
@@ -1535,8 +1557,7 @@
         "Base EXP": 162,
         "Starting Moves": [
             "PECK",
-            "GROWL",
-            "LEER"
+            "GROWL"
         ],
         "TMHM Moves": [
             "RAZOR_WIND",
@@ -1601,7 +1622,8 @@
             "Atk": 60,
             "Def": 44,
             "Spd": 55,
-            "Spc": 40
+            "Spc": 40,
+            "BST": 234
         },
         "Types": [
             "POISON",
@@ -1672,7 +1694,8 @@
             "Atk": 85,
             "Def": 69,
             "Spd": 80,
-            "Spc": 65
+            "Spc": 65,
+            "BST": 359
         },
         "Types": [
             "POISON",
@@ -1758,7 +1781,8 @@
             "Atk": 65,
             "Def": 50,
             "Spd": 90,
-            "Spc": 65
+            "Spc": 65,
+            "BST": 320
         },
         "Types": [
             "ELECTRIC",
@@ -1793,7 +1817,8 @@
             "THUNDER_WAVE",
             "SUBSTITUTE",
             "FLASH",
-            "SURF"
+            "SURF",
+            "DIG"
         ]
     },
     "RAICHU": {
@@ -1842,7 +1867,8 @@
             "Atk": 95,
             "Def": 70,
             "Spd": 115,
-            "Spc": 100
+            "Spc": 100,
+            "BST": 455
         },
         "Types": [
             "ELECTRIC",
@@ -1852,8 +1878,7 @@
         "Base EXP": 122,
         "Starting Moves": [
             "THUNDERSHOCK",
-            "GROWL",
-            "THUNDER_WAVE"
+            "GROWL"
         ],
         "TMHM Moves": [
             "MEGA_PUNCH",
@@ -1879,7 +1904,8 @@
             "THUNDER_WAVE",
             "SUBSTITUTE",
             "FLASH",
-            "SURF"
+            "SURF",
+            "DIG"
         ]
     },
     "SANDSHREW": {
@@ -1918,7 +1944,8 @@
             "Atk": 75,
             "Def": 85,
             "Spd": 40,
-            "Spc": 30
+            "Spc": 30,
+            "BST": 280
         },
         "Types": [
             "GROUND",
@@ -1984,7 +2011,8 @@
             "Atk": 100,
             "Def": 110,
             "Spd": 65,
-            "Spc": 55
+            "Spc": 55,
+            "BST": 405
         },
         "Types": [
             "GROUND",
@@ -2069,7 +2097,8 @@
             "Atk": 47,
             "Def": 52,
             "Spd": 41,
-            "Spc": 40
+            "Spc": 40,
+            "BST": 235
         },
         "Types": [
             "POISON",
@@ -2147,7 +2176,8 @@
             "Atk": 62,
             "Def": 67,
             "Spd": 56,
-            "Spc": 55
+            "Spc": 55,
+            "BST": 310
         },
         "Types": [
             "POISON",
@@ -2223,7 +2253,8 @@
             "Atk": 82,
             "Def": 87,
             "Spd": 76,
-            "Spc": 75
+            "Spc": 75,
+            "BST": 410
         },
         "Types": [
             "POISON",
@@ -2319,7 +2350,8 @@
             "Atk": 57,
             "Def": 40,
             "Spd": 50,
-            "Spc": 40
+            "Spc": 40,
+            "BST": 233
         },
         "Types": [
             "POISON",
@@ -2398,7 +2430,8 @@
             "Atk": 72,
             "Def": 57,
             "Spd": 65,
-            "Spc": 55
+            "Spc": 55,
+            "BST": 310
         },
         "Types": [
             "POISON",
@@ -2474,7 +2507,8 @@
             "Atk": 92,
             "Def": 77,
             "Spd": 85,
-            "Spc": 75
+            "Spc": 75,
+            "BST": 410
         },
         "Types": [
             "POISON",
@@ -2570,7 +2604,8 @@
             "Atk": 45,
             "Def": 48,
             "Spd": 35,
-            "Spc": 60
+            "Spc": 60,
+            "BST": 258
         },
         "Types": [
             "NORMAL",
@@ -2661,7 +2696,8 @@
             "Atk": 70,
             "Def": 73,
             "Spd": 60,
-            "Spc": 85
+            "Spc": 85,
+            "BST": 383
         },
         "Types": [
             "NORMAL",
@@ -2751,7 +2787,8 @@
             "Atk": 41,
             "Def": 40,
             "Spd": 65,
-            "Spc": 65
+            "Spc": 65,
+            "BST": 249
         },
         "Types": [
             "FIRE",
@@ -2822,7 +2859,8 @@
             "Atk": 76,
             "Def": 75,
             "Spd": 100,
-            "Spc": 100
+            "Spc": 100,
+            "BST": 424
         },
         "Types": [
             "FIRE",
@@ -2831,10 +2869,9 @@
         "Catch Rate": 255,
         "Base EXP": 178,
         "Starting Moves": [
-            "EMBER",
             "TAIL_WHIP",
             "QUICK_ATTACK",
-            "ROAR"
+            "EMBER"
         ],
         "TMHM Moves": [
             "TOXIC",
@@ -2905,7 +2942,8 @@
             "Atk": 45,
             "Def": 20,
             "Spd": 20,
-            "Spc": 25
+            "Spc": 25,
+            "BST": 225
         },
         "Types": [
             "NORMAL",
@@ -2989,7 +3027,8 @@
             "Atk": 70,
             "Def": 45,
             "Spd": 45,
-            "Spc": 50
+            "Spc": 50,
+            "BST": 350
         },
         "Types": [
             "NORMAL",
@@ -2999,7 +3038,6 @@
         "Base EXP": 109,
         "Starting Moves": [
             "POUND",
-            "DISABLE",
             "SING"
         ],
         "TMHM Moves": [
@@ -3082,7 +3120,8 @@
             "Atk": 45,
             "Def": 35,
             "Spd": 55,
-            "Spc": 40
+            "Spc": 40,
+            "BST": 215
         },
         "Types": [
             "POISON",
@@ -3149,7 +3188,8 @@
             "Atk": 80,
             "Def": 70,
             "Spd": 90,
-            "Spc": 75
+            "Spc": 75,
+            "BST": 390
         },
         "Types": [
             "POISON",
@@ -3231,7 +3271,8 @@
             "Atk": 50,
             "Def": 55,
             "Spd": 30,
-            "Spc": 75
+            "Spc": 75,
+            "BST": 255
         },
         "Types": [
             "GRASS",
@@ -3313,7 +3354,8 @@
             "Atk": 65,
             "Def": 70,
             "Spd": 40,
-            "Spc": 85
+            "Spc": 85,
+            "BST": 320
         },
         "Types": [
             "GRASS",
@@ -3389,7 +3431,8 @@
             "Atk": 80,
             "Def": 85,
             "Spd": 50,
-            "Spc": 100
+            "Spc": 100,
+            "BST": 390
         },
         "Types": [
             "GRASS",
@@ -3465,7 +3508,8 @@
             "Atk": 70,
             "Def": 55,
             "Spd": 25,
-            "Spc": 55
+            "Spc": 55,
+            "BST": 240
         },
         "Types": [
             "BUG",
@@ -3537,7 +3581,8 @@
             "Atk": 95,
             "Def": 80,
             "Spd": 30,
-            "Spc": 80
+            "Spc": 80,
+            "BST": 345
         },
         "Types": [
             "BUG",
@@ -3628,7 +3673,8 @@
             "Atk": 55,
             "Def": 50,
             "Spd": 45,
-            "Spc": 40
+            "Spc": 40,
+            "BST": 250
         },
         "Types": [
             "BUG",
@@ -3710,7 +3756,8 @@
             "Atk": 65,
             "Def": 60,
             "Spd": 90,
-            "Spc": 90
+            "Spc": 90,
+            "BST": 375
         },
         "Types": [
             "PSYCHIC",
@@ -3791,7 +3838,8 @@
             "Atk": 55,
             "Def": 25,
             "Spd": 95,
-            "Spc": 45
+            "Spc": 45,
+            "BST": 230
         },
         "Types": [
             "GROUND",
@@ -3855,7 +3903,8 @@
             "Atk": 80,
             "Def": 50,
             "Spd": 120,
-            "Spc": 70
+            "Spc": 70,
+            "BST": 355
         },
         "Types": [
             "GROUND",
@@ -3922,7 +3971,8 @@
             "Atk": 45,
             "Def": 35,
             "Spd": 90,
-            "Spc": 40
+            "Spc": 40,
+            "BST": 250
         },
         "Types": [
             "NORMAL",
@@ -3984,7 +4034,8 @@
             "Atk": 70,
             "Def": 60,
             "Spd": 115,
-            "Spc": 65
+            "Spc": 65,
+            "BST": 375
         },
         "Types": [
             "NORMAL",
@@ -3994,9 +4045,7 @@
         "Base EXP": 148,
         "Starting Moves": [
             "SCRATCH",
-            "GROWL",
-            "BITE",
-            "SCREECH"
+            "GROWL"
         ],
         "TMHM Moves": [
             "TOXIC",
@@ -4067,7 +4116,8 @@
             "Atk": 52,
             "Def": 48,
             "Spd": 55,
-            "Spc": 50
+            "Spc": 50,
+            "BST": 255
         },
         "Types": [
             "WATER",
@@ -4151,7 +4201,8 @@
             "Atk": 82,
             "Def": 78,
             "Spd": 85,
-            "Spc": 80
+            "Spc": 80,
+            "BST": 405
         },
         "Types": [
             "WATER",
@@ -4238,7 +4289,8 @@
             "Atk": 80,
             "Def": 35,
             "Spd": 70,
-            "Spc": 35
+            "Spc": 35,
+            "BST": 260
         },
         "Types": [
             "FIGHTING",
@@ -4315,7 +4367,8 @@
             "Atk": 105,
             "Def": 60,
             "Spd": 95,
-            "Spc": 60
+            "Spc": 60,
+            "BST": 385
         },
         "Types": [
             "FIGHTING",
@@ -4395,7 +4448,8 @@
             "Atk": 70,
             "Def": 45,
             "Spd": 60,
-            "Spc": 50
+            "Spc": 50,
+            "BST": 280
         },
         "Types": [
             "FIRE",
@@ -4460,7 +4514,8 @@
             "Atk": 110,
             "Def": 80,
             "Spd": 95,
-            "Spc": 80
+            "Spc": 80,
+            "BST": 455
         },
         "Types": [
             "FIRE",
@@ -4533,7 +4588,8 @@
             "Atk": 50,
             "Def": 40,
             "Spd": 90,
-            "Spc": 40
+            "Spc": 40,
+            "BST": 260
         },
         "Types": [
             "WATER",
@@ -4605,7 +4661,8 @@
             "Atk": 65,
             "Def": 65,
             "Spd": 90,
-            "Spc": 50
+            "Spc": 50,
+            "BST": 335
         },
         "Types": [
             "WATER",
@@ -4615,8 +4672,7 @@
         "Base EXP": 131,
         "Starting Moves": [
             "WATER_GUN",
-            "HYPNOSIS",
-            "WATER_GUN"
+            "HYPNOSIS"
         ],
         "TMHM Moves": [
             "MEGA_PUNCH",
@@ -4681,7 +4737,8 @@
             "Atk": 85,
             "Def": 95,
             "Spd": 70,
-            "Spc": 70
+            "Spc": 70,
+            "BST": 410
         },
         "Types": [
             "WATER",
@@ -4690,10 +4747,8 @@
         "Catch Rate": 255,
         "Base EXP": 185,
         "Starting Moves": [
-            "HYPNOSIS",
             "WATER_GUN",
-            "DOUBLESLAP",
-            "BODY_SLAM"
+            "HYPNOSIS"
         ],
         "TMHM Moves": [
             "MEGA_PUNCH",
@@ -4749,7 +4804,8 @@
             "Atk": 20,
             "Def": 15,
             "Spd": 90,
-            "Spc": 105
+            "Spc": 105,
+            "BST": 255
         },
         "Types": [
             "PSYCHIC",
@@ -4831,7 +4887,8 @@
             "Atk": 35,
             "Def": 30,
             "Spd": 105,
-            "Spc": 120
+            "Spc": 120,
+            "BST": 330
         },
         "Types": [
             "PSYCHIC",
@@ -4840,8 +4897,7 @@
         "Catch Rate": 255,
         "Base EXP": 145,
         "Starting Moves": [
-            "TELEPORT",
-            "CONFUSION"
+            "TELEPORT"
         ],
         "TMHM Moves": [
             "MEGA_PUNCH",
@@ -4909,7 +4965,8 @@
             "Atk": 50,
             "Def": 45,
             "Spd": 120,
-            "Spc": 135
+            "Spc": 135,
+            "BST": 405
         },
         "Types": [
             "PSYCHIC",
@@ -4918,8 +4975,7 @@
         "Catch Rate": 255,
         "Base EXP": 186,
         "Starting Moves": [
-            "TELEPORT",
-            "CONFUSION"
+            "TELEPORT"
         ],
         "TMHM Moves": [
             "MEGA_PUNCH",
@@ -4994,7 +5050,8 @@
             "Atk": 80,
             "Def": 50,
             "Spd": 35,
-            "Spc": 35
+            "Spc": 35,
+            "BST": 270
         },
         "Types": [
             "FIGHTING",
@@ -5076,7 +5133,8 @@
             "Atk": 100,
             "Def": 70,
             "Spd": 45,
-            "Spc": 50
+            "Spc": 50,
+            "BST": 345
         },
         "Types": [
             "FIGHTING",
@@ -5153,7 +5211,8 @@
             "Atk": 130,
             "Def": 80,
             "Spd": 55,
-            "Spc": 65
+            "Spc": 65,
+            "BST": 420
         },
         "Types": [
             "FIGHTING",
@@ -5237,7 +5296,8 @@
             "Atk": 75,
             "Def": 35,
             "Spd": 40,
-            "Spc": 70
+            "Spc": 70,
+            "BST": 270
         },
         "Types": [
             "GRASS",
@@ -5312,7 +5372,8 @@
             "Atk": 90,
             "Def": 50,
             "Spd": 55,
-            "Spc": 85
+            "Spc": 85,
+            "BST": 345
         },
         "Types": [
             "GRASS",
@@ -5381,7 +5442,8 @@
             "Atk": 105,
             "Def": 65,
             "Spd": 70,
-            "Spc": 100
+            "Spc": 100,
+            "BST": 420
         },
         "Types": [
             "GRASS",
@@ -5461,7 +5523,8 @@
             "Atk": 40,
             "Def": 35,
             "Spd": 70,
-            "Spc": 100
+            "Spc": 100,
+            "BST": 285
         },
         "Types": [
             "WATER",
@@ -5537,7 +5600,8 @@
             "Atk": 70,
             "Def": 65,
             "Spd": 100,
-            "Spc": 120
+            "Spc": 120,
+            "BST": 435
         },
         "Types": [
             "WATER",
@@ -5612,7 +5676,8 @@
             "Atk": 80,
             "Def": 100,
             "Spd": 20,
-            "Spc": 30
+            "Spc": 30,
+            "BST": 270
         },
         "Types": [
             "ROCK",
@@ -5690,7 +5755,8 @@
             "Atk": 95,
             "Def": 115,
             "Spd": 35,
-            "Spc": 45
+            "Spc": 45,
+            "BST": 345
         },
         "Types": [
             "ROCK",
@@ -5699,8 +5765,7 @@
         "Catch Rate": 255,
         "Base EXP": 134,
         "Starting Moves": [
-            "TACKLE",
-            "DEFENSE_CURL"
+            "TACKLE"
         ],
         "TMHM Moves": [
             "MEGA_PUNCH",
@@ -5763,7 +5828,8 @@
             "Atk": 110,
             "Def": 130,
             "Spd": 45,
-            "Spc": 55
+            "Spc": 55,
+            "BST": 420
         },
         "Types": [
             "ROCK",
@@ -5772,8 +5838,7 @@
         "Catch Rate": 255,
         "Base EXP": 177,
         "Starting Moves": [
-            "TACKLE",
-            "DEFENSE_CURL"
+            "TACKLE"
         ],
         "TMHM Moves": [
             "MEGA_PUNCH",
@@ -5848,7 +5913,8 @@
             "Atk": 85,
             "Def": 55,
             "Spd": 90,
-            "Spc": 65
+            "Spc": 65,
+            "BST": 345
         },
         "Types": [
             "FIRE",
@@ -5919,7 +5985,8 @@
             "Atk": 100,
             "Def": 70,
             "Spd": 105,
-            "Spc": 80
+            "Spc": 80,
+            "BST": 420
         },
         "Types": [
             "FIRE",
@@ -6005,7 +6072,8 @@
             "Atk": 65,
             "Def": 65,
             "Spd": 15,
-            "Spc": 40
+            "Spc": 40,
+            "BST": 275
         },
         "Types": [
             "WATER",
@@ -6099,7 +6167,8 @@
             "Atk": 75,
             "Def": 110,
             "Spd": 30,
-            "Spc": 80
+            "Spc": 80,
+            "BST": 390
         },
         "Types": [
             "WATER",
@@ -6193,7 +6262,8 @@
             "Atk": 35,
             "Def": 70,
             "Spd": 45,
-            "Spc": 95
+            "Spc": 95,
+            "BST": 270
         },
         "Types": [
             "ELECTRIC",
@@ -6261,7 +6331,8 @@
             "Atk": 60,
             "Def": 95,
             "Spd": 70,
-            "Spc": 120
+            "Spc": 120,
+            "BST": 395
         },
         "Types": [
             "ELECTRIC",
@@ -6326,7 +6397,8 @@
             "Atk": 65,
             "Def": 55,
             "Spd": 60,
-            "Spc": 58
+            "Spc": 58,
+            "BST": 290
         },
         "Types": [
             "NORMAL",
@@ -6405,7 +6477,8 @@
             "Atk": 85,
             "Def": 45,
             "Spd": 75,
-            "Spc": 35
+            "Spc": 35,
+            "BST": 275
         },
         "Types": [
             "NORMAL",
@@ -6476,7 +6549,8 @@
             "Atk": 110,
             "Def": 70,
             "Spd": 100,
-            "Spc": 60
+            "Spc": 60,
+            "BST": 400
         },
         "Types": [
             "NORMAL",
@@ -6550,7 +6624,8 @@
             "Atk": 45,
             "Def": 55,
             "Spd": 45,
-            "Spc": 70
+            "Spc": 70,
+            "BST": 280
         },
         "Types": [
             "WATER",
@@ -6619,7 +6694,8 @@
             "Atk": 70,
             "Def": 80,
             "Spd": 70,
-            "Spc": 95
+            "Spc": 95,
+            "BST": 405
         },
         "Types": [
             "WATER",
@@ -6707,7 +6783,8 @@
             "Atk": 80,
             "Def": 50,
             "Spd": 25,
-            "Spc": 40
+            "Spc": 40,
+            "BST": 275
         },
         "Types": [
             "POISON",
@@ -6783,7 +6860,8 @@
             "Atk": 105,
             "Def": 75,
             "Spd": 50,
-            "Spc": 65
+            "Spc": 65,
+            "BST": 400
         },
         "Types": [
             "POISON",
@@ -6793,8 +6871,7 @@
         "Base EXP": 157,
         "Starting Moves": [
             "POUND",
-            "DISABLE",
-            "POISON_GAS"
+            "DISABLE"
         ],
         "TMHM Moves": [
             "TOXIC",
@@ -6855,7 +6932,8 @@
             "Atk": 65,
             "Def": 100,
             "Spd": 40,
-            "Spc": 45
+            "Spc": 45,
+            "BST": 280
         },
         "Types": [
             "WATER",
@@ -6925,7 +7003,8 @@
             "Atk": 95,
             "Def": 180,
             "Spd": 70,
-            "Spc": 85
+            "Spc": 85,
+            "BST": 480
         },
         "Types": [
             "WATER",
@@ -7014,7 +7093,8 @@
             "Atk": 35,
             "Def": 30,
             "Spd": 80,
-            "Spc": 100
+            "Spc": 100,
+            "BST": 275
         },
         "Types": [
             "GHOST",
@@ -7102,7 +7182,8 @@
             "Atk": 50,
             "Def": 45,
             "Spd": 95,
-            "Spc": 115
+            "Spc": 115,
+            "BST": 350
         },
         "Types": [
             "GHOST",
@@ -7184,7 +7265,8 @@
             "Atk": 65,
             "Def": 60,
             "Spd": 110,
-            "Spc": 130
+            "Spc": 130,
+            "BST": 425
         },
         "Types": [
             "GHOST",
@@ -7270,7 +7352,8 @@
             "Atk": 45,
             "Def": 160,
             "Spd": 70,
-            "Spc": 30
+            "Spc": 30,
+            "BST": 340
         },
         "Types": [
             "ROCK",
@@ -7343,7 +7426,8 @@
             "Atk": 48,
             "Def": 45,
             "Spd": 42,
-            "Spc": 90
+            "Spc": 90,
+            "BST": 285
         },
         "Types": [
             "PSYCHIC",
@@ -7419,7 +7503,8 @@
             "Atk": 73,
             "Def": 70,
             "Spd": 67,
-            "Spc": 115
+            "Spc": 115,
+            "BST": 410
         },
         "Types": [
             "PSYCHIC",
@@ -7498,7 +7583,8 @@
             "Atk": 105,
             "Def": 90,
             "Spd": 50,
-            "Spc": 25
+            "Spc": 25,
+            "BST": 300
         },
         "Types": [
             "WATER",
@@ -7562,7 +7648,8 @@
             "Atk": 130,
             "Def": 115,
             "Spd": 75,
-            "Spc": 50
+            "Spc": 50,
+            "BST": 425
         },
         "Types": [
             "WATER",
@@ -7649,7 +7736,8 @@
             "Atk": 30,
             "Def": 50,
             "Spd": 100,
-            "Spc": 55
+            "Spc": 55,
+            "BST": 275
         },
         "Types": [
             "ELECTRIC",
@@ -7728,7 +7816,8 @@
             "Atk": 50,
             "Def": 70,
             "Spd": 140,
-            "Spc": 80
+            "Spc": 80,
+            "BST": 400
         },
         "Types": [
             "ELECTRIC",
@@ -7815,7 +7904,8 @@
             "Atk": 40,
             "Def": 80,
             "Spd": 40,
-            "Spc": 60
+            "Spc": 60,
+            "BST": 280
         },
         "Types": [
             "GRASS",
@@ -7894,7 +7984,8 @@
             "Atk": 95,
             "Def": 85,
             "Spd": 55,
-            "Spc": 125
+            "Spc": 125,
+            "BST": 455
         },
         "Types": [
             "GRASS",
@@ -7979,7 +8070,8 @@
             "Atk": 50,
             "Def": 95,
             "Spd": 35,
-            "Spc": 40
+            "Spc": 40,
+            "BST": 270
         },
         "Types": [
             "GROUND",
@@ -8062,7 +8154,8 @@
             "Atk": 80,
             "Def": 110,
             "Spd": 45,
-            "Spc": 50
+            "Spc": 50,
+            "BST": 345
         },
         "Types": [
             "GROUND",
@@ -8134,7 +8227,8 @@
             "Atk": 120,
             "Def": 63,
             "Spd": 87,
-            "Spc": 55
+            "Spc": 55,
+            "BST": 385
         },
         "Types": [
             "FIGHTING",
@@ -8200,7 +8294,8 @@
             "Atk": 90,
             "Def": 63,
             "Spd": 87,
-            "Spc": 85
+            "Spc": 85,
+            "BST": 385
         },
         "Types": [
             "FIGHTING",
@@ -8273,7 +8368,8 @@
             "Atk": 55,
             "Def": 75,
             "Spd": 30,
-            "Spc": 60
+            "Spc": 60,
+            "BST": 310
         },
         "Types": [
             "NORMAL",
@@ -8371,7 +8467,8 @@
             "Atk": 65,
             "Def": 95,
             "Spd": 35,
-            "Spc": 60
+            "Spc": 60,
+            "BST": 295
         },
         "Types": [
             "POISON",
@@ -8445,7 +8542,8 @@
             "Atk": 90,
             "Def": 120,
             "Spd": 60,
-            "Spc": 85
+            "Spc": 85,
+            "BST": 420
         },
         "Types": [
             "POISON",
@@ -8534,7 +8632,8 @@
             "Atk": 85,
             "Def": 95,
             "Spd": 25,
-            "Spc": 30
+            "Spc": 30,
+            "BST": 315
         },
         "Types": [
             "GROUND",
@@ -8623,7 +8722,8 @@
             "Atk": 130,
             "Def": 120,
             "Spd": 40,
-            "Spc": 45
+            "Spc": 45,
+            "BST": 440
         },
         "Types": [
             "GROUND",
@@ -8716,7 +8816,8 @@
             "Atk": 5,
             "Def": 5,
             "Spd": 50,
-            "Spc": 105
+            "Spc": 105,
+            "BST": 415
         },
         "Types": [
             "NORMAL",
@@ -8764,8 +8865,7 @@
             "SUBSTITUTE",
             "STRENGTH",
             "FLASH",
-            "EXPLOSION",
-            "DOUBLE_TEAM"
+            "EXPLOSION"
         ]
     },
     "TANGELA": {
@@ -8814,7 +8914,8 @@
             "Atk": 55,
             "Def": 115,
             "Spd": 60,
-            "Spc": 100
+            "Spc": 100,
+            "BST": 395
         },
         "Types": [
             "GRASS",
@@ -8887,7 +8988,8 @@
             "Atk": 95,
             "Def": 80,
             "Spd": 90,
-            "Spc": 40
+            "Spc": 40,
+            "BST": 410
         },
         "Types": [
             "NORMAL",
@@ -8968,7 +9070,8 @@
             "Atk": 40,
             "Def": 70,
             "Spd": 60,
-            "Spc": 70
+            "Spc": 70,
+            "BST": 270
         },
         "Types": [
             "WATER",
@@ -9033,7 +9136,8 @@
             "Atk": 65,
             "Def": 95,
             "Spd": 85,
-            "Spc": 95
+            "Spc": 95,
+            "BST": 395
         },
         "Types": [
             "WATER",
@@ -9109,7 +9213,8 @@
             "Atk": 67,
             "Def": 60,
             "Spd": 63,
-            "Spc": 50
+            "Spc": 50,
+            "BST": 285
         },
         "Types": [
             "WATER",
@@ -9176,7 +9281,8 @@
             "Atk": 92,
             "Def": 65,
             "Spd": 68,
-            "Spc": 80
+            "Spc": 80,
+            "BST": 385
         },
         "Types": [
             "WATER",
@@ -9258,7 +9364,8 @@
             "Atk": 45,
             "Def": 55,
             "Spd": 85,
-            "Spc": 70
+            "Spc": 70,
+            "BST": 285
         },
         "Types": [
             "WATER",
@@ -9338,7 +9445,8 @@
             "Atk": 75,
             "Def": 85,
             "Spd": 115,
-            "Spc": 100
+            "Spc": 100,
+            "BST": 435
         },
         "Types": [
             "WATER",
@@ -9411,7 +9519,8 @@
             "Atk": 45,
             "Def": 65,
             "Spd": 90,
-            "Spc": 100
+            "Spc": 100,
+            "BST": 340
         },
         "Types": [
             "PSYCHIC",
@@ -9495,7 +9604,8 @@
             "Atk": 110,
             "Def": 80,
             "Spd": 105,
-            "Spc": 55
+            "Spc": 55,
+            "BST": 420
         },
         "Types": [
             "BUG",
@@ -9563,7 +9673,8 @@
             "Atk": 50,
             "Def": 35,
             "Spd": 95,
-            "Spc": 95
+            "Spc": 95,
+            "BST": 340
         },
         "Types": [
             "ICE",
@@ -9644,7 +9755,8 @@
             "Atk": 83,
             "Def": 57,
             "Spd": 105,
-            "Spc": 85
+            "Spc": 85,
+            "BST": 395
         },
         "Types": [
             "ELECTRIC",
@@ -9725,7 +9837,8 @@
             "Atk": 95,
             "Def": 57,
             "Spd": 93,
-            "Spc": 85
+            "Spc": 85,
+            "BST": 395
         },
         "Types": [
             "FIRE",
@@ -9805,7 +9918,8 @@
             "Atk": 125,
             "Def": 100,
             "Spd": 85,
-            "Spc": 55
+            "Spc": 55,
+            "BST": 430
         },
         "Types": [
             "BUG",
@@ -9866,7 +9980,8 @@
             "Atk": 100,
             "Def": 95,
             "Spd": 110,
-            "Spc": 70
+            "Spc": 70,
+            "BST": 450
         },
         "Types": [
             "NORMAL",
@@ -9923,7 +10038,8 @@
             "Atk": 10,
             "Def": 55,
             "Spd": 80,
-            "Spc": 20
+            "Spc": 20,
+            "BST": 185
         },
         "Types": [
             "WATER",
@@ -9933,7 +10049,8 @@
         "Base EXP": 20,
         "Starting Moves": [
             "SPLASH"
-        ]
+        ],
+        "TMHM Moves": []
     },
     "GYARADOS": {
         "Name": "GYARADOS",
@@ -9977,7 +10094,8 @@
             "Atk": 125,
             "Def": 79,
             "Spd": 81,
-            "Spc": 100
+            "Spc": 100,
+            "BST": 480
         },
         "Types": [
             "WATER",
@@ -10050,7 +10168,8 @@
             "Atk": 85,
             "Def": 80,
             "Spd": 60,
-            "Spc": 95
+            "Spc": 95,
+            "BST": 450
         },
         "Types": [
             "WATER",
@@ -10100,7 +10219,8 @@
             "Atk": 48,
             "Def": 48,
             "Spd": 48,
-            "Spc": 48
+            "Spc": 48,
+            "BST": 240
         },
         "Types": [
             "NORMAL",
@@ -10110,7 +10230,8 @@
         "Base EXP": 61,
         "Starting Moves": [
             "TRANSFORM"
-        ]
+        ],
+        "TMHM Moves": []
     },
     "EEVEE": {
         "Name": "EEVEE",
@@ -10174,7 +10295,8 @@
             "Atk": 55,
             "Def": 50,
             "Spd": 55,
-            "Spc": 65
+            "Spc": 65,
+            "BST": 280
         },
         "Types": [
             "NORMAL",
@@ -10254,7 +10376,8 @@
             "Atk": 65,
             "Def": 60,
             "Spd": 65,
-            "Spc": 110
+            "Spc": 110,
+            "BST": 430
         },
         "Types": [
             "WATER",
@@ -10264,9 +10387,7 @@
         "Base EXP": 196,
         "Starting Moves": [
             "TACKLE",
-            "TAIL_WHIP",
-            "QUICK_ATTACK",
-            "WATER_GUN"
+            "TAIL_WHIP"
         ],
         "TMHM Moves": [
             "TOXIC",
@@ -10342,7 +10463,8 @@
             "Atk": 65,
             "Def": 60,
             "Spd": 130,
-            "Spc": 110
+            "Spc": 110,
+            "BST": 430
         },
         "Types": [
             "ELECTRIC",
@@ -10352,9 +10474,7 @@
         "Base EXP": 197,
         "Starting Moves": [
             "TACKLE",
-            "TAIL_WHIP",
-            "QUICK_ATTACK",
-            "THUNDERSHOCK"
+            "TAIL_WHIP"
         ],
         "TMHM Moves": [
             "TOXIC",
@@ -10429,7 +10549,8 @@
             "Atk": 130,
             "Def": 60,
             "Spd": 65,
-            "Spc": 110
+            "Spc": 110,
+            "BST": 430
         },
         "Types": [
             "FIRE",
@@ -10439,9 +10560,7 @@
         "Base EXP": 198,
         "Starting Moves": [
             "TACKLE",
-            "TAIL_WHIP",
-            "QUICK_ATTACK",
-            "EMBER"
+            "TAIL_WHIP"
         ],
         "TMHM Moves": [
             "TOXIC",
@@ -10506,7 +10625,8 @@
             "Atk": 60,
             "Def": 80,
             "Spd": 40,
-            "Spc": 85
+            "Spc": 85,
+            "BST": 340
         },
         "Types": [
             "NORMAL",
@@ -10581,7 +10701,8 @@
             "Atk": 40,
             "Def": 100,
             "Spd": 35,
-            "Spc": 90
+            "Spc": 90,
+            "BST": 300
         },
         "Types": [
             "ROCK",
@@ -10643,7 +10764,8 @@
             "Atk": 60,
             "Def": 125,
             "Spd": 55,
-            "Spc": 115
+            "Spc": 115,
+            "BST": 425
         },
         "Types": [
             "ROCK",
@@ -10716,7 +10838,8 @@
             "Atk": 80,
             "Def": 90,
             "Spd": 55,
-            "Spc": 45
+            "Spc": 45,
+            "BST": 300
         },
         "Types": [
             "ROCK",
@@ -10778,7 +10901,8 @@
             "Atk": 115,
             "Def": 105,
             "Spd": 80,
-            "Spc": 70
+            "Spc": 70,
+            "BST": 430
         },
         "Types": [
             "ROCK",
@@ -10856,7 +10980,8 @@
             "Atk": 105,
             "Def": 65,
             "Spd": 130,
-            "Spc": 60
+            "Spc": 60,
+            "BST": 440
         },
         "Types": [
             "ROCK",
@@ -10889,7 +11014,8 @@
             "SUBSTITUTE",
             "FLY",
             "FLAMETHROWER",
-            "ROCK_SLIDE"
+            "ROCK_SLIDE",
+            "SWORDS_DANCE"
         ]
     },
     "SNORLAX": {
@@ -10926,7 +11052,8 @@
             "Atk": 110,
             "Def": 65,
             "Spd": 30,
-            "Spc": 65
+            "Spc": 65,
+            "BST": 430
         },
         "Types": [
             "NORMAL",
@@ -11001,7 +11128,8 @@
             "Atk": 85,
             "Def": 100,
             "Spd": 85,
-            "Spc": 125
+            "Spc": 125,
+            "BST": 485
         },
         "Types": [
             "ICE",
@@ -11059,7 +11187,8 @@
             "Atk": 90,
             "Def": 85,
             "Spd": 100,
-            "Spc": 125
+            "Spc": 125,
+            "BST": 490
         },
         "Types": [
             "ELECTRIC",
@@ -11117,7 +11246,8 @@
             "Atk": 100,
             "Def": 90,
             "Spd": 90,
-            "Spc": 125
+            "Spc": 125,
+            "BST": 495
         },
         "Types": [
             "FIRE",
@@ -11187,7 +11317,8 @@
             "Atk": 64,
             "Def": 45,
             "Spd": 50,
-            "Spc": 50
+            "Spc": 50,
+            "BST": 250
         },
         "Types": [
             "DRAGON",
@@ -11263,7 +11394,8 @@
             "Atk": 84,
             "Def": 65,
             "Spd": 70,
-            "Spc": 70
+            "Spc": 70,
+            "BST": 350
         },
         "Types": [
             "DRAGON",
@@ -11334,7 +11466,8 @@
             "Atk": 134,
             "Def": 95,
             "Spd": 80,
-            "Spc": 100
+            "Spc": 100,
+            "BST": 500
         },
         "Types": [
             "DRAGON",
@@ -11401,7 +11534,8 @@
             "Atk": 110,
             "Def": 90,
             "Spd": 130,
-            "Spc": 154
+            "Spc": 154,
+            "BST": 590
         },
         "Types": [
             "PSYCHIC",
@@ -11504,7 +11638,8 @@
             "Atk": 100,
             "Def": 100,
             "Spd": 100,
-            "Spc": 100
+            "Spc": 100,
+            "BST": 500
         },
         "Types": [
             "PSYCHIC",

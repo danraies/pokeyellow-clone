@@ -3,12 +3,17 @@ import re
 import json
 
 root = "/home/danny/decomps/pokeyellow"
+
+# ---------------------------------------------------------------------
+# Pokemon Data
+# ---------------------------------------------------------------------
+
 fpath_pkmn_data_json = os.path.join(root, "_DAN/pkmn_data.json")
 
 fpath_pokedex = os.path.join(root, "constants/pokedex_constants.asm") # pokedex orders
 fpath_pkmn_names = os.path.join(root, "data/pokemon/names.asm") # name strings
 fpath_pkmn_const = os.path.join(root, "constants/pokemon_constants.asm") # species constants
-fpath_moves = os.path.join(root, "data/pokemon/evos_moves.asm") # moves
+fpath_pkmn_evos_moves = os.path.join(root, "data/pokemon/evos_moves.asm") # moves
 dpath_pkmn_data = os.path.join(root, "data/pokemon/base_stats") # type, stats, starting moves, TMS
 
 pkmn_data = {}
@@ -48,7 +53,7 @@ for c, n in zip(pkmn_const, pkmn_names):
         pkmn_data[c]["Name"] = n
 
 key_lookup = {pkmn_data[key]["key_lookup"]: key for key in pkmn_data.keys()}
-with open(fpath_moves, "r", encoding="utf-8") as f:
+with open(fpath_pkmn_evos_moves, "r", encoding="utf-8") as f:
     lines = f.read().split('\n')
     ACTIVE = False
     READING_EVOS = True
@@ -99,6 +104,7 @@ for file in os.listdir(dpath_pkmn_data):
                         pkmn_data[key]["Stats"]["Def"] = int(stats[2].strip())
                         pkmn_data[key]["Stats"]["Spd"] = int(stats[3].strip())
                         pkmn_data[key]["Stats"]["Spc"] = int(stats[4].strip())
+                        pkmn_data[key]["Stats"]["BST"] = pkmn_data[key]["Stats"]["HP"] + pkmn_data[key]["Stats"]["Atk"] + pkmn_data[key]["Stats"]["Def"] + pkmn_data[key]["Stats"]["Spd"] + pkmn_data[key]["Stats"]["Spc"]
                     case 3:
                         types = clean_line.split("db")[1].split(";")[0].replace("PSYCHIC_TYPE", "PSYCHIC").split(",")
                         pkmn_data[key]["Types"] = [types[0].strip(), types[1].strip()]
@@ -116,14 +122,53 @@ for file in os.listdir(dpath_pkmn_data):
                             if clean_move != "NO_MOVE":
                                 move_list.append(clean_move)
                         pkmn_data[key]["Starting Moves"] = move_list
-            if clean_line.startswith("tmhm "):
+            if clean_line.startswith("tmhm"):
                 tmhm_string = clean_line.split("tmhm")[1]
             if READING_TMHM:
                 tmhm_string = tmhm_string + clean_line
             READING_TMHM = clean_line.endswith("\\")
             if not READING_TMHM and tmhm_string is not None:
-                pkmn_data[key]["TMHM Moves"] = [move.strip() for move in tmhm_string.replace("\\", "").split(",")]
+                pkmn_data[key]["TMHM Moves"] = [move.strip() for move in tmhm_string.replace("\\", "").split(",")] if tmhm_string != "" else []
+                tmhm_string = None
 
+all_problems = []
+acceptable_start_move_mismatch = ["CATERPIE", "METAPOD", "WEEDLE", "KAKUNA", "MAGIKARP"]
+acceptable_learn_move_mismatch = ["METAPOD", "KAKUNA", "MAGIKARP", "PIKACHU", "EEVEE"]
+for key in pkmn_data.keys():
+    if len(pkmn_data[key]["TMHM Moves"]) != len(set(pkmn_data[key]["TMHM Moves"])):
+        print(f"[DUPLICATE TMHM] {key}")
+    evos = [this_evo[2] for this_evo in pkmn_data[key]["Evolutions"]]
+    level_moves = [move_data[1] for move_data in pkmn_data[key]["Level-Up Moves"]]
+    for evo in evos:
+        start_move_mismatch = False
+        for start_move in pkmn_data[key]["Starting Moves"]:
+            if not start_move in pkmn_data[evo]["Starting Moves"]:
+                start_move_mismatch = True
+        for start_move in pkmn_data[evo]["Starting Moves"]:
+            if not start_move in pkmn_data[key]["Starting Moves"]:
+                start_move_mismatch = True
+        if start_move_mismatch and not key in acceptable_start_move_mismatch:
+            all_problems.append(f"[START MOVE MISMATCH] {key} -> {evo}")
+
+        learn_move_mismatch = False
+        evo_level_moves = [move_data[1] for move_data in pkmn_data[evo]["Level-Up Moves"]]
+        for level_move in level_moves:
+            if not level_move in evo_level_moves:
+                learn_move_mismatch = True
+        if learn_move_mismatch and not key in acceptable_learn_move_mismatch:
+            all_problems.append(f"[LEARN MOVE MISMATCH] {key} -> {evo}")
+
+        missing_evo_tmhm = []
+        for tmhm in pkmn_data[key]["TMHM Moves"]:
+            if not tmhm in pkmn_data[evo]["TMHM Moves"]:
+                missing_evo_tmhm.append(tmhm)
+        if len(missing_evo_tmhm) > 0:
+            all_problems.append(f"[MISSING EVO TMHM] {key} -> {evo}: {', '.join(missing_evo_tmhm)}")
+
+if len(all_problems) > 0:
+    print('\n'.join(all_problems))
+else:
+    print("NO PROBLEMS FOUND!")
 
 for key in pkmn_data.keys():
     pkmn_data[key].pop("key_lookup")
@@ -132,3 +177,14 @@ if os.path.exists(fpath_pkmn_data_json):
     os.remove(fpath_pkmn_data_json)
 with open(fpath_pkmn_data_json, 'w', encoding="utf-8") as f:
     f.write(json.dumps(pkmn_data, indent=4))
+
+# ---------------------------------------------------------------------
+# Move Data
+# ---------------------------------------------------------------------
+
+fpath_move_data = os.path.join(root, "data/moves/moves.asm") # moves
+
+with open(fpath_move_data, "r", encoding="utf-8") as f:
+    lines = f.read().split('\n')
+    for line in lines:
+        print(line)

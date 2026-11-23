@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage{fontspec}
+\setmainfont{Tekton Light}
+%\usepackage{fourier} % utopia
+%\usepackage{tgbonum} % bonum
+%\usepackage{tgschola} % schola
+%\usepackage{librebaskerville} % baskerville
+%\usepackage{bookman} % bookman
+
+\usepackage{tikz}
+\usepackage[svgnames]{xcolor}
+
+\usepackage{contour}
+\contourlength{0.05em}
+
+\usepackage{tcolorbox}
+
+\colorlet{color_HP}{GreenYellow}
+\colorlet{color_Atk}{Yellow}
+\colorlet{color_Def}{Orange}
+\colorlet{color_Spd}{Violet}
+\colorlet{color_Spc}{LightSlateBlue}
+\colorlet{color_BST}{Navy}
+
+\graphicspath{{SPRITES/}{ART/}}
+
+\begin{document}
+\includegraphics{1.PNG}
+\includegraphics[width=0.25\linewidth]{001 Bulbasaur.png}
+
+\def\MAXSTAT{180}
+\def\MAXBST{590}
+\def\HP{45}
+\def\Atk{49}
+\def\Def{49}
+\def\Spd{45}
+\def\Spc{65}
+\def\BST{253}
+
+\newcommand{\densityfunction}[2]{%
+\draw[#1!50!Black, fill=#1!50!White, ultra thin] plot[yshift={-\count cm}] file {#2.table};
+}
+\newcommand{\statlabel}[2]{%
+\draw (0, {-#1 + 0.5}) node[left, inner sep=2pt] {#2};
+}
+\newcommand{\statdecorators}[4]{%
+%\draw[#4!50!Black, thick] (0, {-#1 + 0.5}) -- ({#2 / #3}, {-#1 + 0.5});
+\draw[#4!50!Black, thick] ({#2 / #3}, {-#1 + 1}) -- ({#2 / #3}, {-#1});
+\draw[fill=#4, fill opacity=0.6] (0, {-\count}) rectangle ({#2 / #3}, {-\count + 1});
+%\draw[#4, thick] ({#2 / #3}, {-#1 + 1}) -- ({#2 / #3}, {-#1});
+\draw (0, {-#1 + 0.5}) node[right] {\contour{White}{\texttt{#2}}};
+\draw (0, {-#1})--(1, {-#1});
+}
+
+
+\def\xscale{5}
+\def\yscale{0.45}
+
+\def\widestlabel{{Hit Points}}
+\pgfmathsetlengthmacro{\labelwidth}{width("\widestlabel") + 4pt} 
+\begin{tikzpicture}[xscale=\xscale, yscale=\yscale]
+\def\count{1}
+\densityfunction{color_HP}{pdf_HP}
+\statlabel{\count}{Hit Points}
+\statdecorators{\count}{\HP}{\MAXSTAT}{color_HP}
+
+\def\count{2}
+\densityfunction{color_Atk}{pdf_Atk}
+\statlabel{\count}{Attack}
+\statdecorators{\count}{\Atk}{\MAXSTAT}{color_Atk}
+
+\def\count{3}
+\densityfunction{color_Def}{pdf_Def}
+\statlabel{\count}{Defense}
+\statdecorators{\count}{\Def}{\MAXSTAT}{color_Def}
+
+\def\count{4}
+\densityfunction{color_Spd}{pdf_Spd}
+\statlabel{\count}{Speed}
+\statdecorators{\count}{\Spd}{\MAXSTAT}{color_Spd}
+
+\def\count{5}
+\densityfunction{color_Spc}{pdf_Spc}
+\statlabel{\count}{Special}
+\statdecorators{\count}{\Spc}{\MAXSTAT}{color_Spc}
+
+\def\count{6}
+\densityfunction{color_BST}{pdf_BST}
+\statlabel{\count}{Total}
+\statdecorators{\count}{\BST}{\MAXBST}{color_BST}
+
+\draw (0, 0) rectangle ({-\labelwidth / \xscale}, {-\count});
+\draw[thick] ({-\labelwidth / \xscale}, {-\count + 1}) rectangle (1, {-\count});
+\end{tikzpicture}
+
+\bigskip
+
+\def\list{1/--/Normal/Text, 2/--/Fighting/New Text, 3/8/Grass/Next Text, 4/16/Poison/Final Text}
+\def\thisinnersep{3pt}
+\def\leveltext{{Level}}
+\pgfmathsetlengthmacro{\levelwidth}{width("\leveltext") + 2 * \thisinnersep}
+\def\typetext{{Fighting}}
+\pgfmathsetlengthmacro{\typelength}{width("\typetext") + 2 * \thisinnersep}
+\def\movelength{3cm}
+\begin{tikzpicture}[yscale=\yscale]
+\draw (0, 0) rectangle ({-\levelwidth}, 1);
+\draw ({-\levelwidth / 2}, 0.5) node{Level};
+\draw (0, 0) rectangle ({\typelength}, 1);
+\draw ({\typelength / 2}, 0.5) node{Type};
+\draw ({\typelength}, 0) rectangle ({\typelength + \movelength}, 1);
+\draw ({\typelength + \movelength / 2}, 0.5) node{Move};
+\foreach \count / \level / \type / \move in \list
+{
+\draw ({-\levelwidth / 2}, {-\count + 0.5}) node{\level};
+\draw (0, {-\count + 0.5}) node[right, inner sep = \thisinnersep]{\type};
+\draw ({\typelength}, {-\count + 0.5}) node[right, inner sep = \thisinnersep]{\move};
+}
+	
+\end{tikzpicture}
+\end{document}

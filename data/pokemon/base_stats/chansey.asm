@@ -21,7 +21,7 @@
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         METRONOME,    \
 	     EGG_BOMB,     FIRE_BLAST,   SKULL_BASH,   FLAMETHROWER, REST,         \
 	     THUNDER_WAVE,       TRI_ATTACK,   SUBSTITUTE,   STRENGTH,     \
-	     FLASH,        EXPLOSION,    DOUBLE_TEAM
+	     FLASH,        EXPLOSION
 	; end
 
 	db 0 ; padding

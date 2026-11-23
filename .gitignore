@@ -32,3 +32,11 @@
 *.sn*
 *.sa*
 *.sg1
+
+# my additions
+_DAN/*.aux
+_DAN/*.log
+_DAN/*.synctex.gz
+_DAN/*.pdf
+_DAN/ART/*
+_DAN/SPRITES/*
