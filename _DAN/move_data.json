@@ -1,0 +1,1322 @@
+{
+    "POUND": {
+        "Effect": "No additional effect.",
+        "Power": 40,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 35,
+        "Name": "POUND"
+    },
+    "KARATE_CHOP": {
+        "Effect": "No additional effect.",
+        "Power": 50,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 25,
+        "Name": "KARATE CHOP"
+    },
+    "DOUBLESLAP": {
+        "Effect": "Hits 2-5 times.",
+        "Power": 15,
+        "Type": "NORMAL",
+        "Accuracy": 85,
+        "PP": 15,
+        "Name": "DOUBLESLAP"
+    },
+    "COMET_PUNCH": {
+        "Effect": "Hits 2-5 times.",
+        "Power": 20,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "COMET PUNCH"
+    },
+    "MEGA_PUNCH": {
+        "Effect": "No additional effect.",
+        "Power": 80,
+        "Type": "NORMAL",
+        "Accuracy": 85,
+        "PP": 20,
+        "Name": "MEGA PUNCH"
+    },
+    "PAY_DAY": {
+        "Effect": "Scatters coins that get collected after the battle.",
+        "Power": 60,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "PAY DAY"
+    },
+    "FIRE_PUNCH": {
+        "Effect": "10% chance to burn the target.",
+        "Power": 85,
+        "Type": "FIRE",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "FIRE PUNCH"
+    },
+    "ICE_PUNCH": {
+        "Effect": "10% chance to freeze the target.",
+        "Power": 85,
+        "Type": "ICE",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "ICE PUNCH"
+    },
+    "THUNDERPUNCH": {
+        "Effect": "10% chance to paralyze the target.",
+        "Power": 85,
+        "Type": "ELECTRIC",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "THUNDERPUNCH"
+    },
+    "SCRATCH": {
+        "Effect": "No additional effect.",
+        "Power": 40,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 35,
+        "Name": "SCRATCH"
+    },
+    "VICEGRIP": {
+        "Effect": "No additional effect.",
+        "Power": 55,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 30,
+        "Name": "VICEGRIP"
+    },
+    "GUILLOTINE": {
+        "Effect": "Causes the target to faint.",
+        "Power": 1,
+        "Type": "NORMAL",
+        "Accuracy": 30,
+        "PP": 5,
+        "Name": "GUILLOTINE"
+    },
+    "RAZOR_WIND": {
+        "Effect": "No additional effect.",
+        "Power": 80,
+        "Type": "NORMAL",
+        "Accuracy": 85,
+        "PP": 10,
+        "Name": "RAZOR WIND"
+    },
+    "SWORDS_DANCE": {
+        "Effect": "Increases the user's attack by two stages.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 30,
+        "Name": "SWORDS DANCE"
+    },
+    "CUT": {
+        "Effect": "No additional effect.",
+        "Power": 70,
+        "Type": "NORMAL",
+        "Accuracy": 95,
+        "PP": 30,
+        "Name": "CUT"
+    },
+    "GUST": {
+        "Effect": "No additional effect.",
+        "Power": 40,
+        "Type": "FLYING",
+        "Accuracy": 100,
+        "PP": 35,
+        "Name": "GUST"
+    },
+    "WING_ATTACK": {
+        "Effect": "No additional effect.",
+        "Power": 65,
+        "Type": "FLYING",
+        "Accuracy": 100,
+        "PP": 35,
+        "Name": "WING ATTACK"
+    },
+    "WHIRLWIND": {
+        "Effect": "Causes a wild battle to end.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 85,
+        "PP": 20,
+        "Name": "WHIRLWIND"
+    },
+    "FLY": {
+        "Effect": "Flies in the air on this turn and attacks next turn.",
+        "Power": 70,
+        "Type": "FLYING",
+        "Accuracy": 95,
+        "PP": 15,
+        "Name": "FLY"
+    },
+    "BIND": {
+        "Effect": "Prevents the target from acting until the effect ends.",
+        "Power": 15,
+        "Type": "NORMAL",
+        "Accuracy": 85,
+        "PP": 20,
+        "Name": "BIND"
+    },
+    "SLAM": {
+        "Effect": "No additional effect.",
+        "Power": 80,
+        "Type": "NORMAL",
+        "Accuracy": 75,
+        "PP": 20,
+        "Name": "SLAM"
+    },
+    "VINE_WHIP": {
+        "Effect": "No additional effect.",
+        "Power": 35,
+        "Type": "GRASS",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "VINE WHIP"
+    },
+    "STOMP": {
+        "Effect": "30% chance to cause the target to flinch.",
+        "Power": 65,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "STOMP"
+    },
+    "DOUBLE_KICK": {
+        "Effect": "Attacks twice.",
+        "Power": 30,
+        "Type": "FIGHTING",
+        "Accuracy": 100,
+        "PP": 30,
+        "Name": "DOUBLE KICK"
+    },
+    "MEGA_KICK": {
+        "Effect": "No additional effect.",
+        "Power": 100,
+        "Type": "NORMAL",
+        "Accuracy": 70,
+        "PP": 5,
+        "Name": "MEGA KICK"
+    },
+    "JUMP_KICK": {
+        "Effect": "If this attack misses, the user damages itself.",
+        "Power": 70,
+        "Type": "FIGHTING",
+        "Accuracy": 95,
+        "PP": 25,
+        "Name": "JUMP KICK"
+    },
+    "ROLLING_KICK": {
+        "Effect": "30% chance to cause the target to flinch.",
+        "Power": 70,
+        "Type": "FIGHTING",
+        "Accuracy": 95,
+        "PP": 15,
+        "Name": "ROLLING KICK"
+    },
+    "SAND_ATTACK": {
+        "Effect": "Drops the target's accuracy by one stage.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "SAND-ATTACK"
+    },
+    "HEADBUTT": {
+        "Effect": "30% chance to cause the target to flinch.",
+        "Power": 70,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "HEADBUTT"
+    },
+    "HORN_ATTACK": {
+        "Effect": "No additional effect.",
+        "Power": 65,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 25,
+        "Name": "HORN ATTACK"
+    },
+    "FURY_ATTACK": {
+        "Effect": "Hits 2-5 times.",
+        "Power": 15,
+        "Type": "NORMAL",
+        "Accuracy": 85,
+        "PP": 20,
+        "Name": "FURY ATTACK"
+    },
+    "HORN_DRILL": {
+        "Effect": "Causes the target to faint.",
+        "Power": 1,
+        "Type": "NORMAL",
+        "Accuracy": 30,
+        "PP": 5,
+        "Name": "HORN DRILL"
+    },
+    "TACKLE": {
+        "Effect": "No additional effect.",
+        "Power": 35,
+        "Type": "NORMAL",
+        "Accuracy": 95,
+        "PP": 35,
+        "Name": "TACKLE"
+    },
+    "BODY_SLAM": {
+        "Effect": "30% chance to paralyze the target.",
+        "Power": 85,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "BODY SLAM"
+    },
+    "WRAP": {
+        "Effect": "Prevents the target from acting until the effect ends.",
+        "Power": 15,
+        "Type": "NORMAL",
+        "Accuracy": 85,
+        "PP": 20,
+        "Name": "WRAP"
+    },
+    "TAKE_DOWN": {
+        "Effect": "Causes recoil, damaging the user.",
+        "Power": 90,
+        "Type": "NORMAL",
+        "Accuracy": 85,
+        "PP": 20,
+        "Name": "TAKE DOWN"
+    },
+    "THRASH": {
+        "Effect": "Attacks for 3-4 turns and then confuses the user.",
+        "Power": 90,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "THRASH"
+    },
+    "DOUBLE_EDGE": {
+        "Effect": "Causes recoil, damaging the user.",
+        "Power": 100,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "DOUBLE-EDGE"
+    },
+    "TAIL_WHIP": {
+        "Effect": "Drops the target's defense by one stage.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 30,
+        "Name": "TAIL WHIP"
+    },
+    "POISON_STING": {
+        "Effect": "20% chance to poison the target.",
+        "Power": 25,
+        "Type": "POISON",
+        "Accuracy": 100,
+        "PP": 35,
+        "Name": "POISON STING"
+    },
+    "TWINEEDLE": {
+        "Effect": "Hits twice and has a 33% chance to poison the target.",
+        "Power": 25,
+        "Type": "BUG",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "TWINEEDLE"
+    },
+    "PIN_MISSILE": {
+        "Effect": "Hits 2-5 times.",
+        "Power": 20,
+        "Type": "BUG",
+        "Accuracy": 85,
+        "PP": 20,
+        "Name": "PIN MISSILE"
+    },
+    "LEER": {
+        "Effect": "Drops the target's defense by one stage.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 30,
+        "Name": "LEER"
+    },
+    "BITE": {
+        "Effect": "10% chance to cause the target to flinch.",
+        "Power": 60,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 25,
+        "Name": "BITE"
+    },
+    "GROWL": {
+        "Effect": "Drops the target's attack by one stage.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 40,
+        "Name": "GROWL"
+    },
+    "ROAR": {
+        "Effect": "Causes a wild battle to end.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "ROAR"
+    },
+    "SING": {
+        "Effect": "Puts the target to sleep.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 60,
+        "PP": 15,
+        "Name": "SING"
+    },
+    "SUPERSONIC": {
+        "Effect": "Confuses the target.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 60,
+        "PP": 20,
+        "Name": "SUPERSONIC"
+    },
+    "SONICBOOM": {
+        "Effect": "Deals 20 damage.",
+        "Power": 1,
+        "Type": "NORMAL",
+        "Accuracy": 90,
+        "PP": 20,
+        "Name": "SONICBOOM"
+    },
+    "DISABLE": {
+        "Effect": "Disables one of the target's moves.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "DISABLE"
+    },
+    "BUG_BITE": {
+        "Effect": "33% chance to drop the target's attack by one stage.",
+        "Power": 45,
+        "Type": "BUG",
+        "Accuracy": 100,
+        "PP": 30,
+        "Name": "BUG BITE"
+    },
+    "EMBER": {
+        "Effect": "10% chance to burn the target.",
+        "Power": 40,
+        "Type": "FIRE",
+        "Accuracy": 100,
+        "PP": 25,
+        "Name": "EMBER"
+    },
+    "FLAMETHROWER": {
+        "Effect": "10% chance to burn the target.",
+        "Power": 95,
+        "Type": "FIRE",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "FLAMETHROWER"
+    },
+    "MIST": {
+        "Effect": "Prevents the target from dropping the user's stats.",
+        "Power": 0,
+        "Type": "ICE",
+        "Accuracy": 100,
+        "PP": 30,
+        "Name": "MIST"
+    },
+    "WATER_GUN": {
+        "Effect": "No additional effect.",
+        "Power": 40,
+        "Type": "WATER",
+        "Accuracy": 100,
+        "PP": 25,
+        "Name": "WATER GUN"
+    },
+    "HYDRO_PUMP": {
+        "Effect": "No additional effect.",
+        "Power": 120,
+        "Type": "WATER",
+        "Accuracy": 85,
+        "PP": 10,
+        "Name": "HYDRO PUMP"
+    },
+    "SURF": {
+        "Effect": "No additional effect.",
+        "Power": 95,
+        "Type": "WATER",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "SURF"
+    },
+    "ICE_BEAM": {
+        "Effect": "10% chance to freeze the target.",
+        "Power": 95,
+        "Type": "ICE",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "ICE BEAM"
+    },
+    "BLIZZARD": {
+        "Effect": "10% chance to freeze the target.",
+        "Power": 120,
+        "Type": "ICE",
+        "Accuracy": 85,
+        "PP": 10,
+        "Name": "BLIZZARD"
+    },
+    "PSYBEAM": {
+        "Effect": "10% chance to confuse the target.",
+        "Power": 75,
+        "Type": "PSYCHIC",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "PSYBEAM"
+    },
+    "BUBBLEBEAM": {
+        "Effect": "33% chance to drop the target's speed by one stage.",
+        "Power": 65,
+        "Type": "WATER",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "BUBBLEBEAM"
+    },
+    "AURORA_BEAM": {
+        "Effect": "33% chance to drop the target's attack by one stage.",
+        "Power": 65,
+        "Type": "ICE",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "AURORA BEAM"
+    },
+    "HYPER_BEAM": {
+        "Effect": "The user must recharge on the next turn.",
+        "Power": 150,
+        "Type": "NORMAL",
+        "Accuracy": 90,
+        "PP": 5,
+        "Name": "HYPER BEAM"
+    },
+    "PECK": {
+        "Effect": "No additional effect.",
+        "Power": 35,
+        "Type": "FLYING",
+        "Accuracy": 100,
+        "PP": 35,
+        "Name": "PECK"
+    },
+    "DRILL_PECK": {
+        "Effect": "No additional effect.",
+        "Power": 80,
+        "Type": "FLYING",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "DRILL PECK"
+    },
+    "SUBMISSION": {
+        "Effect": "Causes recoil, damaging the user.",
+        "Power": 80,
+        "Type": "FIGHTING",
+        "Accuracy": 80,
+        "PP": 25,
+        "Name": "SUBMISSION"
+    },
+    "LOW_KICK": {
+        "Effect": "30% chance to cause the target to flinch.",
+        "Power": 50,
+        "Type": "FIGHTING",
+        "Accuracy": 90,
+        "PP": 20,
+        "Name": "LOW KICK"
+    },
+    "COUNTER": {
+        "Effect": "No additional effect.",
+        "Power": 1,
+        "Type": "FIGHTING",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "COUNTER"
+    },
+    "SEISMIC_TOSS": {
+        "Effect": "Deals damage equal to the user's level.",
+        "Power": 1,
+        "Type": "FIGHTING",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "SEISMIC TOSS"
+    },
+    "STRENGTH": {
+        "Effect": "No additional effect.",
+        "Power": 75,
+        "Type": "FIGHTING",
+        "Accuracy": 95,
+        "PP": 15,
+        "Name": "STRENGTH"
+    },
+    "ABSORB": {
+        "Effect": "Heals the user by 50% of the damage dealt.",
+        "Power": 30,
+        "Type": "GRASS",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "ABSORB"
+    },
+    "MEGA_DRAIN": {
+        "Effect": "Heals the user by 50% of the damage dealt.",
+        "Power": 60,
+        "Type": "GRASS",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "MEGA DRAIN"
+    },
+    "LEECH_SEED": {
+        "Effect": "Drains a bit of the target's HP each turn.",
+        "Power": 0,
+        "Type": "GRASS",
+        "Accuracy": 90,
+        "PP": 15,
+        "Name": "LEECH SEED"
+    },
+    "GROWTH": {
+        "Effect": "Increases the user's special by one stage.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 40,
+        "Name": "GROWTH"
+    },
+    "RAZOR_LEAF": {
+        "Effect": "No additional effect.",
+        "Power": 55,
+        "Type": "GRASS",
+        "Accuracy": 95,
+        "PP": 25,
+        "Name": "RAZOR LEAF"
+    },
+    "SOLARBEAM": {
+        "Effect": "Charges on this turn and attacks next turn.",
+        "Power": 120,
+        "Type": "GRASS",
+        "Accuracy": 100,
+        "PP": 10,
+        "Name": "SOLARBEAM"
+    },
+    "POISONPOWDER": {
+        "Effect": "Poisons the target.",
+        "Power": 0,
+        "Type": "POISON",
+        "Accuracy": 75,
+        "PP": 35,
+        "Name": "POISONPOWDER"
+    },
+    "STUN_SPORE": {
+        "Effect": "Paralyzes the target.",
+        "Power": 0,
+        "Type": "GRASS",
+        "Accuracy": 75,
+        "PP": 30,
+        "Name": "STUN SPORE"
+    },
+    "SLEEP_POWDER": {
+        "Effect": "Puts the target to sleep.",
+        "Power": 0,
+        "Type": "GRASS",
+        "Accuracy": 75,
+        "PP": 15,
+        "Name": "SLEEP POWDER"
+    },
+    "PETAL_DANCE": {
+        "Effect": "Attacks for 3-4 turns and then confuses the user.",
+        "Power": 70,
+        "Type": "GRASS",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "PETAL DANCE"
+    },
+    "STRING_SHOT": {
+        "Effect": "Drops the target's speed by one stage.",
+        "Power": 0,
+        "Type": "BUG",
+        "Accuracy": 95,
+        "PP": 40,
+        "Name": "STRING SHOT"
+    },
+    "DRAGON_RAGE": {
+        "Effect": "Deals 40 damage.",
+        "Power": 1,
+        "Type": "DRAGON",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "DRAGON RAGE"
+    },
+    "FIRE_SPIN": {
+        "Effect": "Prevents the target from acting until the effect ends.",
+        "Power": 15,
+        "Type": "FIRE",
+        "Accuracy": 85,
+        "PP": 15,
+        "Name": "FIRE SPIN"
+    },
+    "THUNDERSHOCK": {
+        "Effect": "10% chance to paralyze the target.",
+        "Power": 40,
+        "Type": "ELECTRIC",
+        "Accuracy": 100,
+        "PP": 30,
+        "Name": "THUNDERSHOCK"
+    },
+    "THUNDERBOLT": {
+        "Effect": "10% chance to paralyze the target.",
+        "Power": 95,
+        "Type": "ELECTRIC",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "THUNDERBOLT"
+    },
+    "THUNDER_WAVE": {
+        "Effect": "Paralyzes the target.",
+        "Power": 0,
+        "Type": "ELECTRIC",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "THUNDER WAVE"
+    },
+    "THUNDER": {
+        "Effect": "10% chance to paralyze the target.",
+        "Power": 120,
+        "Type": "ELECTRIC",
+        "Accuracy": 85,
+        "PP": 10,
+        "Name": "THUNDER"
+    },
+    "ROCK_THROW": {
+        "Effect": "No additional effect.",
+        "Power": 50,
+        "Type": "ROCK",
+        "Accuracy": 80,
+        "PP": 15,
+        "Name": "ROCK THROW"
+    },
+    "EARTHQUAKE": {
+        "Effect": "No additional effect.",
+        "Power": 100,
+        "Type": "GROUND",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "EARTHQUAKE"
+    },
+    "FISSURE": {
+        "Effect": "Causes the target to faint.",
+        "Power": 1,
+        "Type": "GROUND",
+        "Accuracy": 30,
+        "PP": 5,
+        "Name": "FISSURE"
+    },
+    "DIG": {
+        "Effect": "Charges on this turn and attacks next turn.",
+        "Power": 100,
+        "Type": "GROUND",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "DIG"
+    },
+    "TOXIC": {
+        "Effect": "Badly poisons the target.",
+        "Power": 0,
+        "Type": "POISON",
+        "Accuracy": 85,
+        "PP": 15,
+        "Name": "TOXIC"
+    },
+    "CONFUSION": {
+        "Effect": "10% chance to confuse the target.",
+        "Power": 50,
+        "Type": "PSYCHIC",
+        "Accuracy": 100,
+        "PP": 25,
+        "Name": "CONFUSION"
+    },
+    "PSYCHIC_M": {
+        "Effect": "33% chance to drop the target's special by one stage.",
+        "Power": 90,
+        "Type": "PSYCHIC",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "PSYCHIC"
+    },
+    "HYPNOSIS": {
+        "Effect": "Puts the target to sleep.",
+        "Power": 0,
+        "Type": "PSYCHIC",
+        "Accuracy": 60,
+        "PP": 20,
+        "Name": "HYPNOSIS"
+    },
+    "MEDITATE": {
+        "Effect": "Increases the user's attack by one stage.",
+        "Power": 0,
+        "Type": "PSYCHIC",
+        "Accuracy": 100,
+        "PP": 40,
+        "Name": "MEDITATE"
+    },
+    "AGILITY": {
+        "Effect": "Increases the user's speed by two stages.",
+        "Power": 0,
+        "Type": "PSYCHIC",
+        "Accuracy": 100,
+        "PP": 30,
+        "Name": "AGILITY"
+    },
+    "QUICK_ATTACK": {
+        "Effect": "No additional effect.",
+        "Power": 40,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 30,
+        "Name": "QUICK ATTACK"
+    },
+    "RAGE": {
+        "Effect": "Attack is increased when the user is damaged.",
+        "Power": 20,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "RAGE"
+    },
+    "TELEPORT": {
+        "Effect": "Causes a wild battle to end.",
+        "Power": 0,
+        "Type": "PSYCHIC",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "TELEPORT"
+    },
+    "NIGHT_SHADE": {
+        "Effect": "Deals damage equal to the user's level.",
+        "Power": 0,
+        "Type": "GHOST",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "NIGHT SHADE"
+    },
+    "MIMIC": {
+        "Effect": "The user copies one of the target's moves.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 10,
+        "Name": "MIMIC"
+    },
+    "SCREECH": {
+        "Effect": "Drops the target's defense by two stages.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 85,
+        "PP": 40,
+        "Name": "SCREECH"
+    },
+    "DOUBLE_TEAM": {
+        "Effect": "Increases the user's evaison by one stage.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "DOUBLE TEAM"
+    },
+    "RECOVER": {
+        "Effect": "Restores 50% of the user's HP.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "RECOVER"
+    },
+    "HARDEN": {
+        "Effect": "Increases the user's defense by one stage.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 30,
+        "Name": "HARDEN"
+    },
+    "MINIMIZE": {
+        "Effect": "Increases the user's evaison by one stage.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "MINIMIZE"
+    },
+    "SMOKESCREEN": {
+        "Effect": "Drops the target's accuracy by one stage.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "SMOKESCREEN"
+    },
+    "CONFUSE_RAY": {
+        "Effect": "Confuses the target.",
+        "Power": 0,
+        "Type": "GHOST",
+        "Accuracy": 100,
+        "PP": 10,
+        "Name": "CONFUSE RAY"
+    },
+    "WITHDRAW": {
+        "Effect": "Increases the user's defense by one stage.",
+        "Power": 0,
+        "Type": "WATER",
+        "Accuracy": 100,
+        "PP": 40,
+        "Name": "WITHDRAW"
+    },
+    "DEFENSE_CURL": {
+        "Effect": "Increases the user's defense by one stage.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 40,
+        "Name": "DEFENSE CURL"
+    },
+    "BARRIER": {
+        "Effect": "Increases the user's defense by two stages.",
+        "Power": 0,
+        "Type": "PSYCHIC",
+        "Accuracy": 100,
+        "PP": 30,
+        "Name": "BARRIER"
+    },
+    "LIGHT_SCREEN": {
+        "Effect": "Reduces damage from special attacks.",
+        "Power": 0,
+        "Type": "PSYCHIC",
+        "Accuracy": 100,
+        "PP": 30,
+        "Name": "LIGHT SCREEN"
+    },
+    "HAZE": {
+        "Effect": "Resets stat stages of all pokemon.",
+        "Power": 0,
+        "Type": "ICE",
+        "Accuracy": 100,
+        "PP": 30,
+        "Name": "HAZE"
+    },
+    "REFLECT": {
+        "Effect": "Reduces damage from physical attacks.",
+        "Power": 0,
+        "Type": "PSYCHIC",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "REFLECT"
+    },
+    "HAYMAKER": {
+        "Effect": "No additional effect.",
+        "Power": 75,
+        "Type": "FIGHTING",
+        "Accuracy": 100,
+        "PP": 30,
+        "Name": "HAYMAKER"
+    },
+    "BIDE": {
+        "Effect": "Returns double the damage taken to the target.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 10,
+        "Name": "BIDE"
+    },
+    "METRONOME": {
+        "Effect": "The user uses any random move.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "METRONOME"
+    },
+    "MIRROR_MOVE": {
+        "Effect": "The user copies the last move that the target used.",
+        "Power": 0,
+        "Type": "FLYING",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "MIRROR MOVE"
+    },
+    "SELFDESTRUCT": {
+        "Effect": "The user faints after damaging the target.",
+        "Power": 130,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 5,
+        "Name": "SELFDESTRUCT"
+    },
+    "EGG_BOMB": {
+        "Effect": "No additional effect.",
+        "Power": 100,
+        "Type": "GRASS",
+        "Accuracy": 80,
+        "PP": 15,
+        "Name": "EGG BOMB"
+    },
+    "LICK": {
+        "Effect": "30% chance to paralyze the target.",
+        "Power": 50,
+        "Type": "GHOST",
+        "Accuracy": 100,
+        "PP": 30,
+        "Name": "LICK"
+    },
+    "SMOG": {
+        "Effect": "40% chance to poison the target.",
+        "Power": 30,
+        "Type": "POISON",
+        "Accuracy": 70,
+        "PP": 20,
+        "Name": "SMOG"
+    },
+    "SLUDGE": {
+        "Effect": "40% chance to poison the target.",
+        "Power": 75,
+        "Type": "POISON",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "SLUDGE"
+    },
+    "BULLDOZE": {
+        "Effect": "33% chance to drop the target's speed by one stage.",
+        "Power": 65,
+        "Type": "GROUND",
+        "Accuracy": 90,
+        "PP": 20,
+        "Name": "BULLDOZE"
+    },
+    "FIRE_BLAST": {
+        "Effect": "30% chance to burn the target.",
+        "Power": 120,
+        "Type": "FIRE",
+        "Accuracy": 85,
+        "PP": 10,
+        "Name": "FIRE BLAST"
+    },
+    "WATERFALL": {
+        "Effect": "No additional effect.",
+        "Power": 80,
+        "Type": "WATER",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "WATERFALL"
+    },
+    "CLAMP": {
+        "Effect": "Prevents the target from acting until the effect ends.",
+        "Power": 40,
+        "Type": "WATER",
+        "Accuracy": 75,
+        "PP": 15,
+        "Name": "CLAMP"
+    },
+    "SWIFT": {
+        "Effect": "Guaranteed to hit.",
+        "Power": 60,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "SWIFT"
+    },
+    "SKULL_BASH": {
+        "Effect": "No additional effect.",
+        "Power": 100,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "SKULL BASH"
+    },
+    "SPIKE_CANNON": {
+        "Effect": "Hits 2-5 times.",
+        "Power": 20,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "SPIKE CANNON"
+    },
+    "CONSTRICT": {
+        "Effect": "33% chance to drop the target's speed by one stage.",
+        "Power": 60,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 35,
+        "Name": "CONSTRICT"
+    },
+    "AMNESIA": {
+        "Effect": "Increases the user's special by two stages.",
+        "Power": 0,
+        "Type": "PSYCHIC",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "AMNESIA"
+    },
+    "KINESIS": {
+        "Effect": "Drops the target's accuracy by one stage.",
+        "Power": 0,
+        "Type": "PSYCHIC",
+        "Accuracy": 80,
+        "PP": 15,
+        "Name": "KINESIS"
+    },
+    "SOFTBOILED": {
+        "Effect": "Restores 50% of the user's HP.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 10,
+        "Name": "SOFTBOILED"
+    },
+    "HI_JUMP_KICK": {
+        "Effect": "If this attack misses, the user damages itself.",
+        "Power": 85,
+        "Type": "FIGHTING",
+        "Accuracy": 90,
+        "PP": 20,
+        "Name": "HI JUMP KICK"
+    },
+    "GLARE": {
+        "Effect": "Paralyzes the target.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 75,
+        "PP": 30,
+        "Name": "GLARE"
+    },
+    "DREAM_EATER": {
+        "Effect": "Heals the user and fails if the target is not asleep.",
+        "Power": 100,
+        "Type": "PSYCHIC",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "DREAM EATER"
+    },
+    "POISON_GAS": {
+        "Effect": "Poisons the target.",
+        "Power": 0,
+        "Type": "POISON",
+        "Accuracy": 55,
+        "PP": 40,
+        "Name": "POISON GAS"
+    },
+    "SHADOW_BALL": {
+        "Effect": "33% chance to drop the target's special by one stage.",
+        "Power": 90,
+        "Type": "GHOST",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "SHADOW BALL"
+    },
+    "LEECH_LIFE": {
+        "Effect": "Heals the user by 50% of the damage dealt.",
+        "Power": 80,
+        "Type": "BUG",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "LEECH LIFE"
+    },
+    "LOVELY_KISS": {
+        "Effect": "Puts the target to sleep.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 75,
+        "PP": 15,
+        "Name": "LOVELY KISS"
+    },
+    "SKY_ATTACK": {
+        "Effect": "Charges on this turn and attacks next turn.",
+        "Power": 140,
+        "Type": "FLYING",
+        "Accuracy": 90,
+        "PP": 5,
+        "Name": "SKY ATTACK"
+    },
+    "TRANSFORM": {
+        "Effect": "Transforms the user into the target.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 40,
+        "Name": "TRANSFORM"
+    },
+    "DRAGON_CLAW": {
+        "Effect": "33% chance to drop the target's attack by one stage.",
+        "Power": 90,
+        "Type": "DRAGON",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "DRAGON CLAW"
+    },
+    "DIZZY_PUNCH": {
+        "Effect": "No additional effect.",
+        "Power": 70,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "DIZZY PUNCH"
+    },
+    "SPORE": {
+        "Effect": "Puts the target to sleep.",
+        "Power": 0,
+        "Type": "GRASS",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "SPORE"
+    },
+    "FLASH": {
+        "Effect": "Drops the target's accuracy by one stage.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "FLASH"
+    },
+    "PSYWAVE": {
+        "Effect": "Deals a random amount of damage, up to 150% of the user's level.",
+        "Power": 1,
+        "Type": "PSYCHIC",
+        "Accuracy": 80,
+        "PP": 15,
+        "Name": "PSYWAVE"
+    },
+    "SPLASH": {
+        "Effect": "Has no effect.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 40,
+        "Name": "SPLASH"
+    },
+    "ACID_ARMOR": {
+        "Effect": "Increases the user's defense by two stages.",
+        "Power": 0,
+        "Type": "POISON",
+        "Accuracy": 100,
+        "PP": 40,
+        "Name": "ACID ARMOR"
+    },
+    "CRABHAMMER": {
+        "Effect": "No additional effect.",
+        "Power": 90,
+        "Type": "WATER",
+        "Accuracy": 85,
+        "PP": 15,
+        "Name": "CRABHAMMER"
+    },
+    "EXPLOSION": {
+        "Effect": "The user faints after damaging the target.",
+        "Power": 170,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 5,
+        "Name": "EXPLOSION"
+    },
+    "FURY_SWIPES": {
+        "Effect": "Hits 2-5 times.",
+        "Power": 18,
+        "Type": "NORMAL",
+        "Accuracy": 80,
+        "PP": 15,
+        "Name": "FURY SWIPES"
+    },
+    "BONEMERANG": {
+        "Effect": "Attacks twice.",
+        "Power": 50,
+        "Type": "GROUND",
+        "Accuracy": 90,
+        "PP": 15,
+        "Name": "BONEMERANG"
+    },
+    "REST": {
+        "Effect": "Restores 50% of the user's HP.",
+        "Power": 0,
+        "Type": "PSYCHIC",
+        "Accuracy": 100,
+        "PP": 10,
+        "Name": "REST"
+    },
+    "ROCK_SLIDE": {
+        "Effect": "30% chance to cause the target to flinch.",
+        "Power": 75,
+        "Type": "ROCK",
+        "Accuracy": 95,
+        "PP": 15,
+        "Name": "ROCK SLIDE"
+    },
+    "HYPER_FANG": {
+        "Effect": "10% chance to cause the target to flinch.",
+        "Power": 80,
+        "Type": "NORMAL",
+        "Accuracy": 90,
+        "PP": 15,
+        "Name": "HYPER FANG"
+    },
+    "SHARPEN": {
+        "Effect": "Increases the user's attack by one stage.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 30,
+        "Name": "SHARPEN"
+    },
+    "CONVERSION": {
+        "Effect": "The user copies the target's type.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 30,
+        "Name": "CONVERSION"
+    },
+    "TRI_ATTACK": {
+        "Effect": "30% chance to cause the target to flinch.",
+        "Power": 80,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "TRI ATTACK"
+    },
+    "SUPER_FANG": {
+        "Effect": "Halves the target's current HP.",
+        "Power": 1,
+        "Type": "NORMAL",
+        "Accuracy": 90,
+        "PP": 10,
+        "Name": "SUPER FANG"
+    },
+    "SLASH": {
+        "Effect": "No additional effect.",
+        "Power": 70,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 20,
+        "Name": "SLASH"
+    },
+    "SUBSTITUTE": {
+        "Effect": "Creates a substitute at the cost of 25% max HP.",
+        "Power": 0,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 15,
+        "Name": "SUBSTITUTE"
+    },
+    "STRUGGLE": {
+        "Effect": "Causes recoil, damaging the user.",
+        "Power": 50,
+        "Type": "NORMAL",
+        "Accuracy": 100,
+        "PP": 10,
+        "Name": "STRUGGLE"
+    }
+}

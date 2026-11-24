@@ -40,3 +40,4 @@ _DAN/*.synctex.gz
 _DAN/*.pdf
 _DAN/ART/*
 _DAN/SPRITES/*
+.virt

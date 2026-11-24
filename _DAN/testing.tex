@@ -1,17 +1,20 @@
 \documentclass{article}
-\usepackage{fontspec}
-\setmainfont{Tekton Light}
 %\usepackage{fourier} % utopia
 %\usepackage{tgbonum} % bonum
 %\usepackage{tgschola} % schola
 %\usepackage{librebaskerville} % baskerville
 %\usepackage{bookman} % bookman
 
+\usepackage[sfmath]{kpfonts} %% sfmath option only to make math in sans serif. Probablye only for use when base font is sans serif.
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
 \usepackage{tikz}
 \usepackage[svgnames]{xcolor}
 
 \usepackage{contour}
-\contourlength{0.05em}
+\contourlength{0.08em}
+\contournumber{32}
 
 \usepackage{tcolorbox}
 
@@ -22,99 +25,114 @@
 \colorlet{color_Spc}{LightSlateBlue}
 \colorlet{color_BST}{Navy}
 
-\graphicspath{{SPRITES/}{ART/}}
+\colorlet{colornormal}{GhostWhite}
+\colorlet{colorfighting}{DarkOrange}
+\colorlet{colorflying}{LightSteelBlue}
+\colorlet{colorpoison}{MediumOrchid}
+\colorlet{colorground}{SaddleBrown}
+\colorlet{colorrock}{DarkGoldenrod}
+\colorlet{colorbug}{BurlyWood}
+\colorlet{colorghost}{DarkMagenta!70!Black}
+\colorlet{colorfire}{FireBrick}
+\colorlet{colorwater}{LightSeaGreen}
+\colorlet{colorgrass}{Green}
+\colorlet{colorelectric}{Yellow}
+\colorlet{colorpsychic}{Pink}
+\colorlet{colorice}{DeepSkyBlue}
+\colorlet{colordragon}{MidnightBlue}
 
-\begin{document}
-\includegraphics{1.PNG}
-\includegraphics[width=0.25\linewidth]{001 Bulbasaur.png}
+\graphicspath{{SPRITES/}{ART/}}
 
 \def\MAXSTAT{180}
 \def\MAXBST{590}
-\def\HP{45}
-\def\Atk{49}
-\def\Def{49}
-\def\Spd{45}
-\def\Spc{65}
-\def\BST{253}
+\def\wideststatlabel{{\textsc{hit points}}}
+\pgfmathsetlengthmacro{\statlabelwidth}{width("\wideststatlabel") + 4pt} 
+\def\learnsettableinnersep{3pt}
+\def\learnsettableleveltext{{\textbf{\textsc{Level}}}}
+\pgfmathsetlengthmacro{\learnsettablelevelwidth}{width("\learnsettableleveltext") + 2 * \learnsettableinnersep}
+\def\learnsettablelevellength{{\textsc{fighting}}}
+\pgfmathsetlengthmacro{\learnsettabletypewidth}{width("\learnsettablelevellength") + 2 * \learnsettableinnersep}
+\def\learnsettablemovewidth{3cm}
 
 \newcommand{\densityfunction}[2]{%
 \draw[#1!50!Black, fill=#1!50!White, ultra thin] plot[yshift={-\count cm}] file {#2.table};
 }
 \newcommand{\statlabel}[2]{%
-\draw (0, {-#1 + 0.5}) node[left, inner sep=2pt] {#2};
+\draw (0, {-#1 + 0.5}) node[left, inner sep=2pt] {\textsc{#2}};
 }
 \newcommand{\statdecorators}[4]{%
-%\draw[#4!50!Black, thick] (0, {-#1 + 0.5}) -- ({#2 / #3}, {-#1 + 0.5});
 \draw[#4!50!Black, thick] ({#2 / #3}, {-#1 + 1}) -- ({#2 / #3}, {-#1});
 \draw[fill=#4, fill opacity=0.6] (0, {-\count}) rectangle ({#2 / #3}, {-\count + 1});
-%\draw[#4, thick] ({#2 / #3}, {-#1 + 1}) -- ({#2 / #3}, {-#1});
 \draw (0, {-#1 + 0.5}) node[right] {\contour{White}{\texttt{#2}}};
-\draw (0, {-#1})--(1, {-#1});
+\draw[ultra thin] (0, {-#1})--(1, {-#1});
 }
 
-
+\newcommand{\statimage}[6]{
 \def\xscale{5}
 \def\yscale{0.45}
-
-\def\widestlabel{{Hit Points}}
-\pgfmathsetlengthmacro{\labelwidth}{width("\widestlabel") + 4pt} 
 \begin{tikzpicture}[xscale=\xscale, yscale=\yscale]
 \def\count{1}
 \densityfunction{color_HP}{pdf_HP}
-\statlabel{\count}{Hit Points}
-\statdecorators{\count}{\HP}{\MAXSTAT}{color_HP}
+\statlabel{\count}{hit points}
+\statdecorators{\count}{#1}{\MAXSTAT}{color_HP}
 
 \def\count{2}
 \densityfunction{color_Atk}{pdf_Atk}
-\statlabel{\count}{Attack}
-\statdecorators{\count}{\Atk}{\MAXSTAT}{color_Atk}
+\statlabel{\count}{attack}
+\statdecorators{\count}{#2}{\MAXSTAT}{color_Atk}
 
 \def\count{3}
 \densityfunction{color_Def}{pdf_Def}
-\statlabel{\count}{Defense}
-\statdecorators{\count}{\Def}{\MAXSTAT}{color_Def}
+\statlabel{\count}{defense}
+\statdecorators{\count}{#3}{\MAXSTAT}{color_Def}
 
 \def\count{4}
 \densityfunction{color_Spd}{pdf_Spd}
-\statlabel{\count}{Speed}
-\statdecorators{\count}{\Spd}{\MAXSTAT}{color_Spd}
+\statlabel{\count}{speed}
+\statdecorators{\count}{#4}{\MAXSTAT}{color_Spd}
 
 \def\count{5}
 \densityfunction{color_Spc}{pdf_Spc}
-\statlabel{\count}{Special}
-\statdecorators{\count}{\Spc}{\MAXSTAT}{color_Spc}
+\statlabel{\count}{special}
+\statdecorators{\count}{#5}{\MAXSTAT}{color_Spc}
 
 \def\count{6}
 \densityfunction{color_BST}{pdf_BST}
-\statlabel{\count}{Total}
-\statdecorators{\count}{\BST}{\MAXBST}{color_BST}
+\statlabel{\count}{total}
+\statdecorators{\count}{#6}{\MAXBST}{color_BST}
 
-\draw (0, 0) rectangle ({-\labelwidth / \xscale}, {-\count});
-\draw[thick] ({-\labelwidth / \xscale}, {-\count + 1}) rectangle (1, {-\count});
+\draw (0, 0) rectangle ({-\statlabelwidth / \xscale}, {-\count});
+\draw[thick] ({-\statlabelwidth / \xscale}, {-\count + 1}) rectangle (1, {-\count});
 \end{tikzpicture}
+}
+
+\newcommand{\learnsetimage}[1]{
+\begin{tikzpicture}[yscale=\yscale]
+\draw (0, 0) rectangle ({-\learnsettablelevelwidth}, 1);
+\draw ({-\learnsettablelevelwidth / 2}, 0.5) node{\textbf{\textsc{Level}}};
+\draw (0, 0) rectangle ({\learnsettabletypewidth}, 1);
+\draw ({\learnsettabletypewidth / 2}, 0.5) node{\textbf{\textsc{Type}}};
+\draw ({\learnsettabletypewidth}, 0) rectangle ({\learnsettabletypewidth + \learnsettablemovewidth}, 1);
+\draw ({\learnsettabletypewidth + \learnsettablemovewidth / 2}, 0.5) node{\textbf{\textsc{Move}}};
+\foreach \count / \level / \type / \move in #1
+{
+\draw ({-\learnsettablelevelwidth}, {-\count}) rectangle ({\learnsettabletypewidth + \learnsettablemovewidth}, {-\count + 1});
+\draw[fill=color\type] (0, {-\count}) rectangle ({\learnsettabletypewidth}, {-\count + 1});
+\draw ({-\learnsettablelevelwidth / 2}, {-\count + 0.5}) node{\level};
+\draw ({\learnsettabletypewidth / 2}, {-\count + 0.5}) node[rectangle, rounded corners, fill=color\type !30!White, inner sep = 2pt]{\small{\textsc{\type}}};
+%\draw ({\learnsettabletypewidth / 2}, {-\count + 0.5}) node[inner sep = 1.5pt]{\contour{White}{\small{\textsc{\type}}}};
+\draw ({\learnsettabletypewidth}, {-\count + 0.5}) node[right, inner sep = \learnsettableinnersep]{\textsc{\move}};
+}
+\end{tikzpicture}
+}
+
+\begin{document}
+\includegraphics{1.PNG}
+\includegraphics[width=0.25\linewidth]{001 Bulbasaur.png}
+
+\statimage{45}{49}{49}{45}{65}{253}
 
 \bigskip
 
-\def\list{1/--/Normal/Text, 2/--/Fighting/New Text, 3/8/Grass/Next Text, 4/16/Poison/Final Text}
-\def\thisinnersep{3pt}
-\def\leveltext{{Level}}
-\pgfmathsetlengthmacro{\levelwidth}{width("\leveltext") + 2 * \thisinnersep}
-\def\typetext{{Fighting}}
-\pgfmathsetlengthmacro{\typelength}{width("\typetext") + 2 * \thisinnersep}
-\def\movelength{3cm}
-\begin{tikzpicture}[yscale=\yscale]
-\draw (0, 0) rectangle ({-\levelwidth}, 1);
-\draw ({-\levelwidth / 2}, 0.5) node{Level};
-\draw (0, 0) rectangle ({\typelength}, 1);
-\draw ({\typelength / 2}, 0.5) node{Type};
-\draw ({\typelength}, 0) rectangle ({\typelength + \movelength}, 1);
-\draw ({\typelength + \movelength / 2}, 0.5) node{Move};
-\foreach \count / \level / \type / \move in \list
-{
-\draw ({-\levelwidth / 2}, {-\count + 0.5}) node{\level};
-\draw (0, {-\count + 0.5}) node[right, inner sep = \thisinnersep]{\type};
-\draw ({\typelength}, {-\count + 0.5}) node[right, inner sep = \thisinnersep]{\move};
-}
-	
-\end{tikzpicture}
+\learnsetimage{{1/5/poison/poison move, 2/10/bug/bug move, 3/15/water/water move, 4/20/electric/electric move, 5/25/ground/ground move, 6/30/ghost/ghost move, 7/35/fighting/fighting move, 8/40/flying/flying move, 9/45/fire/fire move, 10/50/normal/normal move, 11/55/rock/rock move, 12/60/grass/grass move, 13/65/psychic/psychic move, 14/70/dragon/dragon move, 15/75/ice/ice move}}
 \end{document}
