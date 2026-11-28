@@ -592,7 +592,7 @@
         "Name": "GROWTH"
     },
     "RAZOR_LEAF": {
-        "Effect": "No additional effect.",
+        "Effect": "Increased critical hit ratio.",
         "Power": 55,
         "Type": "GRASS",
         "Accuracy": 95,
@@ -776,7 +776,7 @@
         "Name": "AGILITY"
     },
     "QUICK_ATTACK": {
-        "Effect": "No additional effect.",
+        "Effect": "Usually moves first.",
         "Power": 40,
         "Type": "NORMAL",
         "Accuracy": 100,
@@ -920,7 +920,7 @@
         "Name": "REFLECT"
     },
     "HAYMAKER": {
-        "Effect": "No additional effect.",
+        "Effect": "Increased critical hit ratio.",
         "Power": 75,
         "Type": "FIGHTING",
         "Accuracy": 100,
@@ -1208,7 +1208,7 @@
         "Name": "ACID ARMOR"
     },
     "CRABHAMMER": {
-        "Effect": "No additional effect.",
+        "Effect": "Increased critical hit ratio.",
         "Power": 90,
         "Type": "WATER",
         "Accuracy": 85,
@@ -1296,7 +1296,7 @@
         "Name": "SUPER FANG"
     },
     "SLASH": {
-        "Effect": "No additional effect.",
+        "Effect": "Increased critical hit ratio.",
         "Power": 70,
         "Type": "NORMAL",
         "Accuracy": 100,

@@ -3,6 +3,7 @@ import re
 import json
 
 root = "/home/danny/decomps/pokeyellow"
+all_problems = []
 
 # ---------------------------------------------------------------------
 # Pokemon Data
@@ -15,22 +16,52 @@ fpath_pkmn_names = os.path.join(root, "data/pokemon/names.asm")
 fpath_pkmn_const = os.path.join(root, "constants/pokemon_constants.asm")
 fpath_pkmn_evos_moves = os.path.join(root, "data/pokemon/evos_moves.asm")
 dpath_pkmn_data = os.path.join(root, "data/pokemon/base_stats")
+dpath_encocunters = os.path.join(root, "data/wild/maps")
+fpath_probabilities = os.path.join(root, "data/wild/probabilities.asm")
+fpath_super_rod = os.path.join(root, "data/wild/super_rod.asm")
+fpath_good_rod = os.path.join(root, "data/wild/good_rod.asm")
+fpath_gc_prices = os.path.join(root, "data/events/prize_mon_levels.asm")
+fpath_trades = os.path.join(root, "data/events/trades.asm")
 
 pkmn_data = {}
 
+### Initializing pkmn dictionary based on the pokedex.
+# Note that the "name" pulled from the file is the C name, not the string. So MR_MIME instead of "MR MIME".
+
 with open(fpath_pokedex, "r", encoding="utf-8") as f:
     lines = f.read().split('\n')
+    pokedex_number = 1
     for line in lines:
-        clean_line = line.strip().split(";")[0]
+        clean_line = line.split(";")[0].strip()
         if clean_line.startswith("const DEX"):
             name = clean_line.split(" ")[1].split("DEX_")[1]
-            pkmn_data[name] = {"key_lookup": name.replace("_", "")}
+            pkmn_data[name] = {
+                "key_lookup": name.replace("_", ""),
+                "Pokedex Number": pokedex_number,
+                "Location": {
+                    "Wild": [],
+                    "Surf": [],
+                    "Old Rod": [],
+                    "Good Rod": [],
+                    "Super Rod": [],
+                    "Gift": [],
+                    "Trade": [],
+                    "Purchase": [],
+                    "Reward": [],
+                    "Fossil": [],
+                    "Static": []
+                },
+            }
+            pokedex_number += 1
+
+### Getting the name strings for each pkmn.
+# fpath_pkmn_names stores the text, but it is in an order that must be compared against fpath_pkmn_const
 
 pkmn_const = []
 with open(fpath_pkmn_const, "r", encoding="utf-8") as f:
     lines = f.read().split('\n')
     for line in lines:
-        clean_line = line.strip().split(";")[0]
+        clean_line = line.split(";")[0].strip()
         if clean_line.startswith("const"):
             if clean_line.startswith("const_def"):
                 pass
@@ -45,13 +76,15 @@ pkmn_names = []
 with open(fpath_pkmn_names, "r", encoding="utf-8") as f:
     lines = f.read().split('\n')
     for line in lines:
-        clean_line = line.strip().split(";")[0]
+        clean_line = line.split(";")[0].strip()
         if clean_line.startswith("dname"):
             pkmn_names.append(clean_line.split("\"")[1])
 
 for c, n in zip(pkmn_const, pkmn_names):
     if c in pkmn_data.keys():
         pkmn_data[c]["Name"] = n
+
+### Getting evolutions and Level-Up moves from the file that holds them.
 
 key_lookup = {pkmn_data[key]["key_lookup"]: key for key in pkmn_data.keys()}
 with open(fpath_pkmn_evos_moves, "r", encoding="utf-8") as f:
@@ -64,7 +97,7 @@ with open(fpath_pkmn_evos_moves, "r", encoding="utf-8") as f:
         if line == ";;;; MOVES STOP ;;;;":
             ACTIVE = False
         if ACTIVE:
-            clean_line = line.strip().split(";")[0]
+            clean_line = line.split(";")[0].strip()
             if not clean_line.startswith(';') and not clean_line == "":
                 if not clean_line.startswith("db "):
                     key = key_lookup[clean_line.split("EvosMoves:")[0].upper()]
@@ -83,6 +116,8 @@ with open(fpath_pkmn_evos_moves, "r", encoding="utf-8") as f:
                         move_data = clean_line.split("db ")[1].split(",")
                         pkmn_data[key]["Level-Up Moves"].append([int(move_data[0]), move_data[1].strip()])
 
+### Pulling stats, types, catch rate, base exp, starting moves, and tm/hm moves from individual files.
+
 for file in os.listdir(dpath_pkmn_data):
     this_fpath = os.path.join(dpath_pkmn_data, file)
     with open(this_fpath, "r", encoding="utf-8") as f:
@@ -91,7 +126,7 @@ for file in os.listdir(dpath_pkmn_data):
         READING_TMHM = False
         tmhm_string = None
         for line in lines:
-            clean_line = line.strip().split(";")[0]
+            clean_line = line.split(";")[0].strip()
             if clean_line.startswith("db "):
                 db_count += 1
                 match db_count:
@@ -132,12 +167,258 @@ for file in os.listdir(dpath_pkmn_data):
                 pkmn_data[key]["TMHM Moves"] = [move.strip() for move in tmhm_string.replace("\\", "").split(",")] if tmhm_string != "" else []
                 tmhm_string = None
 
-all_problems = []
+### Populating encounter locations.
+# (Location, Level, Probability)
+
+# Wild encounters
+wild_probabilities = []
+with open(fpath_probabilities, "r", encoding="utf-8") as f:
+    lines = f.read().split('\n')
+    for line in lines:
+        clean_line = line.split(";")[0].strip()
+        if clean_line.startswith("wild_chance "):
+            wild_probabilities.append(int(clean_line.replace("wild_chance ", "")) * 100 / 256)
+
+all_locations = set()
+for file in os.listdir(dpath_encocunters):
+    if file == "nothing.asm":
+        continue
+    this_fpath = os.path.join(dpath_encocunters, file)
+    with open(this_fpath, "r", encoding="utf-8") as f:
+        lines = f.read().split('\n')
+        name_from_fp = file.split('.')[0]
+        name_from_text = None
+        scanning_grass = False
+        scanning_surf = False
+        for line in lines:
+            clean_line = line.split(";")[0].strip()
+            if clean_line.endswith("WildMons:"):
+                if name_from_text is not None:
+                    all_problems.append(f"This file has two names for some reason: {file}")
+                name_from_text = clean_line.replace("WildMons:", "")
+
+            if clean_line.startswith("db"):
+                this_data = clean_line.replace("db", "").split(",")
+                this_level = int(this_data[0].strip())
+                this_pkmn = this_data[1].strip()
+                if scanning_grass:
+                    pkmn_data[this_pkmn]["Location"]["Wild"].append((name_from_fp, this_level, wild_probabilities[probability_counter]))
+                if scanning_surf:
+                    pkmn_data[this_pkmn]["Location"]["Surf"].append((name_from_fp, this_level, wild_probabilities[probability_counter]))
+                probability_counter += 1
+
+            if clean_line.startswith("def_grass_wildmons"):
+                scanning_grass = True
+                probability_counter = 0
+            if clean_line.startswith("end_grass_wildmons"):
+                scanning_grass = False
+            if clean_line.startswith("def_water_wildmons"):
+                scanning_surf = True
+                probability_counter = 0
+            if clean_line.startswith("end_water_wildmons"):
+                scanning_surf = False
+        if name_from_text is None or name_from_fp != name_from_text:
+            all_problems.append(f"[LOCATION NAME MISMATCH] {name_from_fp} | {name_from_text}")
+        all_locations.add(name_from_fp)
+
+# Fishing
+good_rod_pokemon = []
+with open(fpath_good_rod, "r", encoding="utf-8") as f:
+    lines = f.read().split('\n')
+    for line in lines:
+        clean_line = line.split(";")[0].strip()
+        if clean_line.startswith("db "):
+            this_data = clean_line.replace("db", "").split(",")
+            this_level = int(this_data[0].strip())
+            this_pkmn = this_data[1].strip()
+            good_rod_pokemon.append((this_pkmn, this_level))
+
+super_rod_probabilites = [102/256, 76/256, 51/256, 27/256]
+with open(fpath_super_rod, "r", encoding="utf-8") as f:
+    lines = f.read().split('\n')
+    for line in lines:
+        clean_line = line.split(";")[0].strip()
+        if clean_line.startswith("db ") and not clean_line.startswith("db -1"):
+            this_data = clean_line.replace("db ", "").split(",")
+            this_loc_raw = this_data[0].strip()
+            this_loc = "".join([s.title() for s in this_loc_raw.split("_")])
+            p1 = this_data[1].strip()
+            l1 = int(this_data[2].strip())
+            p2 = this_data[3].strip()
+            l2 = int(this_data[4].strip())
+            p3 = this_data[5].strip()
+            l3 = int(this_data[6].strip())
+            p4 = this_data[7].strip()
+            l4 = int(this_data[8].strip())
+            all_locations.add(this_loc)
+            pkmn_data[p1]["Location"]["Super Rod"].append((this_loc, l1, super_rod_probabilites[0]))
+            pkmn_data[p2]["Location"]["Super Rod"].append((this_loc, l2, super_rod_probabilites[1]))
+            pkmn_data[p3]["Location"]["Super Rod"].append((this_loc, l3, super_rod_probabilites[2]))
+            pkmn_data[p4]["Location"]["Super Rod"].append((this_loc, l4, super_rod_probabilites[3]))
+            for pkmn_species, pkmn_level in good_rod_pokemon:
+                pkmn_data[pkmn_species]["Location"]["Good Rod"].append((this_loc, pkmn_level, 50))
+            pkmn_data["MAGIKARP"]["Location"]["Old Rod"].append((this_loc, 5, 100))
+
+# Trades
+TRADE_LOCATIONS = [
+    "Route11Gate",
+    "Route2TradeHouse",
+    None,
+    "CinnabarIsland",
+    None,
+    "Route18Gate",
+    None,
+    "CinnabarIsland",
+    "CinnabarIsland",
+    "Route5UndergroundPath",
+]
+
+with open(fpath_trades, "r", encoding="utf-8") as f:
+    lines = f.read().split('\n')
+    counter = 0
+    for line in lines:
+        clean_line = line.split(";")[0].strip()
+        if clean_line.startswith("npctrade"):
+            received_pkmn = clean_line.split(",")[1].strip()
+            this_loc = TRADE_LOCATIONS[counter]
+            if this_loc is not None:
+                all_locations.add(this_loc)
+                pkmn_data[received_pkmn]["Location"]["Trade"].append((this_loc, -1, 100))
+            counter += 1
+
+# Game Corner prizes
+with open(fpath_gc_prices, "r", encoding="utf-8") as f:
+    lines = f.read().split('\n')
+    counter = 0
+    for line in lines:
+        clean_line = line.split(";")[0].strip()
+        if clean_line.startswith("db "):
+            this_data = clean_line.replace("db ", "").split(",")
+            this_pkmn = this_data[0].strip()
+            this_level = int(this_data[1].strip())
+            pkmn_data[this_pkmn]["Location"]["Purchase"].append(("CeladonCity", this_level, 100))
+
+# Manualling adding some that I'm not clever enough to code programmatically.
+all_locations.add("SaffronCity")
+all_locations.add("Route16Gate")
+all_locations.add("Route11Gate")
+pkmn_data["PIKACHU"]["Location"]["Gift"].append(("PalletTown", 25, 100))
+pkmn_data["EEVEE"]["Location"]["Gift"].append(("CeladonCity", 25, 100))
+pkmn_data["LAPRAS"]["Location"]["Gift"].append(("SaffronCity", 15, 100))
+pkmn_data["SQUIRTLE"]["Location"]["Gift"].append(("VermilionCity", 10, 100))
+pkmn_data["BULBASAUR"]["Location"]["Gift"].append(("CeruleanCity", 10, 100))
+pkmn_data["CHARMANDER"]["Location"]["Gift"].append(("Route24", 10, 100))
+pkmn_data["MAGIKARP"]["Location"]["Purchase"].append(("Route3", 10, 100))
+pkmn_data["HITMONCHAN"]["Location"]["Reward"].append(("SaffronCity", 30, 100))
+pkmn_data["HITMONLEE"]["Location"]["Reward"].append(("SaffronCity", 30, 100))
+pkmn_data["AERODACTYL"]["Location"]["Fossil"].append(("CinnabarIsland", 30, 100))
+pkmn_data["KABUTO"]["Location"]["Fossil"].append(("CinnabarIsland", 30, 100))
+pkmn_data["OMANYTE"]["Location"]["Fossil"].append(("CinnabarIsland", 30, 100))
+pkmn_data["VOLTORB"]["Location"]["Static"].append(("PowerPlant", 40, 100))
+pkmn_data["ELECTRODE"]["Location"]["Static"].append(("PowerPlant", 43, 100))
+pkmn_data["SNORLAX"]["Location"]["Static"].append(("Route16Gate", 30, 100))
+pkmn_data["SNORLAX"]["Location"]["Static"].append(("Route11Gate", 30, 100))
+pkmn_data["ZAPDOS"]["Location"]["Static"].append(("PowerPlant", 50, 100))
+pkmn_data["ARTICUNO"]["Location"]["Static"].append(("SeafoamIslandsB4F", 50, 100))
+pkmn_data["MOLTRES"]["Location"]["Static"].append(("VictoryRoad2F", 50, 100))
+pkmn_data["MEWTWO"]["Location"]["Static"].append(("CeruleanCaveB1F", 70, 100))
+
+for this_pkmn, this_data in pkmn_data.items():
+    for this_type, this_type_data in this_data["Location"].items():
+        for this_location_data in this_type_data:
+            if not this_location_data[0] in all_locations:
+                all_problems.append(f"[EXTRA LOCATION] {this_location_data}")
+
+### Compiling the data around the ways you can obtain each pokemon
+
+LOCATION_REPLACEMENTS = {
+    "CeruleanCave1F": "CeruleanCave",
+    "CeruleanCave2F": "CeruleanCave",
+    "CeruleanCaveB1F": "CeruleanCave",
+    "MtMoon1F": "MountMoon",
+    "MtMoonB1F": "MountMoon",
+    "MtMoonB2F": "MountMoon",
+    "PokemonMansion1F": "CinnabarIsland",
+    "PokemonMansion2F": "CinnabarIsland",
+    "PokemonMansion3F": "CinnabarIsland",
+    "PokemonMansionB1F": "CinnabarIsland",
+    "PokemonTower1F": "LavenderTown",
+    "PokemonTower2F": "LavenderTown",
+    "PokemonTower3F": "LavenderTown",
+    "PokemonTower4F": "LavenderTown",
+    "PokemonTower5F": "LavenderTown",
+    "PokemonTower6F": "LavenderTown",
+    "PokemonTower7F": "LavenderTown",
+    "RockTunnel1F": "RockTunnel",
+    "RockTunnelB1F": "RockTunnel",
+    "SafariZoneCenter": "SafariZone",
+    "SafariZoneEast": "SafariZone",
+    "SafariZoneNorth": "SafariZone",
+    "SafariZoneWest": "SafariZone",
+    "SeafoamIslands1F": "SeafoamIsland",
+    "SeafoamIslandsB1F": "SeafoamIsland",
+    "SeafoamIslandsB2F": "SeafoamIsland",
+    "SeafoamIslandsB3F": "SeafoamIsland",
+    "SeafoamIslandsB4F": "SeafoamIsland",
+    "VictoryRoad1F": "VictoryRoad",
+    "VictoryRoad2F": "VictoryRoad",
+    "VictoryRoad3F": "VictoryRoad",
+}
+
+ENCOUNTER_TYPE_REPLACEMENT = {
+    "Wild": "wild",
+    "Surf": "surf",
+    "Old Rod": "fish",
+    "Good Rod": "fish",
+    "Super Rod": "fish",
+    "Gift": "gift",
+    "Trade": "trade",
+    "Purchase": "purchase",
+    "Reward": "reward",
+    "Fossil": "fossil",
+    "Static": "static",
+}
+
+default_color_keys = {}
+for pkmn in pkmn_data.keys():
+    availability_tracker = dict()
+    for encounter_type, encounter_data in pkmn_data[pkmn]["Location"].items():
+        for this_location, _, _ in encounter_data:
+            if this_location in LOCATION_REPLACEMENTS.keys():
+                latex_location = LOCATION_REPLACEMENTS[this_location]
+            else:
+                latex_location = this_location
+            if not latex_location in default_color_keys.keys():
+                default_color_keys[latex_location] = "White"
+            if not latex_location in availability_tracker.keys():
+                availability_tracker[latex_location] = set()
+            availability_tracker[latex_location].add(ENCOUNTER_TYPE_REPLACEMENT[encounter_type])
+    pkmn_data[pkmn]["Map Color Data"] = {}
+    for latex_location, encounter_types in availability_tracker.items():
+        if len(encounter_types) == 1:
+            this_color_text = list(encounter_types)[0]
+            this_color_key = f"color{this_color_text}"
+        elif len(encounter_types) == 2:
+            this_color_text = " and ".join(encounter_types)
+            this_color_key = "!50!".join([f"color{s}" for s in encounter_types])
+        else:
+            all_problems.append("[TOO MANY ENCOUNTER TYPES] {pkmn} : {encounter_types}")
+        pkmn_data[pkmn]["Map Color Data"][latex_location] = [this_color_key, this_color_text]
+    # pkmn_data[pkmn]["Map Color Data"] = this_pkmn_color_keys
+
+
+
+### Performing some checks against the data that was collected.
 acceptable_start_move_mismatch = ["CATERPIE", "METAPOD", "WEEDLE", "KAKUNA", "MAGIKARP"]
 acceptable_learn_move_mismatch = ["METAPOD", "KAKUNA", "MAGIKARP", "PIKACHU", "EEVEE"]
 for key in pkmn_data.keys():
     if len(pkmn_data[key]["TMHM Moves"]) != len(set(pkmn_data[key]["TMHM Moves"])):
         print(f"[DUPLICATE TMHM] {key}")
+
+    for start_move in pkmn_data[key]["Starting Moves"]:
+        if start_move in pkmn_data[key]["Level-Up Moves"]:
+            all_problems.append(f"[START MOVE BY LEVEL] {key}")
+
     evos = [this_evo[2] for this_evo in pkmn_data[key]["Evolutions"]]
     level_moves = [move_data[1] for move_data in pkmn_data[key]["Level-Up Moves"]]
     for evo in evos:
@@ -279,7 +560,7 @@ with open(fpath_move_names, "r", encoding="utf-8") as f:
     lines = f.read().split('\n')
     index = 0
     for line in lines:
-        clean_line = line.strip().split(";")[0]
+        clean_line = line.split(";")[0].strip()
         if clean_line.startswith("li \""):
             move_name_dict[index] = clean_line.replace("li \"", "").replace("\"", "")
             index += 1
@@ -288,7 +569,7 @@ with open(fpath_move_data, "r", encoding="utf-8") as f:
     lines = f.read().split('\n')
     index = 0
     for line in lines:
-        clean_line = line.strip().split(";")[0]
+        clean_line = line.split(";")[0].strip()
         if clean_line.startswith("move "):
             this_move_data = clean_line.replace("move ", "").split(",")
             move_key = this_move_data[0].strip()

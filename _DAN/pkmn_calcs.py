@@ -63,11 +63,22 @@ for stat in pkmn_stat_info.keys():
     with open(file_name, 'w', encoding="utf-8") as f:
         f.write('\n'.join([f"{x} {y}" for x, y in data_list]))
 
+### Compiling data for the pokedex entries
+
+default_location_colors = {}
+for pkmn in pkmn_data.keys():
+    for loc in pkmn_data[pkmn]["Map Color Data"].keys():
+        if not loc in default_location_colors.keys():
+            default_location_colors[loc] = "White"
+
 def create_learnset_string(count, level, type, name):
     return f"{count}/{level}/{type.lower()}/{name.lower()}"
+def create_color_command(loc, color):
+    return f"\\colorlet{{color{loc}}}{{{color}}}"
 
-all_learnset_data = {}
+pokedex_entry_data = {}
 for pkmn, this_data in pkmn_data.items():
+    pokedex_entry_data[pkmn] = {"NUM": this_data["Pokedex Number"]}
     learnset_strings = []
     count = 1
     for move in this_data["Starting Moves"]:
@@ -77,17 +88,68 @@ for pkmn, this_data in pkmn_data.items():
         learnset_strings.append(create_learnset_string(count, level, move_data[move]['Type'], move_data[move]['Name']))
         count += 1
     if len(learnset_strings) > 0:
-        all_learnset_data[pkmn] = "{" + ", ".join(learnset_strings) + "}"
+        pokedex_entry_data[pkmn]["Learnset Image"] = "\\learnsetimage{{" + ", ".join(learnset_strings) + "}}"
     else:
-        all_learnset_data[pkmn] = None
+        pokedex_entry_data[pkmn]["Learnset Image"] = None
         print(f"[LEARNS NO MOVES] {pkmn}")
+    pokedex_entry_data[pkmn]["Sprite Command"] = "\\includegraphics{SPRITE" + str(this_data["Pokedex Number"]) + ".png}"
+    pokedex_entry_data[pkmn]["Art Command"] = "\\includegraphics[width=0.25\\linewidth]{ART" + str(this_data["Pokedex Number"]) + ".png}"
+    this_pkmn_stats = [this_data["Stats"]["HP"], this_data["Stats"]["Atk"], this_data["Stats"]["Def"], this_data["Stats"]["Spd"], this_data["Stats"]["Spc"], this_data["Stats"]["BST"]]
+    this_pkmn_stat_strings = [str(s) for s in this_pkmn_stats]
+    pokedex_entry_data[pkmn]["Stat Image"] = "\\statimage{" + '}{'.join(this_pkmn_stat_strings) + "}"
+    this_location_colors = default_location_colors.copy()
+    key_data = set()
+    key_data_counter = 0
+    found_colors = set()
+    if len(this_data["Map Color Data"]) == 0:
+        pokedex_entry_data[pkmn]["Map Data"] = "\\unavailablemap{0.5}"
+        continue
+    for loc, color_data in this_data["Map Color Data"].items():
+        color = color_data[0]
+        text = color_data[1]
+        this_location_colors[loc] = color
+        if color != "White" and not color in found_colors:
+            key_data.add(f"{key_data_counter}/{color}/{text}")
+            found_colors.add(color)
+            key_data_counter += 1
+    color_lines = []
+    for loc, color in this_location_colors.items():
+        color_lines.append(create_color_command(loc, color))
+    # pokedex_entry_data[pkmn]["Location Colors"] = "\n".join(color_lines)
+    # pokedex_entry_data[pkmn]["Location Key"] = ",".join(list(this_location_colors))
+    pokedex_entry_data[pkmn]["Map Data"] = '\n'.join([
+        "\n".join(color_lines),
+        # f"\\keydata{{{{{','.join(list(key_data))}}}}}",
+        f"\\drawmap{{1}}{{{{{', '.join(list(key_data))}}}}}",
+    ])
 
-print(f"\\def\\list{all_learnset_data['BULBASAUR']}")
+pokedex_entry_data_sorted = dict(sorted(pokedex_entry_data.items(), key=lambda item: item[1]["NUM"]))
 
-types = {move_data[move]['Type'].lower() for move in move_data.keys()}
-count = 1
-fake_list = []
-for type in types:
-    fake_list.append(create_learnset_string(count, 5 * count, type, f"{type} move"))
-    count += 1
-print("{" + ', '.join(fake_list) + "}")
+list_of_latex_lines = []
+for pkmn, this_data in pokedex_entry_data_sorted.items():
+    list_of_latex_lines.append(this_data["Sprite Command"])
+    list_of_latex_lines.append("")
+    list_of_latex_lines.append("\\bigskip")
+    list_of_latex_lines.append("")
+    list_of_latex_lines.append(this_data["Art Command"])
+    list_of_latex_lines.append("")
+    list_of_latex_lines.append("\\bigskip")
+    list_of_latex_lines.append("")
+    list_of_latex_lines.append(this_data["Stat Image"])
+    list_of_latex_lines.append("")
+    list_of_latex_lines.append("\\bigskip")
+    list_of_latex_lines.append("")
+    list_of_latex_lines.append(this_data["Map Data"])
+    list_of_latex_lines.append("")
+    list_of_latex_lines.append("\\bigskip")
+    list_of_latex_lines.append("")
+    # list_of_latex_lines.append(this_data["Learnset Image"])
+    list_of_latex_lines.append("")
+    list_of_latex_lines.append("\\clearpage")
+    list_of_latex_lines.append("")
+    
+fpath_pkmn_data_json = os.path.join(root, "_DAN/pokedex_test.tex")
+if os.path.exists(fpath_pkmn_data_json):
+    os.remove(fpath_pkmn_data_json)
+with open(fpath_pkmn_data_json, 'w', encoding="utf-8") as f:
+    f.write("\n".join(list_of_latex_lines))

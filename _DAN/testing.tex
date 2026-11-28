@@ -10,6 +10,8 @@
 \usepackage[T1]{fontenc}
 
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
 \usepackage[svgnames]{xcolor}
 
 \usepackage{contour}
@@ -17,6 +19,7 @@
 \contournumber{32}
 
 \usepackage{tcolorbox}
+\tcbuselibrary{skins}
 
 \colorlet{color_HP}{GreenYellow}
 \colorlet{color_Atk}{Yellow}
@@ -40,6 +43,16 @@
 \colorlet{colorpsychic}{Pink}
 \colorlet{colorice}{DeepSkyBlue}
 \colorlet{colordragon}{MidnightBlue}
+
+\colorlet{colorwild}{Grey}
+\colorlet{colorsurf}{DarkBlue}
+\colorlet{colorfish}{LightBlue}
+\colorlet{colorgift}{IndianRed}
+\colorlet{colortrade}{Orange}
+\colorlet{colorpurchase}{Green}
+\colorlet{colorreward}{HotPink}
+\colorlet{colorfossil}{Brown}
+\colorlet{colorstatic}{Gold}
 
 \graphicspath{{SPRITES/}{ART/}}
 
@@ -69,7 +82,7 @@
 
 \newcommand{\statimage}[6]{
 \def\xscale{5}
-\def\yscale{0.45}
+\def\yscale{0.5}
 \begin{tikzpicture}[xscale=\xscale, yscale=\yscale]
 \def\count{1}
 \densityfunction{color_HP}{pdf_HP}
@@ -126,13 +139,345 @@
 \end{tikzpicture}
 }
 
+\colorlet{colorViridianCity}{White}
+\colorlet{colorPalletTown}{White}
+\colorlet{colorPewterCity}{White}
+\colorlet{colorViridianForest}{White}
+\colorlet{colorCeruleanCity}{White}
+\colorlet{colorMountMoon}{White}
+\colorlet{colorIndigoPlateau}{White}
+\colorlet{colorVictoryRoad}{White}
+\colorlet{colorLavenderTown}{White}
+\colorlet{colorSaffronCity}{White}
+\colorlet{colorCeladonCity}{White}
+\colorlet{colorPowerPlant}{White}
+\colorlet{colorRockTunnel}{White}
+\colorlet{colorVermilionCity}{White}
+\colorlet{colorFuchsiaCity}{White}
+\colorlet{colorCinnabarIsland}{White}
+\colorlet{colorSeafoamIsland}{White}
+\colorlet{colorCeruleanCave}{White}
+\colorlet{colorSafariZone}{White}
+\colorlet{colorDiglettsCave}{White}
+\colorlet{colorRoute2TradeHouse}{White}
+\colorlet{colorRoute5UndergroundPath}{White}
+\colorlet{colorRoute11Gate}{White}
+\colorlet{colorRoute16Gate}{White}
+\colorlet{colorRoute18Gate}{White}
+\colorlet{colorRoute1}{White}
+\colorlet{colorRoute2}{White}
+\colorlet{colorRoute3}{White}
+\colorlet{colorRoute4}{White}
+\colorlet{colorRoute5}{White}
+\colorlet{colorRoute6}{White}
+\colorlet{colorRoute7}{White}
+\colorlet{colorRoute8}{White}
+\colorlet{colorRoute9}{White}
+\colorlet{colorRoute10}{White}
+\colorlet{colorRoute11}{White}
+\colorlet{colorRoute12}{White}
+\colorlet{colorRoute13}{White}
+\colorlet{colorRoute14}{White}
+\colorlet{colorRoute15}{White}
+\colorlet{colorRoute16}{White}
+\colorlet{colorRoute17}{White}
+\colorlet{colorRoute18}{White}
+\colorlet{colorRoute19}{White}
+\colorlet{colorRoute20}{White}
+\colorlet{colorRoute21}{White}
+\colorlet{colorRoute22}{White}
+\colorlet{colorRoute23}{White}
+\colorlet{colorRoute24}{White}
+\colorlet{colorRoute25}{White}
+
+\newcommand{\drawmap}[2]{
+\def\mapscale{#1}
+\begin{tikzpicture}[scale=\mapscale]
+\tiny
+\pgfmathsetlengthmacro{\rc}{2pt * \mapscale}
+\pgfmathsetlengthmacro{\ms}{0.5cm * \mapscale}
+\pgfmathsetlengthmacro{\dd}{\ms / 2}
+\pgfmathsetlengthmacro{\sq}{\dd}
+\pgfmathsetlengthmacro{\cir}{0.4 * \sq / \mapscale}
+
+\coordinate (nViridianCity) at (0, 0);
+\coordinate (nPalletTown) at (0, -1cm);
+\coordinate (nPewterCity) at (0, 2cm);
+\coordinate (nCeruleanCity) at (3cm, 2.5cm);
+\coordinate (nIndigoPlateau) at (-1cm, 3cm);
+\coordinate (nMountMoon) at (1.5cm, 2.5cm);
+\coordinate (nLavenderTown) at (4.5cm, 1.1cm);
+\coordinate (nSaffronCity) at (3cm, 1.1cm);
+\coordinate (nCeladonCity) at (2cm, 1.1cm);
+\coordinate (nVermilionCity) at (3cm, -0.15cm);
+\coordinate (nFuchsiaCity) at (2cm, -1.5cm);
+\coordinate (nCinnabarIsland) at (0cm, -2.25cm);
+\coordinate (nEndRoute9) at (4.5cm, 2.5cm);
+\coordinate (nEndRoute11) at (4.5cm, -0.15cm);
+\coordinate (nEndRoute12) at (4.5cm, -1cm);
+\coordinate (nEndRoute13) at (3.25cm, -1cm);
+\coordinate (nEndRoute14) at (3.25cm, -1.5cm);
+\coordinate (nEndRoute16) at (1.2cm, 1.1cm);
+\coordinate (nEndRoute18) at (1.2cm, -1.5cm);
+\coordinate (nEndRoute19) at (2cm, -2.25cm);
+\coordinate (nEndRoute22) at (-1cm, 0);
+\coordinate (nEndRoute24) at (3cm, 3.25cm);
+
+\draw[double distance=\dd, double=colorRoute1] (nPalletTown) -- (nViridianCity);
+\draw[double distance=\dd, double=colorRoute2] (nViridianCity) -- (nPewterCity);
+\draw[double distance=\dd, double=colorRoute4] (nMountMoon) -- (nCeruleanCity);
+\draw[double distance=\dd, double=colorRoute3, line cap=rect] (nPewterCity) -- ++(1cm, 0cm) -- ++(0cm, 0.5cm) -- (nMountMoon);
+\draw[double distance=\dd] (nViridianCity) -- (nEndRoute22) -- (nIndigoPlateau);
+\draw[double distance=\dd, double=colorRoute23, cap=rect] (nEndRoute22) -- (nIndigoPlateau);
+\draw[double distance=\dd, double=colorRoute22, cap=rect] (nViridianCity) -- (nEndRoute22);
+\draw[double distance=\dd, double=colorRoute25, cap=rect] (nEndRoute24) -- ++(1.25cm, 0cm);
+\draw[double distance=\dd, double=colorRoute24, cap=rect] (nCeruleanCity) -- (nEndRoute24);
+\draw[double distance=\dd, double=colorRoute9, cap=rect] (nCeruleanCity) -- (nEndRoute9);
+\draw[double distance=\dd, double=colorRoute10, cap=rect] (nEndRoute9) -- (nLavenderTown);
+\draw[double distance=\dd, double=colorRoute8, cap=rect] (nSaffronCity) -- (nLavenderTown);
+\draw[double distance=\dd, double=colorRoute5, cap=rect] (nSaffronCity) -- (nCeruleanCity);
+\draw[double distance=\dd, double=colorRoute7, cap=rect] (nSaffronCity) -- (nCeladonCity);
+\draw[double distance=\dd, double=colorRoute6, cap=rect] (nSaffronCity) -- (nVermilionCity);
+\draw[double distance=\dd, double=colorRoute11, cap=rect] (nVermilionCity) -- (nEndRoute11);
+\draw[double distance=\dd, double=colorRoute12, cap=rect] (nLavenderTown) -- (nEndRoute12);
+\draw[double distance=\dd, double=colorRoute15, cap=rect] (nEndRoute14) -- (nFuchsiaCity);
+\draw[double distance=\dd, double=colorRoute14, cap=rect] (nEndRoute13) -- (nEndRoute14);
+\draw[double distance=\dd, double=colorRoute13, cap=rect] (nEndRoute12) -- (nEndRoute13);
+\draw[double distance=\dd, double=colorRoute17, cap=rect] (nEndRoute18) -- (nEndRoute16);
+\draw[double distance=\dd, double=colorRoute16, cap=rect] (nCeladonCity) -- (nEndRoute16);
+\draw[double distance=\dd, double=colorRoute18, cap=rect] (nFuchsiaCity) -- (nEndRoute18);
+\draw[double distance=\dd, double=colorRoute21, cap=rect] (nPalletTown) -- (nCinnabarIsland);
+\draw[double distance=\dd, double=colorRoute19, cap=rect] (nCinnabarIsland) -- (nEndRoute19);
+\draw[double distance=\dd, double=colorRoute18, cap=rect] (nFuchsiaCity) -- (nEndRoute19);
+
+\node[fill=colorIndigoPlateau, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nIndigoPlateau) {};
+\node[fill=colorViridianCity, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nViridianCity) {};
+\node[fill=colorPalletTown, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nPalletTown) {};
+\node[fill=colorPewterCity, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nPewterCity) {};
+\node[fill=colorCeruleanCity, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nCeruleanCity) {};
+\node[fill=colorLavenderTown, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nLavenderTown) {};
+\node[fill=colorSaffronCity, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nSaffronCity) {};
+\node[fill=colorCeladonCity, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nCeladonCity) {};
+\node[fill=colorVermilionCity, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nVermilionCity) {};
+\node[fill=colorFuchsiaCity, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nFuchsiaCity) {};
+\node[fill=colorCinnabarIsland, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nCinnabarIsland) {};
+\node[left, fill=colorViridianForest, draw, rectangle, minimum size=\sq] at ($ (nViridianCity)!0.45!(nPewterCity) $) {};
+\node[above, fill=colorMountMoon, draw, rectangle, minimum size=\sq] at ($ (nMountMoon) + (0.125cm, 0cm) $) {};
+\node[left, fill=colorVictoryRoad, draw, rectangle, minimum size=\sq] at ($ (nIndigoPlateau) + (0cm, -1cm) $) {};
+\node[right, fill=colorPowerPlant, draw, rectangle, minimum size=\sq] at ($ (nEndRoute9)!0.6!(nLavenderTown) $) {};
+\node[left, fill=colorRockTunnel, draw, rectangle, minimum size=\sq] at ($ (nEndRoute9)!0.3!(nLavenderTown) $) {};
+\node[above, fill=colorSeafoamIsland, draw, rectangle, minimum size=\sq] at ($ (nCinnabarIsland)!0.5!(nEndRoute19) $) {};
+\node[above, fill=colorDiglettsCave, draw, rectangle, minimum size=\sq] at ($ (nVermilionCity)!0.4!(nEndRoute11) $) {};
+\node[fill=colorCeruleanCave, draw, rectangle, minimum size=\sq] at ($ (nCeruleanCity) + ({-\ms / \mapscale / 2}, {\ms / \mapscale / 2}) $) {};
+\node[fill=colorSafariZone, draw, rectangle, minimum size=\sq] at ($ (nFuchsiaCity) + (0, {\ms / \mapscale / 2}) $) {};
+
+\draw[fill=colorRoute2TradeHouse] ($ (nViridianCity)!0.55!(nPewterCity) + ({\dd / \mapscale / 2}, 0) $) circle(\cir);
+\draw[fill=colorRoute5UndergroundPath] ($ (nSaffronCity) + ({\dd / \mapscale / 2}, {\ms / \mapscale}) $) circle(\cir);
+\draw[fill=colorRoute11Gate] ($ (nEndRoute11) + ({-\dd / \mapscale / 2}, 0) $) circle(\cir);
+\draw[fill=colorRoute16Gate] ($ (nEndRoute16) + ({\dd / \mapscale / 2}, 0) $) circle(\cir);
+\draw[fill=colorRoute18Gate] ($ (nEndRoute18) + ({\dd / \mapscale / 2}, 0) $) circle(\cir);
+
+\foreach \keycount / \keycolor / \keytext in #2
+{
+\draw[\keycolor, fill=\keycolor] ({2.5cm}, {-2cm - \keycount * 3.5 * \cir}) circle(\cir);
+\node[right] at ({2.5cm + \cir}, {-2cm - \keycount * 3.5 * \cir}) {\scriptsize{\textsc{\keytext}}};
+}
+\end{tikzpicture}
+}
+
+\newcommand{\unavailablemap}[1]{
+\def\mapscale{1}
+\begin{tikzpicture}[scale=\mapscale]
+\tiny
+\pgfmathsetlengthmacro{\rc}{2pt * \mapscale}
+\pgfmathsetlengthmacro{\ms}{0.5cm * \mapscale}
+\pgfmathsetlengthmacro{\dd}{\ms / 2}
+\pgfmathsetlengthmacro{\sq}{\dd}
+\pgfmathsetlengthmacro{\cir}{0.4 * \sq / \mapscale}
+
+\coordinate (nViridianCity) at (0, 0);
+\coordinate (nPalletTown) at (0, -1cm);
+\coordinate (nPewterCity) at (0, 2cm);
+\coordinate (nCeruleanCity) at (3cm, 2.5cm);
+\coordinate (nIndigoPlateau) at (-1cm, 3cm);
+\coordinate (nMountMoon) at (1.5cm, 2.5cm);
+\coordinate (nLavenderTown) at (4.5cm, 1.1cm);
+\coordinate (nSaffronCity) at (3cm, 1.1cm);
+\coordinate (nCeladonCity) at (2cm, 1.1cm);
+\coordinate (nVermilionCity) at (3cm, -0.15cm);
+\coordinate (nFuchsiaCity) at (2cm, -1.5cm);
+\coordinate (nCinnabarIsland) at (0cm, -2.25cm);
+\coordinate (nEndRoute9) at (4.5cm, 2.5cm);
+\coordinate (nEndRoute11) at (4.5cm, -0.15cm);
+\coordinate (nEndRoute12) at (4.5cm, -1cm);
+\coordinate (nEndRoute13) at (3.25cm, -1cm);
+\coordinate (nEndRoute14) at (3.25cm, -1.5cm);
+\coordinate (nEndRoute16) at (1.2cm, 1.1cm);
+\coordinate (nEndRoute18) at (1.2cm, -1.5cm);
+\coordinate (nEndRoute19) at (2cm, -2.25cm);
+\coordinate (nEndRoute22) at (-1cm, 0);
+\coordinate (nEndRoute24) at (3cm, 3.25cm);
+
+\draw[double distance=\dd, double=White] (nPalletTown) -- (nViridianCity);
+\draw[double distance=\dd, double=White] (nViridianCity) -- (nPewterCity);
+\draw[double distance=\dd, double=White] (nMountMoon) -- (nCeruleanCity);
+\draw[double distance=\dd, double=White, line cap=rect] (nPewterCity) -- ++(1cm, 0cm) -- ++(0cm, 0.5cm) -- (nMountMoon);
+\draw[double distance=\dd, double=White, cap=rect] (nEndRoute22) -- (nIndigoPlateau);
+\draw[double distance=\dd, double=White, cap=rect] (nViridianCity) -- (nEndRoute22);
+\draw[double distance=\dd, double=White, cap=rect] (nEndRoute24) -- ++(1.25cm, 0cm);
+\draw[double distance=\dd, double=White, cap=rect] (nCeruleanCity) -- (nEndRoute24);
+\draw[double distance=\dd, double=White, cap=rect] (nCeruleanCity) -- (nEndRoute9);
+\draw[double distance=\dd, double=White, cap=rect] (nEndRoute9) -- (nLavenderTown);
+\draw[double distance=\dd, double=White, cap=rect] (nSaffronCity) -- (nLavenderTown);
+\draw[double distance=\dd, double=White, cap=rect] (nSaffronCity) -- (nCeruleanCity);
+\draw[double distance=\dd, double=White, cap=rect] (nSaffronCity) -- (nCeladonCity);
+\draw[double distance=\dd, double=White, cap=rect] (nSaffronCity) -- (nVermilionCity);
+\draw[double distance=\dd, double=White, cap=rect] (nVermilionCity) -- (nEndRoute11);
+\draw[double distance=\dd, double=White, cap=rect] (nLavenderTown) -- (nEndRoute12);
+\draw[double distance=\dd, double=White, cap=rect] (nEndRoute14) -- (nFuchsiaCity);
+\draw[double distance=\dd, double=White, cap=rect] (nEndRoute13) -- (nEndRoute14);
+\draw[double distance=\dd, double=White, cap=rect] (nEndRoute12) -- (nEndRoute13);
+\draw[double distance=\dd, double=White, cap=rect] (nEndRoute18) -- (nEndRoute16);
+\draw[double distance=\dd, double=White, cap=rect] (nCeladonCity) -- (nEndRoute16);
+\draw[double distance=\dd, double=White, cap=rect] (nFuchsiaCity) -- (nEndRoute18);
+\draw[double distance=\dd, double=White, cap=rect] (nPalletTown) -- (nCinnabarIsland);
+\draw[double distance=\dd, double=White, cap=rect] (nCinnabarIsland) -- (nEndRoute19);
+\draw[double distance=\dd, double=White, cap=rect] (nFuchsiaCity) -- (nEndRoute19);
+
+\node[fill=White, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nIndigoPlateau) {};
+\node[fill=White, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nViridianCity) {};
+\node[fill=White, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nPalletTown) {};
+\node[fill=White, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nPewterCity) {};
+\node[fill=White, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nCeruleanCity) {};
+\node[fill=White, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nLavenderTown) {};
+\node[fill=White, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nSaffronCity) {};
+\node[fill=White, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nCeladonCity) {};
+\node[fill=White, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nVermilionCity) {};
+\node[fill=White, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nFuchsiaCity) {};
+\node[fill=White, draw, rectangle, minimum size=\ms, rounded corners=\rc] at (nCinnabarIsland) {};
+\node[left, fill=White, draw, rectangle, minimum size=\sq] at ($ (nViridianCity)!0.45!(nPewterCity) $) {};
+\node[above, fill=White, draw, rectangle, minimum size=\sq] at ($ (nMountMoon) + (0.125cm, 0cm) $) {};
+\node[left, fill=White, draw, rectangle, minimum size=\sq] at ($ (nIndigoPlateau) + (0cm, -1cm) $) {};
+\node[right, fill=White, draw, rectangle, minimum size=\sq] at ($ (nEndRoute9)!0.6!(nLavenderTown) $) {};
+\node[left, fill=White, draw, rectangle, minimum size=\sq] at ($ (nEndRoute9)!0.3!(nLavenderTown) $) {};
+\node[above, fill=White, draw, rectangle, minimum size=\sq] at ($ (nCinnabarIsland)!0.5!(nEndRoute19) $) {};
+\node[above, fill=White, draw, rectangle, minimum size=\sq] at ($ (nVermilionCity)!0.4!(nEndRoute11) $) {};
+\node[fill=White, draw, rectangle, minimum size=\sq] at ($ (nCeruleanCity) + ({-\ms / \mapscale / 2}, {\ms / \mapscale / 2}) $) {};
+\node[fill=White, draw, rectangle, minimum size=\sq] at ($ (nFuchsiaCity) + (0, {\ms / \mapscale / 2}) $) {};
+\node[fill=White, draw, thick, rectangle, inner sep = 0.5pt] at (1.75cm, 0.75cm) {\normalsize{\textsc{\begin{tabular}{c} only available \\ by evolution \end{tabular}}}};
+\end{tikzpicture}
+}
+
 \begin{document}
-\includegraphics{1.PNG}
-\includegraphics[width=0.25\linewidth]{001 Bulbasaur.png}
+\input{pokedex_test}
+\end{document}
+\includegraphics{SPRITE1.png}
+
+\bigskip
+
+\includegraphics[width=0.25\linewidth]{ART1.png}
+
+\bigskip
 
 \statimage{45}{49}{49}{45}{65}{253}
 
 \bigskip
 
-\learnsetimage{{1/5/poison/poison move, 2/10/bug/bug move, 3/15/water/water move, 4/20/electric/electric move, 5/25/ground/ground move, 6/30/ghost/ghost move, 7/35/fighting/fighting move, 8/40/flying/flying move, 9/45/fire/fire move, 10/50/normal/normal move, 11/55/rock/rock move, 12/60/grass/grass move, 13/65/psychic/psychic move, 14/70/dragon/dragon move, 15/75/ice/ice move}}
+\colorlet{colorCeruleanCity}{colorgift}
+\colorlet{colorRoute24}{White}
+\colorlet{colorVermilionCity}{White}
+\colorlet{colorViridianForest}{White}
+\colorlet{colorRoute21}{White}
+\colorlet{colorRoute11}{White}
+\colorlet{colorRoute6}{White}
+\colorlet{colorRoute12}{White}
+\colorlet{colorRoute13}{White}
+\colorlet{colorRoute8}{White}
+\colorlet{colorRoute25}{White}
+\colorlet{colorRoute3}{White}
+\colorlet{colorRoute1}{White}
+\colorlet{colorRoute7}{White}
+\colorlet{colorRoute5}{White}
+\colorlet{colorRoute2}{White}
+\colorlet{colorRoute15}{White}
+\colorlet{colorRoute14}{White}
+\colorlet{colorRoute10}{White}
+\colorlet{colorRoute9}{White}
+\colorlet{colorRoute16}{White}
+\colorlet{colorCinnabarIsland}{White}
+\colorlet{colorRoute18}{White}
+\colorlet{colorRoute22}{White}
+\colorlet{colorRoute23}{White}
+\colorlet{colorRoute17}{White}
+\colorlet{colorMountMoon}{White}
+\colorlet{colorCeladonCity}{White}
+\colorlet{colorRoute4}{White}
+\colorlet{colorCeruleanCave}{White}
+\colorlet{colorSafariZone}{White}
+\colorlet{colorRoute5UndergroundPath}{White}
+\colorlet{colorSeafoamIsland}{White}
+\colorlet{colorRockTunnel}{White}
+\colorlet{colorVictoryRoad}{White}
+\colorlet{colorDiglettsCave}{White}
+\colorlet{colorPalletTown}{White}
+\colorlet{colorViridianCity}{White}
+\colorlet{colorFuchsiaCity}{White}
+\colorlet{colorRoute19}{White}
+\colorlet{colorRoute20}{White}
+\colorlet{colorVermilionDock}{White}
+\colorlet{colorPowerPlant}{White}
+\colorlet{colorRoute2TradeHouse}{White}
+\colorlet{colorLavenderTown}{White}
+\colorlet{colorSaffronCity}{White}
+\colorlet{colorRoute11Gate}{White}
+\colorlet{colorRoute18Gate}{White}
+\colorlet{colorRoute16Gate}{White}
+\drawmap{0.5}{{0/colorgift/gift, 1/colorfossil/fossil}}
+
+\learnsetimage{{1/--/normal/tackle, 2/--/normal/growl, 3/7/grass/leech seed, 4/12/grass/vine whip, 5/17/poison/poisonpowder, 6/22/normal/wrap, 7/27/grass/razor leaf, 8/32/bug/leech life, 9/37/normal/growth, 10/42/grass/sleep powder, 11/47/grass/solarbeam}}
+
+\clearpage
+
+\begin{tcolorbox}[enhanced, sharp corners,
+title=My title,
+attach boxed title to top left=
+{xshift=-2mm,yshift=-2mm},
+boxed title style={size=small,colback=blue},
+show bounding box]
+This is a \textbf{tcolorbox}.
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced,title=My title,
+colframe=red!50!black,colback=red!10!white,
+arc=1mm,colbacktitle=red!10!white,
+fonttitle=\bfseries,coltitle=red!50!black,
+attach boxed title to top text left=
+{yshift=-0.50mm},
+boxed title style={skin=enhancedfirst jigsaw,
+size=small,arc=1mm,bottom=-1mm,
+interior style={fill=none,
+top color=red!30!white,
+bottom color=red!20!white}}]
+This is a \textbf{tcolorbox}.
+\end{tcolorbox}
+
+\clearpage
+
+\includegraphics{SPRITE94.png}
+
+\bigskip
+
+\includegraphics[width=0.25\linewidth]{ART94.png}
+
+\bigskip
+
+\statimage{60}{65}{60}{110}{130}{425}
+
+\bigskip
+
+\learnsetimage{{1/--/grass/absorb, 2/--/normal/disable, 3/--/ghost/confuse ray, 4/8/ghost/night shade, 5/12/psychic/confusion, 6/16/ghost/lick, 7/21/normal/glare, 8/28/psychic/psybeam, 9/34/normal/substitute, 10/43/psychic/hypnosis, 11/48/ghost/shadow ball, 12/58/psychic/dream eater}}
+
+
+%\input{pokedex_test}
+
 \end{document}
